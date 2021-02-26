@@ -16,7 +16,7 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center">
                                     <img 
                                         draggable={false} 
-                                        src="/front.png" 
+                                        src="front.png" 
                                         alt="" style={{width:"70%", aspectRatio: 1/1}}
                                     />
                                 </div>
@@ -85,7 +85,7 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center">
                                     <img 
                                         draggable={false} 
-                                        src="/back.png" 
+                                        src="back.png" 
                                         alt="" 
                                         style={{width:"70%", aspectRatio: 1/1}}
                                     />
@@ -97,7 +97,7 @@ const Skills = () => {
                                 <div className="d-flex col justify-content-around mb-3">
                                     <img 
                                         draggable={false} 
-                                        src="./express.png" 
+                                        src="skills/express.png" 
                                         alt="" 
                                         width="70" 
                                         height="65" 
@@ -105,7 +105,7 @@ const Skills = () => {
                                     />
                                     <img 
                                         draggable={false} 
-                                        src="./mysql.png" 
+                                        src="skills/mysql.png" 
                                         alt="" 
                                         width="55" 
                                         height="55" 
@@ -127,7 +127,7 @@ const Skills = () => {
                                     />
                                     <img 
                                         draggable={false} 
-                                        src="./sequelize.png" 
+                                        src="skills/sequelize.png" 
                                         alt="" 
                                         width="55" 
                                         height="55" 
@@ -167,7 +167,7 @@ const Skills = () => {
                                     />
                                     <img 
                                         draggable={false} 
-                                        src="/json.png" 
+                                        src="skills/json.png" 
                                         alt="" 
                                         width="55" 
                                         height="55" 
@@ -191,7 +191,7 @@ const Skills = () => {
                                     />
                                     <img 
                                         draggable={false} 
-                                        src="/webpack.png" 
+                                        src="skills/webpack.png" 
                                         alt="" 
                                         width="55" 
                                         height="55" 

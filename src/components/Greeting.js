@@ -18,7 +18,7 @@ const Greeting = () => {
                 <div className="w-100 h-100 bg-7 clip3 position-absolute"/>
                 <div className="w-75 h-100 bg-2 clip2 position-relative d-flex justify-content-end decoration">
                     <img 
-                        src="/logo.png" 
+                        src="logo.png" 
                         alt="" 
                         width="40%" 
                         height="23%" 

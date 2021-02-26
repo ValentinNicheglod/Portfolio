@@ -86,7 +86,7 @@ const Contact = ({smallScreen}) => {
             >
                 <div className="d-flex justify-content-center">
                     <img 
-                        src='/logo-wob.png' 
+                        src='logo.png' 
                         alt="" 
                         width="150" 
                         height="150" 

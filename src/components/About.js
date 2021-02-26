@@ -38,7 +38,7 @@ const About = () => {
                             images.map(image => (
                                 <div>
                                     <img 
-                                        src={`/me/${image}.jpeg`} 
+                                        src={`me/${image}.jpeg`} 
                                         alt="" 
                                         draggable={false}
                                     />

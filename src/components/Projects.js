@@ -12,7 +12,7 @@ const projects = [
     },
     {
         name: 'NotatKy',
-        img: 'notatky.png',
+        img: 'notatKy.png',
         state: 'En desarrollo',
         github: null,
         page: null,
