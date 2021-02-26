@@ -205,6 +205,10 @@ ul {
   border-right-width: 1px;
 }
 
+.contact{
+  height: 50%;
+}
+
 .contact-btn{
   background-color: transparent;
   border-width: 3px;
@@ -257,9 +261,18 @@ ul {
   height: 100%;
 }
 
+.max-height{
+  height: 100%;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
+
+  body{
+    height: auto;
+  }
+
   .info-cont{
     display: flex;
     justify-content: space-around;
@@ -291,11 +304,12 @@ ul {
 
   .info-cont{
     margin-top: 2rem;
-    padding: 0px;
+    padding-top: 50px;
+    padding-right: 0px;
   }
   
   .info-cont p{
-    font-size: 2.5vw;
+    font-size: 4vw;
     /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'Work Sans', sans-serif;
     margin: 0px;
@@ -319,9 +333,24 @@ ul {
     width: 100%;
   }
 
+  .max-height{
+    height: 100%;
+  }
+
+  .max-height h1{
+    margin-top: 80%;
+  }
+
+  .max-height h6{
+    margin-bottom: 80%;
+  }
+
+
   .contact-btn{
     background-color: #37BFA7;
     border-width: 1px;
+    margin-top: 8%;
+    margin-bottom: 8%;
     border-radius: 25px;
     border-color: #37BFA7;
     color: #FFFF;
@@ -390,9 +419,14 @@ ul {
     height: fit-content;
   }
 
+  .clip{
+    height:inherit;
+
+  }
+
   /* ================== */
   
-  .side{
+/*   .side{
     width: 80%;
     height: 65%;
     border-top-left-radius: 65%;
@@ -440,5 +474,5 @@ ul {
   
   .box{
     box-sizing: border-box;
-  }
+  } */
 }

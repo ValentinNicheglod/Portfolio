@@ -22,7 +22,7 @@ const Contact = ({smallScreen}) => {
     return (
         <div className="h-100 ">
             
-            <div className="bg-2 h-50 d-flex justify-content-center row">
+            <div className="bg-2 d-flex justify-content-center row contact">
                 <hr/>
                 <h1 className="display-3 white title d-flex justify-content-center">
                     CONTACTO
