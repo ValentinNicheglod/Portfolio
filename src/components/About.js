@@ -12,7 +12,7 @@ const info = [
 const About = () => {
     return (
         <div className="bg-1 row m-0 box responsive-cont">
-            <div className="col-md-7 p-4 box">
+            <div className="col-md-7 col-sm-6 p-4 box">
                 <div>
                     <h1 className="display-3 white title">
                         Sobre mi...
@@ -28,7 +28,7 @@ const About = () => {
                     }
                 </div>
             </div>
-            <div className="col-md-5 d-flex justify-content-center align-items-center pb-5 slider-cont">
+            <div className="col-md-5 col-sm-6 d-flex justify-content-center align-items-center pb-5 slider-cont">
                 <div className="slider d-flex justify-content-center">
                     <Slider 
                         className="h-100 d-flex justify-content-center" 

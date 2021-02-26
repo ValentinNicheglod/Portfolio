@@ -79,7 +79,7 @@ const ProjectCard = ({name, img, state, github, page, smallScreen, type}) => {
                     <img 
                         src={`projects/${img}`}
                         alt="" 
-                        style={smallScreen ? {} : {width:"90%", aspectRatio: 1/1}}
+                        style={smallScreen ? {aspectRatio: 1/1, maxWidth: '100%'} : {width:"90%", aspectRatio: 1/1}}
                         draggable={false}
                     />
                 </div>

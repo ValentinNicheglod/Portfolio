@@ -270,7 +270,13 @@ ul {
 @media screen and (max-width: 600px) {
 
   body{
-    height: auto;
+    height: 100%;
+    background-color: #FFFF;
+  }
+
+  .logo{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
   }
 
   .info-cont{
@@ -336,15 +342,6 @@ ul {
   .max-height{
     height: 100%;
   }
-
-  .max-height h1{
-    margin-top: 80%;
-  }
-
-  .max-height h6{
-    margin-bottom: 80%;
-  }
-
 
   .contact-btn{
     background-color: #37BFA7;

@@ -12,7 +12,7 @@ const skills = [
         skills: ['Express', 'MySQL', 'Node JS', 'Postgresql','Sequelize']
     },
     {
-        name: 'LENGUAJES Y UTILIDADES',
+        name: 'OTROS',
         img: 'others',
         skills: ['Git', 'GitHub', 'JavaScript', 'JSON','NPM', 'TypeScript', 'Webpack']
     }
@@ -32,7 +32,7 @@ const SkillsMobile = () => {
                     {
                         skills.map(card => (
                             <div className="card p-4 d-flex justify-content-center mb-2">
-                                <div className="d-flex justify-content-center align-items-end col mb-3">
+                                <div className="d-flex justify-content-between align-items-end col mb-3">
                                     <img 
                                         draggable={false} src={`${card.img}.png`} 
                                         alt="" style={{width:"50%", aspectRatio: 1/1}}
