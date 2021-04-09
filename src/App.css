@@ -43,8 +43,7 @@ ul {
 }
 
 .bg-5{
-  background: linear-gradient(0deg, #ac1bac 0%, #51a4c2 100%);
-  /* background-image: url('duotone (2).png'); */
+  background: linear-gradient(35deg, #ac1bac 0%, #4582bb 100%);
 }
 
 .bg-6{
@@ -56,7 +55,7 @@ ul {
 }
 
 .co-1{
-  color: #534582;
+  color: #191970;
 }
 
 .co-2{
@@ -149,17 +148,18 @@ ul {
   border-radius: 25px;
   border-color: #37BFA7;
   color: #37BFA7;
-  width: 40%;
+  width: 30%;
   height: 43px;
+  margin-top: 10px;
 }
 
 .proyect-btn:hover{
   background-color: #37BFA7;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 25px;
   border-color: #37BFA7;
   color: #FFFF;
-  width: 40%;
+  width: 30%;
   height: 43px;
 }
 
