@@ -3,7 +3,11 @@ html, body {
   margin: 0;
   max-width: inherit;
   overflow-x: hidden;
-  background-color: #534582;
+  background-color: #191970;
+}
+
+img{
+  pointer-events: none;
 }
 
 ul {
@@ -23,7 +27,7 @@ ul {
 }
 
 .bg-1{
-  background-color: #534582;
+  background-color: #191970;
 }
 
 .bg-2{
@@ -39,7 +43,8 @@ ul {
 }
 
 .bg-5{
-  background-color: #FFD34C;
+  background: linear-gradient(0deg, #ac1bac 0%, #51a4c2 100%);
+  /* background-image: url('duotone (2).png'); */
 }
 
 .bg-6{
@@ -140,7 +145,7 @@ ul {
 
 .proyect-btn{
   background-color: transparent;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 25px;
   border-color: #37BFA7;
   color: #37BFA7;
@@ -276,7 +281,8 @@ ul {
 
   .logo{
     border-radius: 50%;
-    aspect-ratio: 1/1;
+    height: 60vw!important;
+    width: 60vw!important;
   }
 
   .info-cont{

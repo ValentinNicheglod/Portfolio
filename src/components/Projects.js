@@ -13,9 +13,9 @@ const projects = [
     {
         name: 'NotatKy',
         img: 'notatKy.png',
-        state: 'En desarrollo',
-        github: null,
-        page: null,
+        state: 'Finalizado',
+        github: 'https://github.com/ValentinNicheglod/notatky-frontend',
+        page: 'https://valentinnicheglod.github.io/NotatKy/#/',
         type: 'Web'
     },
     {
