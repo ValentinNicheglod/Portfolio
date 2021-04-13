@@ -154,6 +154,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     <Slide 
                         autoplay={false} 
                         className="h-100"
+                        easing="ease"
                         nextArrow={
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
@@ -168,13 +169,12 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                 </svg>
                             </div>
                         }
-                        transitionDuration={2000}
+                        transitionDuration={500}
                     >
                         {gallery && gallery.map((image) => (
                             <div className="each-slide">
-                            <div style={{'backgroundImage': `url(projects/mockups/${image}.png)`}}>
+                                <div style={{'backgroundImage': `url(projects/mockups/${image}.png)`}} />
                             </div>
-                        </div>
                         ))}
                     </Slide>
                     <button 
