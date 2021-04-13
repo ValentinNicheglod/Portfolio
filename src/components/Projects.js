@@ -15,7 +15,7 @@ const projects = [
         name: 'NotatKy',
         img: 'notatKy.png',
         state: 'Finalizado',
-        gallery: ['aaaa'],
+        gallery: ['notatky/inicio', 'notatky/login', 'notatky/signup', 'notatky/contra1', 'notatky/contra2', 'notatky/contra3', 'notatky/home', 'notatky/home-editing', 'notatky/home-editing-2', 'notatky/home-editing-3', 'notatky/home-add-tag', 'notatky/profile', 'notatky/edit-data', 'notatky/edit-pw', 'notatky/col-tag',],
         github: 'https://github.com/ValentinNicheglod/notatky-frontend',
         page: 'https://valentinnicheglod.github.io/NotatKy/#/',
         type: 'Web'
@@ -31,7 +31,7 @@ const projects = [
     }
 ];
 
-const Proyects = ({setOpen, smallScreen}) => {
+const Proyects = ({smallScreen}) => {
 
     return (
         <div className="bg-2 row min m-0">
@@ -51,7 +51,6 @@ const Proyects = ({setOpen, smallScreen}) => {
                                 gallery={project.gallery}
                                 name= {project.name}
                                 page= {project.page}
-                                setOpen={setOpen}
                                 smallScreen={smallScreen}
                                 state= {project.state}
                                 type= {project.type}
