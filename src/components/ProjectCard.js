@@ -168,6 +168,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                 </svg>
                             </div>
                         }
+                        transitionDuration={2000}
                     >
                         {gallery && gallery.map((image) => (
                             <div className="each-slide">
