@@ -56,7 +56,7 @@ const Inicio = () => {
                 onClose={() => setOpen(false)}
             >
                 <div className="slide-container h-100">
-                    <Slide autoplay={false} className="h-100">
+                    <Slide autoplay={false} transitionDuration={500} className="h-100">
                         <div className="each-slide">
                             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
                             <span>Slide 1</span>
