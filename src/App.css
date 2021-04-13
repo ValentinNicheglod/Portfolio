@@ -95,6 +95,14 @@ ul {
   height: 70%;
 }
 
+.react-slideshow-container{
+  height: 100%;
+}
+
+.react-slideshow-wrapper{
+  height: 100%;
+}
+
 .card{
   border-radius: 20px;
 }

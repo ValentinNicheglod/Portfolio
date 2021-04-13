@@ -6,6 +6,7 @@ const projects = [
         name: 'Mono',
         img: 'mono.png',
         state: 'Finalizado',
+        gallery: null,
         github: 'https://github.com/ValentinNicheglod/MONO',
         page: 'https://valentinnicheglod.github.io/MONO-/',
         type: 'Aplicación'
@@ -14,6 +15,7 @@ const projects = [
         name: 'NotatKy',
         img: 'notatKy.png',
         state: 'Finalizado',
+        gallery: ['aaaa'],
         github: 'https://github.com/ValentinNicheglod/notatky-frontend',
         page: 'https://valentinnicheglod.github.io/NotatKy/#/',
         type: 'Web'
@@ -22,13 +24,14 @@ const projects = [
         name: 'TreeBank',
         img: 'treebank.png',
         state: 'Finalizado',
+        gallery: null,
         github: 'https://github.com/ValentinNicheglod/treebank',
         page: 'https://drive.google.com/file/d/1ZBBJfk34kLWOKT6QSCeHXc1n09jh6v0S/view',
         type: 'Web'
     }
 ];
 
-const Proyects = ({smallScreen}) => {
+const Proyects = ({setOpen, smallScreen}) => {
 
     return (
         <div className="bg-2 row min m-0">
@@ -45,8 +48,10 @@ const Proyects = ({smallScreen}) => {
                                 github= {project.github}
                                 img= {project.img}
                                 key={index}
+                                gallery={project.gallery}
                                 name= {project.name}
                                 page= {project.page}
+                                setOpen={setOpen}
                                 smallScreen={smallScreen}
                                 state= {project.state}
                                 type= {project.type}
