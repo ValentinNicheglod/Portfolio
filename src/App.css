@@ -95,12 +95,26 @@ ul {
   height: 70%;
 }
 
-.react-slideshow-container{
+.react-slideshow-container, .react-slideshow-wrapper, .images-wrap, .images-wrap div{
   height: 100%;
 }
 
-.react-slideshow-wrapper{
+.each-slide{
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.each-slide div{
+  width: 90%;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.default-nav{
+  margin: 10px;
 }
 
 .card{
