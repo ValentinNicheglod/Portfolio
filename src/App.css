@@ -111,6 +111,8 @@ ul {
   height: 90%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+  background-color: #dddddd;
 }
 
 .default-nav{

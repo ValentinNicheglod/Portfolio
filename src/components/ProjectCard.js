@@ -151,14 +151,41 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                 onClose={() => setOpen(false)}
             >
                 <div className="slide-container h-100">
-                    <Slide autoplay={false} transitionDuration={500} className="h-100">
+                    <Slide 
+                        autoplay={false} 
+                        className="h-100"
+                        nextArrow={
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                                </svg>
+                            </div>
+                        }
+                        prevArrow={
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                                </svg>
+                            </div>
+                        }
+                        transitionDuration={500}
+                    >
                         {gallery && gallery.map((image) => (
                             <div className="each-slide">
-                            <div style={{'backgroundImage': `url(projects/mockups/${image})`}}>
+                            <div style={{'backgroundImage': `url(projects/mockups/${image}.png)`}}>
                             </div>
                         </div>
                         ))}
                     </Slide>
+                    <button 
+                        className="btn" 
+                        onClick={() => setOpen(false)} 
+                        style={{position: 'absolute', top: '10px', right: '10px'}}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="red" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
                 </div>
             </Modal>
         </Tilt>
