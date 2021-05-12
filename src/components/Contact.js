@@ -66,7 +66,7 @@ const Contact = ({smallScreen}) => {
                         </a>
                         : <div className="card h-50 w-75 bg-1 d-flex justify-content-around align-items-center contact-card">
                             <h3 className="display-6 white contact-title">
-                                ¿ DESEAS CONTACTARME ?
+                                ¿QUIERES COMUNICARTE CONMIGO?
                             </h3>
                             <p className="white">
                                 Estoy dispuesto a recibir propuestas laborales o realizar colaboraciones en algún proyecto.

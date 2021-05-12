@@ -17,7 +17,8 @@ const Skills = () => {
                                     <img 
                                         draggable={false} 
                                         src="front.svg" 
-                                        alt="" style={{width:"70%", aspectRatio: 1/1}}
+                                        alt="" 
+                                        style={{width:"70%", aspectRatio: 1/1, margin: '6.3% 0'}}
                                     />
                                 </div>
                                 <hr/>
