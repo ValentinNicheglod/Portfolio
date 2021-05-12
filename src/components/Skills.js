@@ -16,7 +16,7 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center">
                                     <img 
                                         draggable={false} 
-                                        src="front.png" 
+                                        src="front.svg" 
                                         alt="" style={{width:"70%", aspectRatio: 1/1}}
                                     />
                                 </div>
@@ -85,7 +85,7 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center">
                                     <img 
                                         draggable={false} 
-                                        src="back.png" 
+                                        src="back.svg" 
                                         alt="" 
                                         style={{width:"70%", aspectRatio: 1/1}}
                                     />

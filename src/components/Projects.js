@@ -6,7 +6,7 @@ const projects = [
         name: 'Mono',
         img: 'mono.png',
         state: 'Finalizado',
-        gallery: null,
+        gallery: ['mono/inicio',  'mono/catalogo', 'mono/catalogo-filtro'],
         github: 'https://github.com/ValentinNicheglod/MONO',
         page: 'https://valentinnicheglod.github.io/MONO-/',
         type: 'Aplicación'
