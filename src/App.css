@@ -95,7 +95,7 @@ ul {
   height: 70%;
 }
 
-.react-slideshow-container, .react-slideshow-fade-wrapper, .react-slideshow-fade-images-wrap, .react-slideshow-fade-images-wrap div{
+.react-slideshow-container, .react-slideshow-wrapper, .images-wrap, .images-wrap div{
   height: 100%;
 }
 

@@ -25,61 +25,63 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center">
                                     <h6 className="display-6 mb-4">FRONT END</h6>
                                 </div>
-                                <div className="d-flex col justify-content-around mb-3">
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/bootstrap.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="Bootstrap"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/css3.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="CSS 3"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/html-5.png" 
-                                        alt="" 
-                                        title="HTML 5"
-                                    />
-                                </div>
-                                <div className="d-flex col justify-content-around mb-3">
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/windows/55/000000/less-logo.png" 
-                                        alt="" 
-                                        title="Less"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/material-ui.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="Material UI"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/react-native.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="React JS y React Native"
-                                    />
-                                </div>
-                                <div className="d-flex col justify-content-around mb-3">
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/windows/48/000000/redux.png" 
-                                        alt="" 
-                                        title="Redux"
-                                    />
+                                <div>
+                                    <div className="d-flex col justify-content-around mb-3">
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/color/48/000000/bootstrap.png" 
+                                            alt="" 
+                                            width="55" 
+                                            height="55" 
+                                            title="Bootstrap"
+                                        />
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/color/48/000000/css3.png" 
+                                            alt="" 
+                                            width="55" 
+                                            height="55" 
+                                            title="CSS 3"
+                                        />
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/color/48/000000/html-5.png" 
+                                            alt="" 
+                                            title="HTML 5"
+                                        />
+                                    </div>
+                                    <div className="d-flex col justify-content-around mb-3">
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/windows/55/000000/less-logo.png" 
+                                            alt="" 
+                                            title="Less"
+                                        />
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/color/48/000000/material-ui.png" 
+                                            alt="" 
+                                            width="55" 
+                                            height="55" 
+                                            title="Material UI"
+                                        />
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/color/48/000000/react-native.png" 
+                                            alt="" 
+                                            width="55" 
+                                            height="55" 
+                                            title="React JS y React Native"
+                                        />
+                                    </div>
+                                    <div className="d-flex col justify-content-around mb-3">
+                                        <img 
+                                            draggable={false} 
+                                            src="https://img.icons8.com/windows/48/000000/redux.png" 
+                                            alt="" 
+                                            title="Redux"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-md-6">
