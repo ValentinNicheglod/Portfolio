@@ -13,7 +13,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
     const [open, setOpen] = useState(false);
 
     return (
-        <>
+        <div className="Tilt card bg-1 p-3 proyect-card">
             <div className="d-flex justify-content-center row" style={{height: '70%'}}>
                 {!smallScreen &&
                     <>
@@ -185,7 +185,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     </button>
                 </div>
             </Modal>
-        </>
+        </div>
     )
 }
 
