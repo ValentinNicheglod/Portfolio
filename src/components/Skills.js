@@ -13,12 +13,12 @@ const Skills = () => {
                     <div className="card w-75 p-5">
                         <div className="row">
                             <div className="col-md-6">
-                                <div className="d-flex justify-content-center">
+                                <div className="d-flex justify-content-center align-items-center h-50">
                                     <img 
                                         draggable={false} 
                                         src="front.svg" 
                                         alt="" 
-                                        style={{width:"70%", aspectRatio: 1/1, margin: '6.3% 0'}}
+                                        style={{width:"70%", aspectRatio: 1/1}}
                                     />
                                 </div>
                                 <hr/>
@@ -83,7 +83,7 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <div className="d-flex justify-content-center">
+                                <div className="d-flex justify-content-center h-50">
                                     <img 
                                         draggable={false} 
                                         src="back.svg" 
