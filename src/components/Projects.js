@@ -44,6 +44,7 @@ const Proyects = ({smallScreen}) => {
                 <div className="row d-flex justify-content-around proyect-card-cont">
                     {
                         projects.map((project, index) => (
+                            <>
                             <ProjectCard
                                 github= {project.github}
                                 img= {project.img}
@@ -55,6 +56,12 @@ const Proyects = ({smallScreen}) => {
                                 state= {project.state}
                                 type= {project.type}
                             />
+                            <div id="preload">
+                            {project.gallery && project.gallery.map(img => (
+                                <img async src={`projects/mockups/${img}.jpg`} alt=""/>
+                            ))}
+                            </div>
+                            </>
                         ))
                     }
                 </div>

@@ -145,11 +145,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     }
                 </div>
             </div>
-            <div id="preload">
-                {gallery && gallery.map((image) => (
-                    <img async src={`projects/mockups/${image}.jpg`} alt=""/>
-                ))}
-            </div>
+            
             <Modal 
                 open={open}
                 onClose={() => setOpen(false)}
@@ -175,8 +171,8 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     >
                         {gallery && gallery.map((image) => (
                             <div className="each-slide">
-                                {/* <div style={{'backgroundImage': `url(projects/mockups/${image}.jpg)`}} /> */}
-                                <img async src={`projects/mockups/${image}.jpg`} alt="no img"/>
+                                <img async src={`projects/mockups/${image}.jpg`} alt="no img" id="preload"/>
+                                <div style={{'backgroundImage': `url(projects/mockups/${image}.jpg)`}} />
                             </div>
                         ))}
                     </Slide>

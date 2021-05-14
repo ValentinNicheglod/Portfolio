@@ -19,7 +19,7 @@ ul {
   list-style-type: none;
 }
 
-div#preload{
+#preload{
   display: none;
 }
 
