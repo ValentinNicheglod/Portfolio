@@ -13,7 +13,7 @@ body::after{
   height:0; 
   overflow:hidden; 
   z-index:-1;
-  content:url(projects/mockups/notatky/inicio.jpg) url(projects/mockups/notatky/login.jpg) url(projects/mockups/notatky/sign-up.jpg) url(projects/mockups/notatky/contra1.jpg);
+  content:url(/public/projects/mockups/notatky/inicio.jpg) url(/public/projects/mockups/notatky/login.jpg) url(/public/projects/mockups/notatky/signup.jpg) url(/public/projects/mockups/notatky/contra1.jpg);
 }
 
 button:focus, a:focus{
