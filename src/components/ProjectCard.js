@@ -145,6 +145,11 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     }
                 </div>
             </div>
+            <div id="preload">
+                {gallery && gallery.map((image) => (
+                    <img src={`projects/mockups/${image}.jpg`} alt=""/>
+                ))}
+            </div>
             <Modal 
                 open={open}
                 onClose={() => setOpen(false)}

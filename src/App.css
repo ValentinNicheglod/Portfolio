@@ -6,16 +6,6 @@ html, body {
   background-color: #191970;
 }
 
-/* Precarga de imágenes */
-body::after{
-  position:absolute; 
-  width:0; 
-  height:0; 
-  overflow:hidden; 
-  z-index:-1;
-  content:url(/public/projects/mockups/notatky/inicio.jpg) url(/public/projects/mockups/notatky/login.jpg) url(/public/projects/mockups/notatky/signup.jpg) url(/public/projects/mockups/notatky/contra1.jpg);
-}
-
 button:focus, a:focus{
   outline: none!important;
   box-shadow: none!important;
@@ -27,6 +17,10 @@ img{
 
 ul {
   list-style-type: none;
+}
+
+div#preload{
+  display: none;
 }
 
 .wrapper {
