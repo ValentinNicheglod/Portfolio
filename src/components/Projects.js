@@ -58,7 +58,7 @@ const Proyects = ({smallScreen}) => {
                             />
                             <div id="preload">
                             {project.gallery && project.gallery.map(img => (
-                                <img async src={`projects/mockups/${img}.jpg`} alt=""/>
+                                <img src={`projects/mockups/${img}.jpg`} alt=""/>
                             ))}
                             </div>
                             </>

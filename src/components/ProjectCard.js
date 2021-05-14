@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import Tilt from 'react-tilt';
 import Modal from '@material-ui/core/Modal';
-import { Slide } from 'react-slideshow-image';
+import { Slide, Fade } from 'react-slideshow-image';
 
 const laptop = "M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z";
 const smartphone = "M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z";
@@ -151,7 +151,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                 onClose={() => setOpen(false)}
             >
                 <div className="slide-container h-100">
-                    <Slide 
+                    {/* <Slide 
                         autoplay={false} 
                         className="h-100"
                         nextArrow={
@@ -175,7 +175,33 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                 <div style={{'backgroundImage': `url(projects/mockups/${image}.jpg)`}} />
                             </div>
                         ))}
-                    </Slide>
+                    </Slide> */}
+                    <Fade 
+                        autoplay={false} 
+                        className="h-100"
+                        nextArrow={
+                            <div title="Siguiente">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                                </svg>
+                            </div>
+                        }
+                        prevArrow={
+                            <div title="Anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                                </svg>
+                            </div>
+                        }
+                    >
+                        {gallery && gallery.map((image_path) => (
+                            <div className="each-fade">
+                                <div className="image-container">
+                                    <img async src={`projects/mockups/${image_path}.jpg`} alt="no img" />
+                                </div>
+                            </div>
+                        ))}
+                    </Fade>
                     <button 
                         className="btn" 
                         onClick={() => setOpen(false)} 
