@@ -176,7 +176,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                             </div>
                         ))}
                     </Slide> */}
-                    <Fade 
+                    {/* <Fade 
                         autoplay={false} 
                         className="h-100"
                         nextArrow={
@@ -197,11 +197,20 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                         {gallery && gallery.map((image_path) => (
                             <div className="each-fade">
                                 <div className="image-container">
-                                    <img async src={`projects/mockups/${image_path}.jpg`} alt="no img" />
+                                    <img src={`projects/mockups/${image_path}.jpg`} alt="no img" />
                                 </div>
                             </div>
                         ))}
-                    </Fade>
+                    </Fade> */}
+                    <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+                        <div className="carousel-inner">
+                            {gallery && gallery.map((image_path) => (
+                                <div className="carousel-item active">
+                                    <img className="d-block w-100" src={`projects/mockups/${image_path}.jpg`} alt=""/>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                     <button 
                         className="btn" 
                         onClick={() => setOpen(false)} 
