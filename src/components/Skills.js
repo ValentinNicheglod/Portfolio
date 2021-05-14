@@ -128,7 +128,7 @@ const Skills = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="d-flex justify-content-center row">
+                            <div className="d-flex justify-content-center row mt-4">
                                 <hr/>
                                 <h6 className="display-6 d-flex justify-content-center mb-4 ">
                                     LENGUAJES Y UTILIDADES
