@@ -202,11 +202,11 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                             </div>
                         ))}
                     </Fade> */}
-                    <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
-                        <div className="carousel-inner">
-                            {gallery && gallery.map((image_path) => (
-                                <div className="carousel-item active">
-                                    <img className="d-block w-100" src={`projects/mockups/${image_path}.jpg`} alt=""/>
+                    <div id="carouselExampleSlidesOnly" className="carousel slide h-100" data-ride="carousel">
+                        <div className="carousel-inner h-100">
+                            {gallery && gallery.map((image_path, i) => (
+                                <div className={i === 0 ? "carousel-item active" : "carousel-item"}>
+                                    <img className="d-block h-100 image-slider" src={`projects/mockups/${image_path}.jpg`} alt=""/>
                                 </div>
                             ))}
                         </div>

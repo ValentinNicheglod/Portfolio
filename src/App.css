@@ -118,6 +118,11 @@ ul {
   align-items: center;
 }
 
+.image-slider{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* .each-fade div{
   
   background-repeat: no-repeat;
