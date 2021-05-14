@@ -175,7 +175,8 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     >
                         {gallery && gallery.map((image) => (
                             <div className="each-slide">
-                                <div style={{'backgroundImage': `url(projects/mockups/${image}.jpg)`}} />
+                                {/* <div style={{'backgroundImage': `url(projects/mockups/${image}.jpg)`}} /> */}
+                                <img async src={`projects/mockups/${image}.jpg`} alt="no img"/>
                             </div>
                         ))}
                     </Slide>
