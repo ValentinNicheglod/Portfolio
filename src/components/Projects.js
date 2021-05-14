@@ -9,7 +9,7 @@ const projects = [
         gallery: ['mono/inicio',  'mono/catalogo', 'mono/catalogo-filtro'],
         github: 'https://github.com/ValentinNicheglod/MONO',
         page: 'https://valentinnicheglod.github.io/MONO-/',
-        type: 'Aplicación'
+        type: 'Web'
     },
     {
         name: 'NotatKy',
@@ -27,7 +27,7 @@ const projects = [
         gallery: null,
         github: 'https://github.com/ValentinNicheglod/treebank',
         page: 'https://drive.google.com/file/d/1ZBBJfk34kLWOKT6QSCeHXc1n09jh6v0S/view',
-        type: 'Web'
+        type: 'Aplicación'
     }
 ];
 

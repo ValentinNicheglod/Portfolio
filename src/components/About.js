@@ -4,7 +4,7 @@ import Slider from "react-slideview";
 const images = [1, 2, 3, 4, 5];
 const info = [
     'Me llamo Valentín Nicheglod, vivo en Uruguay, en la ciudad de Paysandú, tengo 20 años y mi vida gira en torno a cuatro pasiones: la arquitectura 👷🏼‍♂️, la aviación ✈️, el diseño 🖊️ y por supuesto la programación 👨🏻‍💻.',
-    'Soy desarrollador web full stack jr con más de seis meses de experiencia programando en JavaScript, también he desarrollado aplicaciones moviles en react native, si tengo que elegir entre front end y back end, prefiero el front end, pero esto no quita que disfrute trabajar en back end.',
+    'Soy desarrollador web full stack con más de diez meses de experiencia programando en JavaScript, también he desarrollado aplicaciones moviles en react native, si tengo que elegir entre front end y back end, prefiero el front end, pero esto no quita que disfrute trabajar en back end.',
     'Siempre estoy en busca de expandir mis conocimientos, me encanta aprender y afrontarme a nuevos desafios, es algo que considero fundamental para el desarrollo de cualquier persona.',
     'Me considero una persona muy atenta a los detalles, y esto me ayuda al momento de pensar y diseñar, disfruto trabajando en equipos proactivos y organizados.'
 ];

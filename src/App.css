@@ -6,6 +6,11 @@ html, body {
   background-color: #191970;
 }
 
+button:focus, a:focus{
+  outline: none!important;
+  box-shadow: none!important;
+}
+
 img{
   pointer-events: none;
 }
@@ -171,24 +176,58 @@ ul {
 }
 
 .proyect-btn{
-  background-color: transparent;
+  background-color: #F9A826;
   border-width: 2px;
   border-radius: 25px;
-  border-color: #37BFA7;
-  color: #37BFA7;
-  width: 30%;
-  height: 43px;
+  border-color: #F9A826;
+  color: #FFF;
+  width: 50px;
+  height: 50px;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s, border-radius 1.5s;
+  position: relative;
 }
 
 .proyect-btn:hover{
-  background-color: #37BFA7;
-  border-width: 2px;
-  border-radius: 25px;
-  border-color: #37BFA7;
-  color: #FFFF;
-  width: 30%;
-  height: 43px;
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #F9A826;
+  color: #F9A826;
+  width: 35%;
+  height: 50px;
+}
+
+.proyect-btn svg{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s;
+  color: #FFF;
+}
+
+.proyect-btn:hover svg{
+  left: 10px;
+  transform: translateX(0);
+  color: #F9A826;
+}
+
+.proyect-btn p{
+  position: absolute;
+  left: 40%;
+  transform: translateX(50%);
+  transition: all .5s, display 2s;
+  display: none;
+  color: #191970;
+}
+
+.proyect-btn:hover p{
+  transform: translateX(0);
+  color: #F9A826;
+  left: 33%;
+  display: inline;
 }
 
 .proyect-card-cont{
@@ -240,34 +279,38 @@ ul {
 
 .contact{
   height: 50%;
+  position: relative;
 }
 
 .contact-btn{
   background-color: transparent;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 25px;
-  border-color: #37BFA7;
-  color: #37BFA7;
+  border-color: #F9A826;
+  color: #F9A826;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 20px;
-  width: 50%;
+  width: 30%;
+  transition: all .5s, border-radius 1.5s;
 }
 
 .contact-btn:hover{
-  background-color: #37BFA7;
-  border-width: 3px;
-  border-radius: 25px;
-  border-color: #37BFA7;
+  background-color: #F9A826;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #F9A826;
   color: #FFFF;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 20px;
+  width: 35%;
 }
 
 .contact-card{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  margin-top: 6%;
+  position: absolute;
+  bottom: -15vh;
   padding: 1rem;
 }
 
@@ -284,6 +327,7 @@ ul {
 
 .social-cont{
   width: 50%;
+  margin-bottom: 15vh;
 }
 
 .box{
@@ -296,6 +340,11 @@ ul {
 
 .max-height{
   height: 100%;
+}
+
+.gallery-count{
+  position: fixed;
+  top: 10px;
 }
 
 /* RESPONSIVE */
