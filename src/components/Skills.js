@@ -59,22 +59,12 @@ const Skills = () => {
                                         />
                                         <img 
                                             draggable={false} 
-                                            src="https://img.icons8.com/color/48/000000/material-ui.png" 
-                                            alt="" 
-                                            width="55" 
-                                            height="55" 
-                                            title="Material UI"
-                                        />
-                                        <img 
-                                            draggable={false} 
                                             src="https://img.icons8.com/color/48/000000/react-native.png" 
                                             alt="" 
                                             width="55" 
                                             height="55" 
                                             title="React JS y React Native"
                                         />
-                                    </div>
-                                    <div className="d-flex col justify-content-around mb-3">
                                         <img 
                                             draggable={false} 
                                             src="https://img.icons8.com/windows/48/000000/redux.png" 

@@ -6,6 +6,16 @@ html, body {
   background-color: #191970;
 }
 
+/* Precarga de imágenes */
+body::after{
+  position:absolute; 
+  width:0; 
+  height:0; 
+  overflow:hidden; 
+  z-index:-1;
+  content:url(projects/mockups/notatky/inicio.jpg) url(projects/mockups/notatky/login.jpg) url(projects/mockups/notatky/sign-up.jpg) url(projects/mockups/notatky/contra1.jpg);
+}
+
 button:focus, a:focus{
   outline: none!important;
   box-shadow: none!important;
@@ -48,7 +58,7 @@ ul {
 }
 
 .bg-5{
-  background: linear-gradient(35deg, #ac1bac 0%, #4582bb 100%);
+  background: linear-gradient(180deg, #191970,#387AC4);
 }
 
 .bg-6{
@@ -57,6 +67,10 @@ ul {
 
 .bg-7{
   background-color: #D3D2DA;
+}
+
+.bg-8{
+  background-color: #ffae2d;
 }
 
 .co-1{
@@ -181,8 +195,8 @@ ul {
   border-radius: 25px;
   border-color: #F9A826;
   color: #FFF;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 40px;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -193,11 +207,11 @@ ul {
 
 .proyect-btn:hover{
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 5px 25px 25px 5px;
   border-color: #F9A826;
   color: #F9A826;
   width: 35%;
-  height: 50px;
+  height: 40px;
 }
 
 .proyect-btn svg{
@@ -216,18 +230,20 @@ ul {
 
 .proyect-btn p{
   position: absolute;
-  left: 40%;
+  left: -30%;
   transform: translateX(50%);
   transition: all .5s, display 2s;
   display: none;
+  opacity: 0;
   color: #191970;
 }
 
 .proyect-btn:hover p{
   transform: translateX(0);
   color: #F9A826;
-  left: 33%;
+  left: 37%;
   display: inline;
+  opacity: 1;
 }
 
 .proyect-card-cont{
