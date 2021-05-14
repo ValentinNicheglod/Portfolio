@@ -112,28 +112,29 @@ ul {
   height: 100%;
 }
 
-.each-slide{
+.each-fade{
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.each-slide div{
-  width: 100%;
-  height: 95%;
+/* .each-fade div{
+  
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-color: #dddddd;
-}
+} */
 
 .default-nav{
   margin: 10px;
 }
 
-.slide-container{
+.image-container{
   background-color: #dddddd;
+  width: 100%;
+  height: 100%;
 }
 
 .card{
