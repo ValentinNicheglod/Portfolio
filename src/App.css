@@ -123,6 +123,11 @@ ul {
   margin-right: auto;
 }
 
+.carousel-item{
+  background-color: #DEDEDE;
+  height: 100%;
+}
+
 /* .each-fade div{
   
   background-repeat: no-repeat;

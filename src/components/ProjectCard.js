@@ -202,7 +202,12 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                             </div>
                         ))}
                     </Fade> */}
-                    <div id="carouselExampleSlidesOnly" className="carousel slide h-100" data-ride="carousel">
+                    <div id="carouselExampleSlidesOnly" className="carousel slide h-100" data-ride={false} data-interval={false}>
+                    <ol class="carousel-indicators">
+                        {gallery && gallery.map((image_path, i) => (
+                            <li data-target="#carouselExampleIndicators" data-slide-to={i}></li>
+                        ))}
+                    </ol>
                         <div className="carousel-inner h-100">
                             {gallery && gallery.map((image_path, i) => (
                                 <div className={i === 0 ? "carousel-item active" : "carousel-item"}>
@@ -210,6 +215,14 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                 </div>
                             ))}
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                     <button 
                         className="btn" 
