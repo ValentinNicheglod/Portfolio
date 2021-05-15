@@ -25,7 +25,11 @@ const About = () => {
                                 {paragraph}
                             </p>
                         ))
-                    }
+                    }                    
+                </div>
+                <div className="cv-btn-cont">
+                    <button className="btn cv-btn">Ver curriculúm</button>
+                    <div className="cv-btn-line"/>
                 </div>
             </div>
             <div className="col-md-5 col-sm-6 d-flex justify-content-center align-items-center pb-5 slider-cont">
