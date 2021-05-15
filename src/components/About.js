@@ -28,7 +28,14 @@ const About = () => {
                     }                    
                 </div>
                 <div className="cv-btn-cont">
-                    <button className="btn cv-btn">Ver curriculúm</button>
+                    <a 
+                        className="btn cv-btn" 
+                        href="https://drive.google.com/file/d/1aQuwdbBWLX1Ju6ghsN5kB6Pwtec2Dc2c/view?usp=sharing" 
+                        target="_blank" 
+                        rel="noreferrer noopener"
+                    >
+                            Ver curriculúm
+                    </a>
                     <div className="cv-btn-line"/>
                 </div>
             </div>
@@ -51,6 +58,16 @@ const About = () => {
                         }
                     </Slider>
                 </div>
+            </div>
+            <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">
+                <a 
+                    className="btn contact-btn cv-btn-mobile d-flex justify-content-center W-100"
+                    href="https://drive.google.com/file/d/1aQuwdbBWLX1Ju6ghsN5kB6Pwtec2Dc2c/view?usp=sharing" 
+                    target="_blank" 
+                    rel="noreferrer noopener"
+                >
+                    VER CURRíCULUM
+                </a>
             </div>
         </div>
     )
