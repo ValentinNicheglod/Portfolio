@@ -663,7 +663,20 @@ ul {
   }
 
   .cv-btn-cont-mobile{
-    display: flex;
+    display: flex!important;
+  }
+  
+  .slider-cont{
+    padding-bottom: 0!important;
+  }
+  
+  .greeting-text h1{
+    font-size: 10vw!important;
+  }
+
+  .greeting-text h6{
+    font-size: 5vw!important;
+    color: snow;
   }
 
   /* ================== */
@@ -677,9 +690,7 @@ ul {
     padding-right: 0px;
   }
 
-  .slider-cont{
-    height: 50%;
-  }
+  
   
   .slider{
     height: 100%;
@@ -717,4 +728,20 @@ ul {
   .box{
     box-sizing: border-box;
   } */
+}
+
+@media screen and (max-width: 400px) {
+  /* .contact-btn{
+    margin-top: .2vh;
+    margin-bottom: 1vh;
+  } */
+
+  .contact{
+    height: 70%;
+  }
+
+  .legend{
+    padding-top: 5%;
+    height: 35%!important;
+  }
 }

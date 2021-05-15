@@ -25,7 +25,7 @@ const GreetingsMobile = () => {
                 </h6>
             </div>
         </div> */
-        <div className="bg-white h-100 row max-height m-0 responsive-cont">
+        <div className="bg-8 h-100 row max-height m-0 responsive-cont">
             <div className="d-flex justify-content-center align-items-center">
                 <div>
                     <div className="h-50 p-5 d-flex justify-content-center">
@@ -41,9 +41,9 @@ const GreetingsMobile = () => {
                             />
                         </div>
                     </div>
-                    <div className="h-50 p-2 row d-flex align-items-center mt-5">
+                    <div className="h-50 p-2 row d-flex align-items-center mt-5 greeting-text">
                         <h1 className="display-3">
-                            Hola! Soy <b><span className="co-1">Valentín</span></b>,
+                            Hola! Soy <b><span className="co-2 name">Valentín</span></b>,
                         </h1>
                         <h6 className="display-6">
                             Desarrollador Web Full Stack
