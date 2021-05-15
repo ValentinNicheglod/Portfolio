@@ -47,7 +47,7 @@ const Slider = ({images}) => {
         next={next}
         previous={previous}
       >
-        <CarouselIndicators images={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
+        <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
