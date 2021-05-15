@@ -122,10 +122,12 @@ ul {
 
 .image-slider{
   margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    right: 0;
-    left: 0;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
 }
 
 .carousel-item{
@@ -419,7 +421,6 @@ ul {
   }
 
   .proyect-card{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     aspect-ratio: 1/1;
     width: 80%;
     cursor: pointer;
@@ -428,6 +429,34 @@ ul {
 
   .decoration{
     visibility: hidden;
+  }
+
+  .proyect-btn{
+    width: 50px;
+    height: 50px;
+  }
+
+  .proyect-btn:hover{
+    background-color: #d08c1e;
+    border-width: 2px;
+    border-radius: 25px;
+    border-color: #d08c1e;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .proyect-btn:hover svg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .5s;
+    color: #FFF;
   }
 
   .absolute{
@@ -464,6 +493,28 @@ ul {
 
   .social-cont{
     width: 100%;
+    margin-bottom: 3%;
+  }
+
+  .contact-title{
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 100vw;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-text-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-text-cont p {
+    font-size: 4vw;
+    padding: 2%;
+    text-align: center;
   }
 
   .max-height{
@@ -471,12 +522,12 @@ ul {
   }
 
   .contact-btn{
-    background-color: #37BFA7;
-    border-width: 1px;
-    margin-top: 8%;
-    margin-bottom: 8%;
+    background-color: #212529;
+    border-width: 2px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     border-radius: 25px;
-    border-color: #37BFA7;
+    border-color: #FFFF;
     color: #FFFF;
     font-weight: 300;
     letter-spacing: 1px;
@@ -486,11 +537,13 @@ ul {
   }
 
   .contact-btn:hover{
-    background-color: #FFFF;
-    border-width: 1px;
+    background-color: #000;
+    border-width: 2px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     border-radius: 25px;
-    border-color: #37BFA7;
-    color: #37BFA7;
+    border-color: #FFFF;
+    color: #FFFF;
     font-weight: 300;
     letter-spacing: 1px;
     font-size: 15px;
@@ -500,26 +553,6 @@ ul {
 
   .title{
     padding-bottom: 10px;
-  }
-
-  .proyect-btn{
-    background-color: transparent;
-    border-width: 1px;
-    border-radius: 25px;
-    border-color: #37BFA7;
-    color: #37BFA7;
-    width: 40%;
-    height: fit-content;
-  }
-  
-  .proyect-btn:hover{
-    background-color: #37BFA7;
-    border-width: 3px;
-    border-radius: 25px;
-    border-color: #37BFA7;
-    color: #FFFF;
-    width: 40%;
-    height: fit-content;
   }
 
   .legend p {
@@ -546,6 +579,15 @@ ul {
   .clip{
     height:inherit;
 
+  }
+
+  .image-slider{
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    height: auto;
   }
 
   /* ================== */

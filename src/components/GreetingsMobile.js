@@ -26,9 +26,9 @@ const GreetingsMobile = () => {
             </div>
         </div> */
         <div className="bg-white h-100 row max-height m-0 responsive-cont">
-            <div className="justify-content-center align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
                 <div>
-                    <div className="h-50 p-5">
+                    <div className="h-50 p-5 d-flex justify-content-center">
                         <div className="h-25 bg-2 d-flex justify-content-center align-items-center logo">
                             <img 
                                 src="logo-white.png" 

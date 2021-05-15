@@ -61,12 +61,19 @@ const Contact = ({smallScreen}) => {
                 </div>
                 {
                     smallScreen
-                        ? <a 
+                        ? <div className="contact-text-cont">
+                        <h6 className="white contact-title">
+                                ¿QUIERES COMUNICARTE CONMIGO?
+                            </h6>
+                            <p className="white w-100 m-0">
+                                Estoy dispuesto a recibir propuestas laborales o realizar colaboraciones en algún proyecto.
+                            </p><a 
                             href="mailto:nicheglod69@gmail.com" 
                             className="btn contact-btn"
                         >
                             ENVÍAME UN CORREO
                         </a>
+                        </div>
                         : <div className="card h-50 w-75 bg-3 d-flex justify-content-around align-items-center contact-card">
                             <h3 className="display-6 white contact-title">
                                 ¿QUIERES COMUNICARTE CONMIGO?

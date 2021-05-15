@@ -33,7 +33,7 @@ const Slider = ({images}) => {
         // onExiting={() => setAnimating(true)}
         // onExited={() => setAnimating(false)}
       >
-        <img src={`projects/mockups/${path}.jpg`} alt="" height="100%" className="image-slider"/>
+        <img src={`projects/mockups/${path}.jpg`} alt=""className="image-slider"/>
         {/* <img src={path} alt="" height="100%" className="image-slider"/> */}
       </CarouselItem>
     ));
