@@ -28,7 +28,7 @@ const Slider = ({images}) => {
     setActiveIndex(newIndex);
   }
 
-  const slides = images.map((path, i) => {
+  const slides = images && images.map((path, i) => {
     return (
       <CarouselItem
         key={i}
