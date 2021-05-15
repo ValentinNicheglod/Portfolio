@@ -12,7 +12,7 @@ const info = [
 const About = () => {
     return (
         <div className="bg-1 row m-0 box responsive-cont">
-            <div className="col-md-7 col-sm-6 p-4 box">
+            <div className="col-md-7 col-sm-6 p-4 box fit-content">
                 <div>
                     <h1 className="display-3 white title">
                         Sobre mi...

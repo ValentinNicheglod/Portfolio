@@ -248,6 +248,8 @@ ul {
 
 .proyect-btn-cont{
   width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .proyect-btn svg{
@@ -427,10 +429,9 @@ ul {
   }
 
   .proyect-card{
-    aspect-ratio: 1/1;
-    width: 80%;
+    width: 100%;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: .5rem;
   }
 
   .decoration{
@@ -572,6 +573,10 @@ ul {
     font-size: 1.2rem;
   }
 
+  .slider{
+    width: 100%;
+  }
+
   .slider-items img{
     width: 100%;
   }
@@ -579,6 +584,10 @@ ul {
   .responsive-cont{
     display: flex;
     flex-direction: row;
+    height: fit-content;
+  }
+
+  .fit-content{
     height: fit-content;
   }
 
