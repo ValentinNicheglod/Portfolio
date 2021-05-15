@@ -34,7 +34,7 @@ const SkillsMobile = () => {
                             <div className="card p-4 d-flex justify-content-center mb-2">
                                 <div className="d-flex justify-content-between align-items-end col mb-3">
                                     <img 
-                                        draggable={false} src={`${card.img}.png`} 
+                                        draggable={false} src={`${card.img}.svg`} 
                                         alt="" style={{width:"50%", aspectRatio: 1/1}}
                                     />
                                     <h4 className="display-4 m-0">{card.name}</h4>

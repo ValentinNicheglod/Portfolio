@@ -23,7 +23,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
 
     return (
         <div className="Tilt card bg-3 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
-            <div className="d-flex justify-content-center row" style={{height: '70%'}}>
+            <div className="d-flex justify-content-center row" style={smallScreen ? {} : {height: '70%'}}>
                 {!smallScreen &&
                     <>
                         <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
@@ -105,11 +105,12 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     <h6 className="display-6 d-flex justify-content-center align-items-start white">
                         {name}
                     </h6>
+                    {smallScreen && <hr style={{color: '#f9a826', margin: '10px 0 2px 0', height: '2px'}}/>}
                 </div>
                 <div className="d-flex justify-content-around">
                     {
                         github &&
-                            <div>
+                            <div className="proyect-btn-cont">
                                 <a 
                                     className="proyect-btn btn" 
                                     href={github} 
@@ -127,7 +128,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     }
                     {
                         gallery &&
-                            <div>
+                            <div className="proyect-btn-cont">
                                 <button 
                                     className="proyect-btn btn" 
                                     onClick={() => setOpen(true)}
@@ -144,7 +145,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     }
                     {
                         page &&
-                            <div>
+                            <div className="proyect-btn-cont">
                                 <a 
                                     className="proyect-btn btn" 
                                     href={page} 
