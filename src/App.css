@@ -120,12 +120,30 @@ ul {
 
 .image-slider{
   margin-left: auto;
-  margin-right: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 
 .carousel-item{
   background-color: #DEDEDE;
   height: 100%;
+}
+
+.carousel-inner{
+  height: 100%;
+}
+
+#modal{
+  background-color: #DEDEDE;
+}
+
+.close-gallery-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
 }
 
 /* .each-fade div{

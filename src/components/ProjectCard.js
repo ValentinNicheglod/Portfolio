@@ -230,9 +230,8 @@ const ProjectCard = ({name, img, state, /* gallery */ github, page, smallScreen,
                     </div> */}
                     <Slider images={gallery}/>
                     <button 
-                        className="btn" 
+                        className="btn close-gallery-btn" 
                         onClick={() => setOpen(false)} 
-                        style={{position: 'absolute', top: '10px', right: '10px'}}
                         title="Cerrar galería"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="red" className="bi bi-x" viewBox="0 0 16 16">
