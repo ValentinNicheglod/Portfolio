@@ -34,7 +34,7 @@ const Slider = ({images}) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <img async src={`projects/mockups/${path}.jpg`} alt="" height="100%" className="image-slider"/>
+        <img src={`projects/mockups/${path}.jpg`} alt="" height="100%" className="image-slider"/>
         {/* <img src={path} alt="" height="100%" className="image-slider"/> */}
       </CarouselItem>
     );
@@ -51,7 +51,7 @@ const Slider = ({images}) => {
       >
         <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
-        <CarouselControl direction="prev" directionText=" " onClickHandler={previous} cssModule={{height: '3rem', width: '3rem'}}/>
+        <CarouselControl direction="prev" directionText=" " onClickHandler={previous}/>
         <CarouselControl direction="next" directionText=" " onClickHandler={next} />
       </Carousel>
   );
