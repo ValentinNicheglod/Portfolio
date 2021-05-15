@@ -67,7 +67,7 @@ const Contact = ({smallScreen}) => {
                         >
                             ENVÍAME UN CORREO
                         </a>
-                        : <div className="card h-50 w-75 bg-1 d-flex justify-content-around align-items-center contact-card">
+                        : <div className="card h-50 w-75 bg-3 d-flex justify-content-around align-items-center contact-card">
                             <h3 className="display-6 white contact-title">
                                 ¿QUIERES COMUNICARTE CONMIGO?
                             </h3>

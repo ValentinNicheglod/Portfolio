@@ -27,18 +27,16 @@ const Slider = ({images}) => {
     setActiveIndex(newIndex);
   }
 
-  const slides = images && images.map((path, i) => {
-    return (
+  const slides = images && images.map((path, i) => (
       <CarouselItem
         key={i}
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
+        // onExiting={() => setAnimating(true)}
+        // onExited={() => setAnimating(false)}
       >
         <img src={`projects/mockups/${path}.jpg`} alt="" height="100%" className="image-slider"/>
         {/* <img src={path} alt="" height="100%" className="image-slider"/> */}
       </CarouselItem>
-    );
-  });
+    ));
 
   return (
       <Carousel

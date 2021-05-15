@@ -1,8 +1,5 @@
-/* eslint-disable no-undef */
 import React, { useState } from 'react';
-// import Tilt from 'react-tilt';
 import Modal from '@material-ui/core/Modal';
-// import { Slide, Fade } from 'react-slideshow-image';
 import Slider from './Slider';
 
 const laptop = "M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z";
@@ -25,7 +22,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
     }
 
     return (
-        <div className="Tilt card bg-1 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
+        <div className="Tilt card bg-3 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
             <div className="d-flex justify-content-center row" style={{height: '70%'}}>
                 {!smallScreen &&
                     <>
@@ -98,7 +95,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                 </div>
             </div>
 
-            {!smallScreen && <hr/>}
+            {!smallScreen && <hr style={{color: '#f9a826'}}/>}
 
             <div 
                 className="row" 
@@ -163,77 +160,6 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                 id="modal"
             >
                 <div className="slide-container h-100">
-                    {/* <Slide 
-                        autoplay={false} 
-                        className="h-100"
-                        nextArrow={
-                            <div title="Siguiente">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" className="bi bi-chevron-compact-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
-                                </svg>
-                            </div>
-                        }
-                        prevArrow={
-                            <div title="Anterior">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" className="bi bi-chevron-compact-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
-                                </svg>
-                            </div>
-                        }
-                    >
-                        {gallery && gallery.map((image) => (
-                            <div className="each-slide">
-                                <img async src={`projects/mockups/${image}.jpg`} alt="no img" id="preload"/>
-                                <div style={{'backgroundImage': `url(projects/mockups/${image}.jpg)`}} />
-                            </div>
-                        ))}
-                    </Slide> */}
-                    {/* <Fade 
-                        autoplay={false} 
-                        className="h-100"
-                        nextArrow={
-                            <div title="Siguiente">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" className="bi bi-chevron-compact-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
-                                </svg>
-                            </div>
-                        }
-                        prevArrow={
-                            <div title="Anterior">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="grey" className="bi bi-chevron-compact-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
-                                </svg>
-                            </div>
-                        }
-                    >
-                        {gallery && gallery.map((image_path) => (
-                            <div className="each-fade">
-                                <div className="image-container">
-                                    <img src={`projects/mockups/${image_path}.jpg`} alt="no img" />
-                                </div>
-                            </div>
-                        ))}
-                    </Fade> */}
-                    {/* <div id="carousel-slide" className="carousel slide h-100" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        {gallery && gallery.map((image_path, i) => (
-                            <li key={i} data-target="#carousel-slide" data-slide-to={i}></li>
-                        ))}
-                    </ol>
-                        <div className="carousel-inner h-100">
-                            {gallery && gallery.map((image_path, i) => (
-                                <div className={i === 0 ? "carousel-item active" : "carousel-item"} key={i}>
-                                    <img className="d-block h-100 image-slider" src={`projects/mockups/${image_path}.jpg`} alt=""/>
-                                </div>
-                            ))}
-                        </div>
-                        <a className="carousel-control-prev" href="#carousel-slide" role="button" data-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a className="carousel-control-next" href="#carousel-slide" role="button" data-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
-                    </div> */}
                     <Slider images={gallery}/>
                     <button 
                         className="btn close-gallery-btn" 
