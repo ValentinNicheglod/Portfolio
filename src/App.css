@@ -135,8 +135,8 @@ ul {
   height: 100%;
 }
 
-#modal{
-  background-color: #DEDEDE;
+#modal, #modal div{
+  background-color: #DEDEDE!important;
 }
 
 .close-gallery-btn{

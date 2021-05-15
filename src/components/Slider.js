@@ -4,7 +4,6 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
 } from 'reactstrap';
 
 const Slider = ({images}) => {
@@ -35,7 +34,7 @@ const Slider = ({images}) => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <img src={`projects/mockups/${path}.jpg`} alt="" height="100%" className="image-slider"/>
+        <img async src={`projects/mockups/${path}.jpg`} alt="" height="100%" className="image-slider"/>
         {/* <img src={path} alt="" height="100%" className="image-slider"/> */}
       </CarouselItem>
     );
@@ -44,13 +43,15 @@ const Slider = ({images}) => {
   return (
       <Carousel
         activeIndex={activeIndex}
+        className="h-100"
+        interval={false}
         next={next}
         previous={previous}
-        className="h-100"
+        slide={true}
       >
         <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
-        <CarouselControl direction="prev" directionText=" " onClickHandler={previous} />
+        <CarouselControl direction="prev" directionText=" " onClickHandler={previous} cssModule={{height: '3rem', width: '3rem'}}/>
         <CarouselControl direction="next" directionText=" " onClickHandler={next} />
       </Carousel>
   );

@@ -13,6 +13,8 @@ const production = "M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.0
 const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type}) => {
 
     const [open, setOpen] = useState(false);
+    const modal = $('#modal:first-child');
+    console.log(modal)
 
     return (
         <div className="Tilt card bg-1 p-3 proyect-card">
