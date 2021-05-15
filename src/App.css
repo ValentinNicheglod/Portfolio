@@ -130,6 +130,7 @@ ul {
   left: 0;
   width: auto;
   height: 100%;
+  transform: scale(1.2);
 }
 
 .carousel-item{
@@ -645,6 +646,7 @@ ul {
     margin-bottom: auto;
     width: 100%;
     height: auto;
+    transform: none;
   }
 
   .proyect-btn-cont{
