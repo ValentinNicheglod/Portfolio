@@ -540,8 +540,11 @@ ul {
   }
 
   .social-cont{
-    width: 100%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #ffff;
     margin-bottom: 3%;
+    padding: 10px;
   }
 
   .contact-title{
@@ -743,5 +746,9 @@ ul {
   .legend{
     padding-top: 5%;
     height: 35%!important;
+  }
+
+  .legend p{
+    padding-bottom: 10px;
   }
 }
