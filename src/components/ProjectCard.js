@@ -24,8 +24,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
     return (
         <div className="Tilt card bg-3 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
             <div className="d-flex justify-content-center row" style={smallScreen ? {} : {height: '70%'}}>
-                {/* !smallScreen &&
-                    <> */}
+                    <div className="row">
                         <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
                             <p>
                                 {
@@ -83,12 +82,11 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                 &nbsp;&nbsp;&nbsp;{state}
                             </p>
                         </div>
-                    {/* </>
-                 */}
+                    </div>
                 <div className="d-flex justify-content-center image">
                     <img 
-                        src={`projects/${img}`}
-                        alt="" 
+                        src={`/projects/${img}`}
+                        alt=""
                         style={smallScreen ? {aspectRatio: 1/1, width: '150px', maxHeight: '150px'} : {width:"90%", aspectRatio: 1/1}}
                         draggable={false}
                     />

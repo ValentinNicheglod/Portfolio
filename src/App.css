@@ -682,6 +682,33 @@ ul {
     color: snow;
   }
 
+  .p-info{
+    width: 50%;
+  }
+
+  .skill-mobile-cont-1{
+    position: relative;
+    width: 55%;
+  }
+  
+  .skill-mobile-cont-1 h6{
+    position: absolute;
+    transform: rotate(270deg);
+    bottom: 60px;
+    left: -80px;
+    color: #f8f8f8;
+    letter-spacing: .4mm;
+  }
+
+  .skill-mobile-cont-2{
+    width: 45%;
+  }
+
+  .skill-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   /* ================== */
   
 /*   .side{
