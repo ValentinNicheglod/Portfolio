@@ -6,8 +6,6 @@ html, body {
   background-color: #191970;
 }
 
-
-
 button:focus, a:focus{
   outline: none!important;
   box-shadow: none!important;
@@ -239,7 +237,7 @@ ul {
 }
 
 .proyect-btn:hover{
-  background-color: transparent;
+  background-color: #F9A8264D;
   border-radius: 5px 25px 25px 5px;
   border-color: #F9A826;
   color: #F9A826;
@@ -444,6 +442,17 @@ ul {
   display: none!important;
 }
 
+.p-info p{
+  background-color: #F9A8264D;
+  color: #F9A826;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: 2px solid #F9A826;
+  font-family: 'Rubik';
+  display: flex;
+  align-items: center;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
@@ -523,11 +532,6 @@ ul {
     /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'Work Sans', sans-serif;
     margin: 0px;
-  }
-
-  .p-info{
-    /* border-right-color: rgb(88, 88, 88); */
-    height: 20%;
   }
 
   .image{
@@ -684,7 +688,7 @@ ul {
 
   .p-info{
     width: 50%;
-  }
+  } 
 
   .skill-mobile{
     min-height: 270px;
@@ -699,9 +703,10 @@ ul {
   }
 
   .skill-title{
-    background-color: #FFFF;
+    background-color: #F9A8264D;
     border-radius: 25px;
-    height: 35px;
+    height: 40px;
+    border: 2px solid #F9A826;
     display: flex;
     align-items: center;
     padding: 10px 25px 10px 10px;
@@ -716,6 +721,23 @@ ul {
     font-size: 25px;
     font-weight: 400;
     font-family: 'Rubik';
+    color: #F9A826;
+  }
+
+  .card-icon{
+    background-color: #F9A826;
+    border-radius: 25px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .card-icon img{
+    filter: invert(1);
+    transform: scale(.9);
   }
 
   .rubik{

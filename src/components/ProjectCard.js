@@ -31,8 +31,8 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     type === 'Web' 
                                     ? <svg 
                                         xmlns="http://www.w3.org/2000/svg" 
-                                        width="16" 
-                                        height="16" 
+                                        width="20" 
+                                        height="20" 
                                         fill="currentColor" 
                                         className="bi bi-laptop" 
                                         viewBox="0 0 16 16"
@@ -41,8 +41,8 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     </svg>
                                     : <svg 
                                         xmlns="http://www.w3.org/2000/svg" 
-                                        width="16" 
-                                        height="16" 
+                                        width="20" 
+                                        height="20" 
                                         fill="currentColor" 
                                         className="bi bi-phone" 
                                         viewBox="0 0 16 16"
@@ -60,8 +60,8 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     state === 'Finalizado'
                                     ? <svg 
                                         xmlns="http://www.w3.org/2000/svg" 
-                                        width="16" 
-                                        height="16" 
+                                        width="20" 
+                                        height="20" 
                                         fill="currentColor" 
                                         className="bi bi-check2" 
                                         viewBox="0 0 16 16"
@@ -70,8 +70,8 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     </svg>
                                     : <svg 
                                         xmlns="http://www.w3.org/2000/svg" 
-                                        width="16" 
-                                        height="16" 
+                                        width="20" 
+                                        height="20" 
                                         fill="currentColor" 
                                         className="bi bi-braces" 
                                         viewBox="0 0 16 16"
@@ -85,7 +85,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     </div>
                 <div className="d-flex justify-content-center image">
                     <img 
-                        src={`/projects/${img}`}
+                        src={`projects/${img}`}
                         alt=""
                         style={smallScreen ? {aspectRatio: 1/1, width: '150px', maxHeight: '150px'} : {width:"90%", aspectRatio: 1/1}}
                         draggable={false}

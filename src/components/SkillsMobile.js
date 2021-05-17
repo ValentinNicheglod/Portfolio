@@ -40,11 +40,7 @@ const SkillsMobile = () => {
                 <div className="d-flex justify-content-center align-items-center row">
                     {
                         skills.map(card => (
-                            <div 
-                                className="card p-3 d-flex justify-content-center mb-2 skill-mobile" 
-                                //style={{background: `linear-gradient(315deg, ${card.colors[0]}, ${card.colors[1]}`}}
-                                style={{backgroundImage: `url(${card.background}-bg.jpg`}}
-                            >
+                            <div className="card p-3 bg-3 d-flex justify-content-center mb-2 skill-mobile">
                                 <div className="row">
                                     <div className="d-flex justify-content-center align-items-center row skill-mobile-cont-1">
                                         
@@ -57,13 +53,16 @@ const SkillsMobile = () => {
                                     <div className="skill-mobile-cont-2">
                                         <div className="skill-title">
                                             <h6 className="display-6 m-0">{card.name}</h6>
-                                            <img alt="" src={card.icon} />   
+                                            <div className="card-icon">
+                                                <img alt="" src={card.icon}/> 
+                                            </div>
+                                              
                                         </div>
-                                        <ul className="p-0">
+                                        <ul className="p-0 white">
                                             {
                                                 card.skills.map(skill => (
                                                     <li className="list-item">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5A38FD" className="bi bi-check2" viewBox="0 0 16 16">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F9A826" className="bi bi-check2" viewBox="0 0 16 16">
                                                             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                                         </svg>
                                                         &nbsp;{skill}
