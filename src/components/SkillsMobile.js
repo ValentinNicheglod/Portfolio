@@ -20,7 +20,7 @@ const skills = [
         img: 'other',
         skills: ['Git', 'GitHub', 'JavaScript', 'JSON','NPM', 'TypeScript', 'Webpack'],
         colors: ['#ffc107', '#ff5722'],
-        background: 'purple'
+        background: 'pink'
     }
 ]
 
@@ -40,7 +40,7 @@ const SkillsMobile = () => {
                             <div 
                                 className="card p-4 d-flex justify-content-center mb-2 skill-bg" 
                                 //style={{background: `linear-gradient(315deg, ${card.colors[0]}, ${card.colors[1]}`}}
-                                style={{background: `url(${card.background}-bg.jpg`}}
+                                style={{backgroundImage: `url(${card.background}-bg.jpg`}}
                             >
                                 <div className="row">
                                     <div className="d-flex justify-content-center align-items-center row skill-mobile-cont-1">
@@ -48,8 +48,7 @@ const SkillsMobile = () => {
                                         <img 
                                             draggable={false} 
                                             src={`${card.img}.svg`} 
-                                            alt="" 
-                                            width="80%"
+                                            alt=""
                                         />
                                     </div>
                                     <div className="skill-mobile-cont-2">

@@ -700,6 +700,11 @@ ul {
     letter-spacing: .4mm;
   }
 
+  .skill-mobile-cont-1 img{
+    width: 100%;
+    transform: scale(1.5);
+  }
+
   .skill-mobile-cont-2{
     width: 45%;
   }
