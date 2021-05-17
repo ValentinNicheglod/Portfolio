@@ -686,18 +686,40 @@ ul {
     width: 50%;
   }
 
+  .skill-mobile{
+    min-height: 270px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
   .skill-mobile-cont-1{
     position: relative;
     width: 55%;
   }
-  
-  .skill-mobile-cont-1 h6{
+
+  .skill-title{
+    background-color: #FFFF;
+    border-radius: 25px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 10px 25px 10px 10px;
+    width: 215px;
+    justify-content: space-between;
+    margin-bottom: 5%;
     position: absolute;
-    transform: rotate(270deg);
-    bottom: 60px;
-    left: -80px;
-    color: #f8f8f8;
-    letter-spacing: .4mm;
+    top: 20px;
+  }
+  
+  .skill-title h6{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Rubik';
+  }
+
+  .rubik{
+    font-family: 'Rubik';
   }
 
   .skill-mobile-cont-1 img{
@@ -707,11 +729,32 @@ ul {
 
   .skill-mobile-cont-2{
     width: 45%;
+    padding: 0;
+    margin-top: 50px;
   }
 
-  .skill-bg{
-    background-size: cover;
-    background-repeat: no-repeat;
+  .logo{
+    position: relative;
+  }
+
+  .logo svg{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    transform: scale(1.5);
+    opacity: .7;
+    z-index: 10;
+  }
+
+  .blob2{
+    opacity: .6;
+    z-index: 100;
+  }
+
+  .blob3{
+    opacity: .2;
   }
 
   /* ================== */
