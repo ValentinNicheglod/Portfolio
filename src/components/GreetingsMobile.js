@@ -31,7 +31,7 @@ const GreetingsMobile = () => {
                     <div className="h-50 p-5 d-flex justify-content-center">
                         <div className="h-25 d-flex justify-content-center align-items-center logo">
                             <img 
-                                src="logo.png" 
+                                src="logo-wo-bg.png" 
                                 alt="" 
                                 width="60%" 
                                 height="60%" 

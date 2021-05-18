@@ -7,7 +7,8 @@ const skills = [
         skills: ['Bootstrap', 'CSS 3', 'HTML 5', 'Less','Material UI', 'React', 'React Native', 'Redux' ],
         colors: ['#ff5722', '#e91e63'],
         background: 'green',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAiElEQVRIS2NkoDFgpLH5DHS3wIGBgWE+AwODApk+e8DAwJDIwMBwAKYf3QcgBfJkGg7TBjJDEZcF/6ES5AYdhn50g0YtGA0iggl4NIiGQBBRoyx6iFxYohcVBgwMDOcJBgR+BYYMDAwXsBV2sCRGoflw7WDHI/uA5hZQy+Uo5pBb7hPtmKFvAQCemyEZ3hVsZQAAAABJRU5ErkJggg=='
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAiElEQVRIS2NkoDFgpLH5DHS3wIGBgWE+AwODApk+e8DAwJDIwMBwAKYf3QcgBfJkGg7TBjJDEZcF/6ES5AYdhn50g0YtGA0iggl4NIiGQBBRoyx6iFxYohcVBgwMDOcJBgR+BYYMDAwXsBV2sCRGoflw7WDHI/uA5hZQy+Uo5pBb7hPtmKFvAQCemyEZ3hVsZQAAAABJRU5ErkJggg==',
+        width: '95%'
     },
     {
         name: 'BACK END',
@@ -15,7 +16,8 @@ const skills = [
         skills: ['Express', 'MySQL', 'Node JS', 'Postgresql','Sequelize'],
         colors: ['#009688', '#66bb6a'],
         background: 'yellow',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlklEQVRIS2NkoDFgpLH5DHS1wIGBgWE+AwODAoW+esDAwJDIwMBwAGQOsg9AEvIUGg7TDjJLEd2C/1BZSoMNxRxkw0i1AFk9LjZKEA06C3BFF84g+sDAwMBPpUh+CEuNyHEASqYLqJCSQIYnYEumVHI8qjGUJkmCjkIPotGcDAqy0ZxMMOGM5mSCQYSigK45mTSnEakaAEn1LBkSFpfeAAAAAElFTkSuQmCC'
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlklEQVRIS2NkoDFgpLH5DHS1wIGBgWE+AwODAoW+esDAwJDIwMBwAGQOsg9AEvIUGg7TDjJLEd2C/1BZSoMNxRxkw0i1AFk9LjZKEA06C3BFF84g+sDAwMBPpUh+CEuNyHEASqYLqJCSQIYnYEumVHI8qjGUJkmCjkIPotGcDAqy0ZxMMOGM5mSCQYSigK45mTSnEakaAEn1LBkSFpfeAAAAAElFTkSuQmCC',
+        width: '90%'
     },
     {
         name: 'GENERAL',
@@ -23,7 +25,8 @@ const skills = [
         skills: ['Git', 'GitHub', 'JavaScript', 'JSON','NPM', 'TypeScript', 'Webpack'],
         colors: ['#ffc107', '#ff5722'],
         background: 'pink',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABcUlEQVRIS7XVvzMdURjG8c8taWgp0NCSGenxD4Q+ZqKnj0pU0tMzQ0/+AfRJQUuDglaaaM1rzmb2bvbXvbGnu/ecfb/P+7z7nO3pePU6rm9YwDTu24gbBjCLmwSYaYIMA/iMY5xhrQvAPjaxje9dAH5iESu4+B/AAj5hN1dkBH/S71G84Fuy66oMVjWDVRxiPPkcfsdaSqp/4SPi3CmesZFAfZwyQCjaSad+4EsqEH99xR4OsJUEHKVOYz+ezXfcl4NQG6pDVaw4GA/kV6iN/XWc5DbyoqLb6Ca66gOEh/P4nVRntuQBj5jAHG4L8ABHN2OIWh+qAFV+ZgF7wmTJQPNzu0a8JP9YVOdnXcAq59Y05LyfZQFrnFvda5r5GddBgLKALeMyWZS9ppVzq7uLwsMoEO2XBSwbw1BBK84wVJ8jC1jTDfF3v+1tWgzYuwOqAtYIatvBHeIrVhawWkhbQBSZwkOj5MKBQQCD1n473zngFQdTVBmi/FcZAAAAAElFTkSuQmCC'
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABcUlEQVRIS7XVvzMdURjG8c8taWgp0NCSGenxD4Q+ZqKnj0pU0tMzQ0/+AfRJQUuDglaaaM1rzmb2bvbXvbGnu/ecfb/P+7z7nO3pePU6rm9YwDTu24gbBjCLmwSYaYIMA/iMY5xhrQvAPjaxje9dAH5iESu4+B/AAj5hN1dkBH/S71G84Fuy66oMVjWDVRxiPPkcfsdaSqp/4SPi3CmesZFAfZwyQCjaSad+4EsqEH99xR4OsJUEHKVOYz+ezXfcl4NQG6pDVaw4GA/kV6iN/XWc5DbyoqLb6Ca66gOEh/P4nVRntuQBj5jAHG4L8ABHN2OIWh+qAFV+ZgF7wmTJQPNzu0a8JP9YVOdnXcAq59Y05LyfZQFrnFvda5r5GddBgLKALeMyWZS9ppVzq7uLwsMoEO2XBSwbw1BBK84wVJ8jC1jTDfF3v+1tWgzYuwOqAtYIatvBHeIrVhawWkhbQBSZwkOj5MKBQQCD1n473zngFQdTVBmi/FcZAAAAAElFTkSuQmCC',
+        width: '77%'
     }
 ]
 
@@ -48,6 +51,7 @@ const SkillsMobile = () => {
                                             draggable={false} 
                                             src={`${card.img}.svg`} 
                                             alt=""
+                                            width={card.width}
                                         />
                                     </div>
                                     <div className="skill-mobile-cont-2">

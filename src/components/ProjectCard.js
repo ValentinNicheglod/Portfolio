@@ -87,7 +87,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                     <img 
                         src={`projects/${img}`}
                         alt=""
-                        style={smallScreen ? {aspectRatio: 1/1, width: '150px', maxHeight: '150px'} : {width:"90%", aspectRatio: 1/1}}
+                        style={smallScreen ? {aspectRatio: 1/1, width: '80%', maxHeight: '200px', maxWidth: '200px'} : {width:"90%", aspectRatio: 1/1}}
                         draggable={false}
                     />
                 </div>
@@ -121,7 +121,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     </svg>
                                     {!smallScreen && <p className="m-0">GitHub</p>}
                                 </a>
-                                {smallScreen && <small className="m-0 mt-1 white d-flex justify-content-center">GitHub</small>}
+                                {smallScreen && <small className="m-0 mt-1 d-flex justify-content-center">GitHub</small>}
                             </div>
                     }
                     {
@@ -138,7 +138,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     </svg>
                                     {!smallScreen && <p className="m-0">Galería</p>}
                                 </button>
-                                {smallScreen && <small className="m-0 mt-1 white d-flex justify-content-center">Galería</small>}
+                                {smallScreen && <small className="m-0 mt-1 d-flex justify-content-center">Galería</small>}
                             </div>
                     }
                     {
@@ -156,7 +156,7 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                                     </svg>
                                     {!smallScreen && <p className="m-0">Abrir</p>}
                                 </a>
-                                {smallScreen && <small className="m-0 mt-1 white d-flex justify-content-center">Abrir</small>}
+                                {smallScreen && <small className="m-0 mt-1 d-flex justify-content-center">Abrir</small>}
                             </div>
                     }
                 </div>

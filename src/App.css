@@ -489,6 +489,10 @@ ul {
   .decoration{
     visibility: hidden;
   }
+  
+  .proyect-btn-cont small{
+    color: #d08c1e;
+  }
 
   .proyect-btn{
     width: 50px;
@@ -745,7 +749,6 @@ ul {
   }
 
   .skill-mobile-cont-1 img{
-    width: 100%;
     transform: scale(1.5);
   }
 
