@@ -51,7 +51,7 @@ const SkillsMobile = () => {
                                             draggable={false} 
                                             src={`${card.img}.svg`} 
                                             alt=""
-                                            width={card.width}
+                                            style={{width: card.width}}
                                         />
                                     </div>
                                     <div className="skill-mobile-cont-2">
