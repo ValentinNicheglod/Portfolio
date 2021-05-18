@@ -176,7 +176,7 @@ ul {
 }
 
 .card{
-  border-radius: 20px;
+  border-radius: 20px!important;
 }
 
 .info-cont p{
@@ -217,7 +217,7 @@ ul {
 .proyect-card{
   height: 100%;
   width: 25%;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .proyect-btn{
@@ -462,6 +462,10 @@ ul {
     background-color: #FFFF;
   }
 
+  .card{
+    border-radius: 15px!important;
+  }
+
   .logo{
     border-radius: 50%;
     height: 70vw!important;
@@ -549,6 +553,7 @@ ul {
 
   .social-cont{
     width: 90%;
+    height: fit-content;
     border-radius: 10px;
     background-color: #ffff;
     margin-bottom: 3%;
@@ -863,5 +868,25 @@ ul {
 
   .legend p{
     padding-bottom: 10px;
+  }
+
+  .list-item{
+    font-size: .9rem
+  }
+
+  .p-info p{
+    background-color: #F9A8264D;
+    color: #F9A826;
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid #F9A826;
+    font-family: 'Rubik';
+    display: flex;
+    align-items: center;
+  }
+
+  .proyect-btn{
+    width: 40px;
+    height: 40px;
   }
 }
