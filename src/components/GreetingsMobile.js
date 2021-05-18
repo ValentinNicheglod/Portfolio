@@ -28,15 +28,14 @@ const GreetingsMobile = () => {
         <div className="bg-8 h-100 row max-height m-0 responsive-cont">
             <div className="d-flex justify-content-center align-items-center">
                 <div>
-                    <div className="h-50 p-5 d-flex justify-content-center">
-                        <div className="h-25 d-flex justify-content-center align-items-center logo">
+                    <div className="h-50 d-flex justify-content-center">
+                        <div className="h-25 w-100 d-flex justify-content-center align-items-center logo">
                             <img 
                                 src="logo-wo-bg.png" 
                                 alt="" 
-                                width="60%" 
-                                height="60%" 
-                                id="img" 
-                                style={{margin: '3rem', zIndex: '200'}} 
+                                width="60%"
+                                height="60%"
+                                id="img"
                                 draggable={false}
                             />
                             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">

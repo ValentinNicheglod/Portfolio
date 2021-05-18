@@ -466,7 +466,6 @@ ul {
     border-radius: 50%;
     height: 70vw!important;
     width: 70vw!important;
-    transform: scale(1.3);
   }
 
   .info-cont{
@@ -763,24 +762,37 @@ ul {
     position: relative;
   }
 
+  .logo img{
+    z-index: 200;
+  }
+
   .logo svg{
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     right: 0;
-    left: 15px;
+    left: 7vw;
     transform: scale(1.5);
     opacity: .7;
     z-index: 10;
   }
 
   .blob2{
-    opacity: .6;
-    z-index: 100;
+    opacity: .6!important;
+    z-index: 100!important;
   }
 
   .blob3{
-    opacity: .2;
+    opacity: .4!important;
+  }
+
+  .contact{
+    height: 60%;
+  }
+
+  .legend{
+    padding-top: 5%;
+    height: 40%!important;
   }
 
   /* ================== */
@@ -846,7 +858,7 @@ ul {
 
   .legend{
     padding-top: 5%;
-    height: 35%!important;
+    height: 30%!important;
   }
 
   .legend p{
