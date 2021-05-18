@@ -172,7 +172,6 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                         name={name}
                         logo={img}
                         page={page}
-                        smallScreen={smallScreen}
                     />
                     <button 
                         className="btn close-gallery-btn" 

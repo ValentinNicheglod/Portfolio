@@ -486,6 +486,7 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 10px;
 }
 
 .bottombar-1 h6{
@@ -518,6 +519,21 @@ ul {
 
 .slide-container{
   background-color: #DEDEDE!important;
+}
+
+.gallery-selector{
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  box-shadow: none!important;
 }
 
 /* RESPONSIVE */
@@ -866,6 +882,24 @@ ul {
     padding-top: 5%;
     height: 40%!important;
   }
+
+  .bottombar-3{
+    display: none;
+  }
+
+  .carousel-bottombar{
+    background-color: transparent;
+  }
+
+  .bottombar-1 h6{
+    color: #212529;
+  }
+
+  .bottombar-2 p{
+    color: #212529;
+    font-weight: 500;
+  }
+
 
   /* ================== */
   
