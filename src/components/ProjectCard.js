@@ -167,7 +167,13 @@ const ProjectCard = ({name, img, state, gallery, github, page, smallScreen, type
                 id="modal"
             >
                 <div className="slide-container h-100">
-                    <Slider images={gallery}/>
+                    <Slider 
+                        images={gallery}
+                        name={name}
+                        logo={img}
+                        page={page}
+                        smallScreen={smallScreen}
+                    />
                     <button 
                         className="btn close-gallery-btn" 
                         onClick={() => setOpen(false)} 
