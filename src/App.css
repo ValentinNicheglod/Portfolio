@@ -447,7 +447,7 @@ ul {
   color: #F9A826;
   padding: 5px 10px;
   border-radius: 25px;
-  border: 2px solid #F9A826;
+  border: 1px solid #F9A826;
   font-family: 'Rubik';
   display: flex;
   align-items: center;
@@ -464,9 +464,9 @@ ul {
 
   .logo{
     border-radius: 50%;
-    height: 60vw!important;
-    width: 60vw!important;
-    transform: scale(1.5);
+    height: 70vw!important;
+    width: 70vw!important;
+    transform: scale(1.3);
   }
 
   .info-cont{
@@ -709,21 +709,21 @@ ul {
 
   .skill-title{
     background-color: #F9A8264D;
-    border-radius: 25px;
-    height: 40px;
-    border: 2px solid #F9A826;
+    border-radius: 25px 0 0 25px;
+    height: 45px;
+    border: 1px solid #F9A826;
     display: flex;
     align-items: center;
-    padding: 10px 25px 10px 10px;
-    width: 215px;
+    padding: 10px;
+    width: 60%;
     justify-content: space-between;
-    margin-bottom: 5%;
     position: absolute;
     top: 20px;
+    right: -2px;
   }
   
   .skill-title h6{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     font-family: 'Rubik';
     color: #F9A826;
@@ -750,18 +750,17 @@ ul {
   }
 
   .skill-mobile-cont-1 img{
-    transform: scale(1.5);
+    transform: scale(1.5); 
   }
 
   .skill-mobile-cont-2{
     width: 45%;
     padding: 0;
-    margin-top: 50px;
+    margin-top: 18%;
   }
 
   .logo{
     position: relative;
-    transform: scale(1.8);
   }
 
   .logo svg{
