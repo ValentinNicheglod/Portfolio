@@ -59,8 +59,6 @@ const Slider = ({images, logo, name, page}) => {
             src={`projects/${logo}`} 
             //src="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png"
             alt=""
-            width="40px"
-            height="40px"
           />
           <h6 className="white">Galería de {name}</h6>
         </div>

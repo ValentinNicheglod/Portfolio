@@ -536,6 +536,15 @@ ul {
   box-shadow: none!important;
 }
 
+.bottombar-1 img{
+  width: 40px;
+  height: 40px;
+}
+
+.shadow{
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
@@ -900,6 +909,16 @@ ul {
     font-weight: 500;
   }
 
+  .bottombar-1 img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .close-gallery-btn{
+    top: 0;
+    right: 0;
+  }
+
 
   /* ================== */
   
@@ -987,6 +1006,11 @@ ul {
   }
 
   .proyect-btn{
+    width: 40px;
+    height: 40px;
+  }
+
+  .proyect-btn:hover{
     width: 40px;
     height: 40px;
   }

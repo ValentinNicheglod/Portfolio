@@ -10,7 +10,7 @@ const Skills = () => {
                     </h1>
                 </div>
                 <div className="d-flex justify-content-center align-items-center">
-                    <div className="card w-75 p-5">
+                    <div className="card w-75 p-5 shadow">
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="d-flex justify-content-center align-items-center h-50">
