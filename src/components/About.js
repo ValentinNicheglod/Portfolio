@@ -62,7 +62,7 @@ const About = () => {
             <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">
                 <a 
                     className="btn contact-btn cv-btn-mobile d-flex justify-content-center W-100"
-                    href="https://drive.google.com/file/d/1aQuwdbBWLX1Ju6ghsN5kB6Pwtec2Dc2c/view?usp=sharing" 
+                    href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing" 
                     target="_blank" 
                     rel="noreferrer noopener"
                 >
