@@ -38,7 +38,7 @@ const Proyects = ({smallScreen}) => {
             <div className="p-4">
                 <div>
                     <h1 className="display-3 white title">
-                        Mis proyectos...
+                        Proyectos...
                     </h1>
                 </div>
                 <div className="row d-flex justify-content-around proyect-card-cont">
