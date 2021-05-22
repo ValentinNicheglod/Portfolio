@@ -24,7 +24,7 @@ const projects = [
         name: 'TreeBank',
         img: 'treebank.png',
         state: 'Finalizado',
-        gallery: ['treebank/0', 'treebank/1', 'treebank/2', 'treebank/3', 'treebank/4', 'treebank/5', 'treebank/6', 'treebank/7', 'treebank/8', 'treebank/9', , 'treebank/10', 'treebank/11'],
+        gallery: ['treebank/0', 'treebank/1', 'treebank/2', 'treebank/3', 'treebank/4', 'treebank/5', 'treebank/6', 'treebank/7', 'treebank/8', 'treebank/9', 'treebank/10', 'treebank/11'],
         github: 'https://github.com/ValentinNicheglod/treebank',
         page: 'https://github.com/ValentinNicheglod/treebank',
         type: 'Aplicación'
