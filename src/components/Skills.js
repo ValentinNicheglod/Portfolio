@@ -6,7 +6,7 @@ const Skills = () => {
         <div className="bg-5 min skills m-0 p-4">
                 <div>
                     <h1 className="display-3 white title">
-                        Tech Skills...
+                        Tech skills...
                     </h1>
                 </div>
                 <div className="d-flex justify-content-center align-items-center">

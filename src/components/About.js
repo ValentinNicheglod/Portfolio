@@ -30,7 +30,7 @@ const About = () => {
                 <div className="cv-btn-cont">
                     <a 
                         className="btn cv-btn" 
-                        href="https://drive.google.com/file/d/1aQuwdbBWLX1Ju6ghsN5kB6Pwtec2Dc2c/view?usp=sharing" 
+                        href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing" 
                         target="_blank" 
                         rel="noreferrer noopener"
                     >
