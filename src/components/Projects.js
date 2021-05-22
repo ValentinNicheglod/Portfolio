@@ -26,7 +26,7 @@ const projects = [
         state: 'Finalizado',
         gallery: ['treebank/0', 'treebank/1', 'treebank/2', 'treebank/3', 'treebank/4', 'treebank/5', 'treebank/6', 'treebank/7', 'treebank/8', 'treebank/9'],
         github: 'https://github.com/ValentinNicheglod/treebank',
-        page: 'https://drive.google.com/file/d/1ZBBJfk34kLWOKT6QSCeHXc1n09jh6v0S/view',
+        page: 'https://github.com/ValentinNicheglod/treebank',
         type: 'Aplicación'
     }
 ];
