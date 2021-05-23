@@ -168,6 +168,7 @@ const ProjectCard = ({deviceType, name, img, state, gallery, mobile_gallery, git
             >
                 <div className="slide-container h-100">
                     <Slider 
+                        deviceType={deviceType}
                         images={deviceType === "phone" ? mobile_gallery : gallery}
                         mobile={mobile_gallery}
                         name={name}

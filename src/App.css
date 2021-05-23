@@ -492,8 +492,8 @@ ul {
 .bottombar-1 h6{
   margin-bottom: 0;
   margin-left: 10px;
-  font-family: 'Rubik';
   font-size: 16px;
+  font-weight: normal;
 }
 
 .bottombar-2{
@@ -503,11 +503,20 @@ ul {
   align-items: center;
 }
 
-.bottombar-2 p{
+.bottombar-2 label{
   margin: 0;
-  font-family: 'Work Sans';
   font-size: 16px;
-  letter-spacing: 2px;
+}
+
+.btn-outline-light:hover, .btn-check:checked+.btn-outline-light, .btn-outline-light:active {
+  color: #f8f9fa!important;
+  background-color: #F9A826!important;
+  border-color: #F9A826!important;
+}
+
+.btn-outline-light{
+  color: #F9A826;
+  border-color: #F9A826;
 }
 
 .bottombar-3{
@@ -522,12 +531,6 @@ ul {
 }
 
 .gallery-selector{
-  position: absolute;
-  top: 20px;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
   display: flex;
   justify-content: center;
 }
@@ -543,6 +546,19 @@ ul {
 
 .shadow{
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+}
+
+.slider-indicators{
+  position: absolute;
+  bottom: 120%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-indicators svg{
+  margin: 0 2px;
 }
 
 /* RESPONSIVE */

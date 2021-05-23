@@ -6,7 +6,7 @@ import {
   CarouselIndicators,
 } from 'reactstrap';
 
-const Slider = ({images, logo, mobile, name, page, setDeviceType}) => {
+const Slider = ({deviceType, images, logo, mobile, name, page, setDeviceType}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -60,13 +60,19 @@ const Slider = ({images, logo, mobile, name, page, setDeviceType}) => {
             //src="https://i.pinimg.com/originals/3b/21/c7/3b21c7efd2ba9c119fb8d361acacc31d.png"
             alt=""
           />
-          <h6 className="white">Galería de {name}</h6>
+          <h6 className="white display">Galería de {name}</h6>
         </div>
-        <div className="bottombar-2">
-          <p className="white">
-            {activeIndex + 1}/{images.length}
-          </p>
-          
+        <div className="bottombar-2 d-flex align-items-center">
+          {mobile &&
+            <div className="gallery-selector">
+              <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked={deviceType === "computer"} onClick={() => setDeviceType("computer")}/>
+                <label className="btn btn-outline-light" for="btnradio1">Computadora</label>
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked={deviceType === "phone"} onClick={() => setDeviceType("phone")}/>
+                <label className="btn btn-outline-light" for="btnradio3">Smartphone</label>
+              </div>
+            </div>
+          }
         </div>
         <div className="bottombar-3 p-3">
           <div className="proyect-btn-cont m-0 open-btn-gallery">
@@ -84,17 +90,19 @@ const Slider = ({images, logo, mobile, name, page, setDeviceType}) => {
             </a>
           </div>
         </div>
-    </div>
-    {mobile &&
-      <div className="gallery-selector">
-        <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked onClick={() => setDeviceType("computer")}/>
-          <label className="btn btn-outline-dark" for="btnradio1">Computadora</label>
-          <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onClick={() => setDeviceType("phone")}/>
-          <label className="btn btn-outline-dark" for="btnradio3">Smartphone</label>
+        <div className="slider-indicators">
+          {
+            images && images.map((image, index) => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill={activeIndex === index ? '#212529' : 'gray'} class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8"/>
+              </svg>
+            ))
+            /* <p className="white">
+            {activeIndex + 1}/{images.length}
+            </p> */
+          }
         </div>
-      </div>
-    }
+    </div>
     </>
   );
 }
