@@ -42,7 +42,7 @@ const Slider = ({deviceType, images, logo, mobile, name, page, setDeviceType}) =
     <>
       <Carousel
         activeIndex={activeIndex}
-        className="h-100"
+        className="carousel-cont"
         interval={false}
         next={next}
         previous={previous}
@@ -97,9 +97,6 @@ const Slider = ({deviceType, images, logo, mobile, name, page, setDeviceType}) =
                 <circle cx="8" cy="8" r="8"/>
               </svg>
             ))
-            /* <p className="white">
-            {activeIndex + 1}/{images.length}
-            </p> */
           }
         </div>
     </div>

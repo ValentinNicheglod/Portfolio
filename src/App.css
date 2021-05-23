@@ -127,7 +127,7 @@ ul {
   right: 0;
   left: 0;
   width: auto;
-  height: 95%;
+  height: 100%;
   transform: scale(1.2);
 }
 
@@ -559,6 +559,11 @@ ul {
 
 .slider-indicators svg{
   margin: 0 2px;
+  cursor: pointer;
+}
+
+.carousel-cont{
+  height: calc(100% - 50px);
 }
 
 /* RESPONSIVE */
