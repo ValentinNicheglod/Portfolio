@@ -35,7 +35,7 @@ const projects = [
 
 const Proyects = ({smallScreen}) => {
 
-    const [deviceType, setDeviceType] = useState('pc')
+    const [deviceType, setDeviceType] = useState('computer')
 
     return (
         <div className="bg-2 row min m-0">
