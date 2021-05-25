@@ -1,3 +1,4 @@
+import { Tooltip } from '@material-ui/core';
 import React from 'react';
 
 const Skills = () => {
@@ -27,28 +28,36 @@ const Skills = () => {
                                 </div>
                                 <div>
                                     <div className="d-flex col justify-content-around mb-3">
+                                        <Tooltip title="Bootstrap">
+                                        <div>
                                         <img 
                                             draggable={false} 
                                             src="https://img.icons8.com/color/48/000000/bootstrap.png" 
                                             alt="" 
                                             width="55" 
                                             height="55" 
-                                            title="Bootstrap"
+                                            
                                         />
+                                        </div>
+                                        </Tooltip>
+                                        <Tooltip title="CSS 3">
                                         <img 
                                             draggable={false} 
                                             src="https://img.icons8.com/color/48/000000/css3.png" 
                                             alt="" 
                                             width="55" 
                                             height="55" 
-                                            title="CSS 3"
+                                            
                                         />
+                                        </Tooltip>
+                                        <Tooltip title="HTML 5">
                                         <img 
                                             draggable={false} 
                                             src="https://img.icons8.com/color/48/000000/html-5.png" 
                                             alt="" 
-                                            title="HTML 5"
+                                            
                                         />
+                                        </Tooltip>
                                     </div>
                                     <div className="d-flex col justify-content-around mb-3">
                                         <img 
