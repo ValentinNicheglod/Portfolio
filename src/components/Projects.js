@@ -18,7 +18,7 @@ const projects = [
         state: 'Finalizado',
         gallery: ['notatky/inicio', 'notatky/login', 'notatky/signup', 'notatky/contra1', 'notatky/contra2', 'notatky/contra3', 'notatky/home', 'notatky/home-editing', 'notatky/home-editing-2', 'notatky/home-editing-3', 'notatky/home-add-tag', 'notatky/profile', 'notatky/edit-data', 'notatky/edit-pw', 'notatky/col-tag'],
         mobile_gallery: ['notatky/mobile/1', 'notatky/mobile/2', 'notatky/mobile/3', 'notatky/mobile/4', 'notatky/mobile/5', 'notatky/mobile/14', 'notatky/mobile/15', 'notatky/mobile/16', 'notatky/mobile/6', 'notatky/mobile/7', 'notatky/mobile/8', 'notatky/mobile/9', 'notatky/mobile/10', 'notatky/mobile/11', 'notatky/mobile/12', 'notatky/mobile/13'],
-        github: 'https://github.com/ValentinNicheglod/notatky-frontend',
+        github: 'https://github.com/ValentinNicheglod/NotatKy',
         page: 'https://valentinnicheglod.github.io/NotatKy/#/',
         type: 'Web'
     },
