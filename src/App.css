@@ -15,6 +15,10 @@ img{
   pointer-events: none;
 }
 
+#img{
+  margin: 4rem
+}
+
 ul {
   list-style-type: none;
 }
@@ -319,6 +323,10 @@ ul {
   min-height: 100%;
 }
 
+.legend{
+  padding-top: 10%;
+}
+
 .legend p {
   color: gray;
   font-family: 'Work Sans', sans-serif;
@@ -481,6 +489,10 @@ ul {
   flex-wrap: nowrap;
 }
 
+.carousel-control-next, .carousel-control-prev{
+  width: 5%!important;
+}
+
 .bottombar-1{
   width: 40%;
   display: flex;
@@ -572,6 +584,30 @@ ul {
   height: calc(100% - 50px);
 }
 
+.proyect-card-1{
+  height: 70%;
+}
+
+image img{
+  aspect-ratio: 1/1; 
+  width: 90%;
+}
+
+.h-30{
+  height: 30%;
+}
+
+.hr-project{
+  color: #f9a826!important; 
+  margin: 10px 0 2px 0!important;
+  height: 2px!important;
+}
+
+.skill-img{
+  width: 70%;
+  aspect-ratio: 1/1;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) {
@@ -650,6 +686,10 @@ ul {
     position: absolute;
   }
 
+  .proyect-card-1{
+    height: auto;
+  }
+
   .info-cont{
     padding-right: 0px;
   }
@@ -666,8 +706,10 @@ ul {
   }
 
   image img{
-    aspect-ratio: 1/1;
-    width: auto;
+    aspect-ratio: 1/1; 
+    width: 80%;
+    max-height: 200px;
+    max-width: 200px;
   }
 
   .social-cont{
@@ -924,8 +966,13 @@ ul {
     position: initial;
   }
   
-  .bottombar-1, .bottombar-3{
-    width: 50%;
+  .bottombar-1{
+    width: 80%;
+    padding: .5rem!important;
+  }
+
+  .bottombar-3{
+    width: 20%;
     padding: .5rem!important;
   }
 
@@ -972,8 +1019,8 @@ ul {
   
   .btn-outline-light:hover{
     color: #f8f9fa!important;
-    background-color: hsl(37, 95%, 46%)!important;
-    border-color: hsl(37, 95%, 46%)!important;
+    background-color: #212529!important;
+    border-color: #212529!important;
   }
 
   .btn-outline-light{

@@ -33,7 +33,7 @@ const projects = [
     }
 ];
 
-const Proyects = ({smallScreen}) => {
+const Projects = ({smallScreen}) => {
 
     const [deviceType, setDeviceType] = useState('computer')
 
@@ -47,13 +47,12 @@ const Proyects = ({smallScreen}) => {
                 </div>
                 <div className="row d-flex justify-content-around proyect-card-cont">
                     {
-                        projects.map((project, index) => (
-                            <>
+                        projects.map((project, i) => (
                             <ProjectCard
                                 deviceType={deviceType}
                                 github= {project.github}
                                 img= {project.img}
-                                key={index}
+                                key={i}
                                 gallery={project.gallery}
                                 mobile_gallery={project.mobile_gallery}
                                 name= {project.name}
@@ -63,13 +62,12 @@ const Proyects = ({smallScreen}) => {
                                 state= {project.state}
                                 type= {project.type}
                             />
-                            <div id="preload">
-                            {project.gallery && project.gallery.map(img => (
+                            /* <div id="preload">
+                            {project.gallery && project.gallery.map((img, i) => (
                                 <img src={`projects/mockups/${img}.jpg`} alt=""/>
                             ))}
-                            </div>
-                            </>
-                        ))
+                            </div> */
+                        )) 
                     }
                 </div>
             </div>
@@ -77,4 +75,4 @@ const Proyects = ({smallScreen}) => {
     )
 }
 
-export default Proyects
+export default Projects;

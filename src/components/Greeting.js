@@ -23,7 +23,6 @@ const Greeting = () => {
                         width="40%" 
                         height="23%" 
                         id="img" 
-                        style={{margin: '4rem'}} 
                         draggable={false}
                     />
                 </div>

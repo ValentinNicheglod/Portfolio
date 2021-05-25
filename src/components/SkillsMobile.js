@@ -42,8 +42,8 @@ const SkillsMobile = () => {
                 </div>
                 <div className="d-flex justify-content-center align-items-center row">
                     {
-                        skills.map(card => (
-                            <div className="card p-3 bg-3 d-flex justify-content-center mb-2 skill-mobile">
+                        skills.map((card, i) => (
+                            <div className="card p-3 bg-3 d-flex justify-content-center mb-2 skill-mobile" key={i}>
                                 <div className="row">
                                     <div className="d-flex justify-content-center align-items-center row skill-mobile-cont-1">
                                         
@@ -64,8 +64,8 @@ const SkillsMobile = () => {
                                         </div>
                                         <ul className="p-0 white">
                                             {
-                                                card.skills.map(skill => (
-                                                    <li className="list-item">
+                                                card.skills.map((skill, i) => (
+                                                    <li className="list-item" key={i}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#F9A826" className="bi bi-check2" viewBox="0 0 16 16">
                                                             <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                                         </svg>

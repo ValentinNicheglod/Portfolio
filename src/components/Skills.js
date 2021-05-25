@@ -13,12 +13,12 @@ const Skills = () => {
                     <div className="card w-75 p-5 shadow">
                         <div className="row">
                             <div className="col-md-6">
-                                <div className="d-flex justify-content-center align-items-center h-50">
+                                <div className="d-flex justify-content-center h-50">
                                     <img 
                                         draggable={false} 
                                         src="front.svg" 
                                         alt="" 
-                                        style={{width:"70%", aspectRatio: 1/1}}
+                                        className="skill-img"
                                     />
                                 </div>
                                 <hr/>
@@ -80,7 +80,7 @@ const Skills = () => {
                                         draggable={false} 
                                         src="back.svg" 
                                         alt="" 
-                                        style={{width:"70%", aspectRatio: 1/1}}
+                                        className="skill-img"
                                     />
                                 </div>
                                 <hr/>

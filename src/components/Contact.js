@@ -34,16 +34,17 @@ const Contact = ({smallScreen}) => {
                     {
                         !smallScreen &&
                             <a href="mailto:nicheglod69@gmail.com" className="social-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="dimgray" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="dimgray" className="bi bi-envelope-fill" viewBox="0 0 16 16">
                                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
                                 </svg>
                             </a>
                     }
                     {
-                        contactLinks.map(link => (
+                        contactLinks.map((link, i) => (
                             <a 
                                 href={link.href} 
                                 className="social-btn" 
+                                key={i}
                                 target="_blank" 
                                 rel="noreferrer noopener"
                             >
@@ -90,10 +91,7 @@ const Contact = ({smallScreen}) => {
                         </div>
                 }
             </div>
-            <div 
-                className="bg-white h-50 d-flex justify-content-center row legend" 
-                style={{paddingTop: '10%'}}
-            >
+            <div className="bg-white h-50 d-flex justify-content-center row legend">
                 <div className="d-flex justify-content-center">
                     <img 
                         src='logo.png' 

@@ -22,8 +22,8 @@ const ProjectCard = ({deviceType, name, img, state, gallery, mobile_gallery, git
     }
 
     return (
-        <div className="Tilt card bg-3 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
-            <div className="d-flex justify-content-center row" style={smallScreen ? {} : {height: '70%'}}>
+        <div className="card bg-3 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
+            <div className="d-flex justify-content-center row proyect-card-1">
                     <div className="row">
                         <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
                             <p>
@@ -87,7 +87,6 @@ const ProjectCard = ({deviceType, name, img, state, gallery, mobile_gallery, git
                     <img 
                         src={`projects/${img}`}
                         alt=""
-                        style={smallScreen ? {aspectRatio: 1/1, width: '80%', maxHeight: '200px', maxWidth: '200px'} : {width:"90%", aspectRatio: 1/1}}
                         draggable={false}
                     />
                 </div>
@@ -95,15 +94,12 @@ const ProjectCard = ({deviceType, name, img, state, gallery, mobile_gallery, git
 
             {!smallScreen && <hr style={{color: '#f9a826'}}/>}
 
-            <div 
-                className="row" 
-                style={{height: '30%'}}
-            >
+            <div className="row h-30">
                 <div>
                     <h6 className="display-6 d-flex justify-content-center align-items-start white">
                         {name}
                     </h6>
-                    {smallScreen && <hr style={{color: '#f9a826', margin: '10px 0 2px 0', height: '2px'}}/>}
+                    {smallScreen && <hr className="hr-project"/>}
                 </div>
                 <div className="d-flex justify-content-around">
                     {
@@ -152,7 +148,7 @@ const ProjectCard = ({deviceType, name, img, state, gallery, mobile_gallery, git
                                     //title="Abrir proyecto"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                        <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                                     </svg>
                                     {!smallScreen && <p className="m-0">Abrir</p>}
                                 </a>
@@ -174,6 +170,7 @@ const ProjectCard = ({deviceType, name, img, state, gallery, mobile_gallery, git
                         name={name}
                         logo={img}
                         page={page}
+                        smallScreen={smallScreen}
                         setDeviceType={setDeviceType}
                         setOpen={setOpen}
                     />

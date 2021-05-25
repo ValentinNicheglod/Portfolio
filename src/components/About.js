@@ -20,8 +20,8 @@ const About = () => {
                 </div>
                 <div className="info-cont box">
                     {
-                        info.map(paragraph => (
-                            <p>
+                        info.map((paragraph, i) => (
+                            <p key={i}>
                                 {paragraph}
                             </p>
                         ))
@@ -46,8 +46,8 @@ const About = () => {
                         speed={5000}
                     >
                         {
-                            images.map(image => (
-                                <div>
+                            images.map((image, i) => (
+                                <div key={i}>
                                     <img 
                                         src={`me/${image}.jpeg`} 
                                         alt="" 
