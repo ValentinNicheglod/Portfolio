@@ -117,7 +117,8 @@ const Skills = () => {
                                                         <img 
                                                             draggable={false} 
                                                             src={icon.src}
-                                                            alt="skill-icon"  
+                                                            alt="skill-icon"
+                                                            width="55"
                                                         />
                                                     </div>
                                                 </Tooltip>
@@ -149,7 +150,8 @@ const Skills = () => {
                                                         <img 
                                                             draggable={false} 
                                                             src={icon.src}
-                                                            alt="skill-icon"  
+                                                            alt="skill-icon"
+                                                            width="55"  
                                                         />
                                                     </div>
                                                 </Tooltip>
@@ -171,7 +173,8 @@ const Skills = () => {
                                                     <img 
                                                         draggable={false} 
                                                         src={icon.src}
-                                                        alt="skill-icon"  
+                                                        alt="skill-icon"
+                                                        width="55"
                                                     />
                                                 </div>
                                             </Tooltip>
