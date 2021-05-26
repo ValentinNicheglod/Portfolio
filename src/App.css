@@ -255,6 +255,9 @@ ul {
   0%{
     transform: translateX(-800px);
   }
+  50%{
+    transform: translateX(-400px);
+  }
   100%{
     transform: translateX(0px);
   }
@@ -283,18 +286,18 @@ ul {
 }
 
 .clip3{
-  animation: circle .8s linear;
+  animation: circle .8s ease;
   clip-path: circle(750px at 90vw 120vh);
 }
 
 .welcome h1{
-  animation: blur .8s linear;
+  animation: blur .5s linear;
 } 
 .welcome h6{
-  animation: blur .8s linear;
+  animation: blur .5s linear;
 } 
 .welcome button{
-  animation: button 1.3s linear;
+  animation: button 1s linear;
 }
 
 .proyect-card{
