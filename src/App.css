@@ -249,13 +249,33 @@ ul {
 @keyframes button {
   0%{
     filter: opacity(0);
+    color: #ff4c38;
   }
-  80%{
+  40%{
     filter: opacity(0);
   }
-  100%{
+  55%{
+    color: #ff4c38;
     filter: opacity(1);
   }
+  80%{
+    color: #ff4c38;
+  }
+  100%{
+    color: #191970;
+  }
+}
+
+@keyframes color {
+  0%{
+    color: #ff4c38;
+  }
+  80%{
+    color: #ff4c38;
+  }
+  100%{
+      color: #191970;
+  } 
 }
 
 .clip{
@@ -278,8 +298,12 @@ ul {
   cursor: default;
 } 
 
+.name{
+  animation: color 4s linear;
+}
+
 .welcome button{
-  animation: button 2.5s ease-in-out;
+  animation: button 4s linear;
 }
 
 .proyect-card{
@@ -288,7 +312,9 @@ ul {
   border-radius: 15px;
 }
 
-
+.skill-img-1{
+  transform: scale(1.4)
+}
 
 .proyect-btn{
   background-color: #F9A826;
@@ -828,9 +854,9 @@ ul {
 
   image img{
     aspect-ratio: 1/1; 
-    width: 80%;
-    max-height: 200px;
-    max-width: 200px;
+    width: 80%!important;
+    max-height: 40vh!important;
+    max-width: 40vh!important;
   }
 
   .social-cont{

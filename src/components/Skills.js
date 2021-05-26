@@ -96,12 +96,13 @@ const Skills = () => {
                     <div className="card w-75 p-5 shadow">
                         <div className="row">
                             <div className="col-md-6">
-                                <div className="d-flex justify-content-center" style={{height: '30vh'}}>
+                                <div className="d-flex justify-content-center align-items-center" style={{height: '30vh'}}>
                                     <img
                                         draggable={false} 
                                         src="front.svg" 
                                         alt="" 
                                         className="skill-img"
+                                        height="50vh"
                                     />
                                 </div>
                                 <hr/>
@@ -129,12 +130,13 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="col-md-6">
-                                <div className="d-flex justify-content-center" style={{height: '30vh'}}>
+                                <div className="d-flex justify-content-center align-items-center" style={{height: '30vh'}}>
                                     <img 
                                         draggable={false} 
                                         src="back.svg" 
                                         alt="" 
                                         className="skill-img"
+                                        height="30vh"
                                     />
                                 </div>
                                 <hr/>
