@@ -170,15 +170,15 @@ const Skills = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="d-flex justify-content-center row mt-4">
+                            <div className="d-flex justify-content-center row">
                                 <hr/>
-                                <div className="skill-title skill-title-1">
+                                <div className="d-flex col justify-content-around general-skills">
+                                <div className="skill-title skill-title-2">
                                     <div className="card-icon">
                                         <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABcUlEQVRIS7XVvzMdURjG8c8taWgp0NCSGenxD4Q+ZqKnj0pU0tMzQ0/+AfRJQUuDglaaaM1rzmb2bvbXvbGnu/ecfb/P+7z7nO3pePU6rm9YwDTu24gbBjCLmwSYaYIMA/iMY5xhrQvAPjaxje9dAH5iESu4+B/AAj5hN1dkBH/S71G84Fuy66oMVjWDVRxiPPkcfsdaSqp/4SPi3CmesZFAfZwyQCjaSad+4EsqEH99xR4OsJUEHKVOYz+ezXfcl4NQG6pDVaw4GA/kV6iN/XWc5DbyoqLb6Ca66gOEh/P4nVRntuQBj5jAHG4L8ABHN2OIWh+qAFV+ZgF7wmTJQPNzu0a8JP9YVOdnXcAq59Y05LyfZQFrnFvda5r5GddBgLKALeMyWZS9ppVzq7uLwsMoEO2XBSwbw1BBK84wVJ8jC1jTDfF3v+1tWgzYuwOqAtYIatvBHeIrVhawWkhbQBSZwkOj5MKBQQCD1n473zngFQdTVBmi/FcZAAAAAElFTkSuQmCC"/> 
                                     </div>
                                     <h6 className="display-6 m-0">GENERAL</h6>
                                 </div>
-                                <div className="d-flex col justify-content-around">
                                     {
                                         others.map((icon, i) => (
                                             <Tooltip title={icon.title} placement="right" key={i}>

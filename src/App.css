@@ -770,11 +770,23 @@ ul {
   border-radius: 0 25px 25px 0;
 }
 
+.skill-title-2{
+  left: -2px;
+  top: initial;
+  border-radius: 0 25px 25px 0;
+  bottom: 50px;
+  width: 15%;
+}
+
 .skill-title h6{
   font-size: 20px;
   font-weight: 400;
   font-family: 'Rubik';
   color: #F9A826;
+}
+
+.general-skills{
+  margin-left: 100px;
 }
 
 .card-icon{
