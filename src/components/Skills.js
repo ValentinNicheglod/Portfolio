@@ -102,7 +102,7 @@ const Skills = () => {
                                         src="front.svg" 
                                         alt="" 
                                         className="skill-img"
-                                        height="50vh"
+                                        height="320vh"
                                     />
                                 </div>
                                 <hr/>
@@ -136,7 +136,7 @@ const Skills = () => {
                                         src="back.svg" 
                                         alt="" 
                                         className="skill-img"
-                                        height="30vh"
+                                        height="270vh"
                                     />
                                 </div>
                                 <hr/>
