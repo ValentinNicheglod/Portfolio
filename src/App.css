@@ -902,6 +902,10 @@ ul {
 
 @media screen and (max-width: 600px) {
 
+  html{
+    overflow: hidden;
+  }
+
   body, html{
     height: 100%;
     background-color: #FFFF;
@@ -931,10 +935,15 @@ ul {
 
   .logo-responsive{
     animation: button 5.5s linear;
+    position: absolute;
+    bottom: -25px;
+    right: 5px;
+    z-index: 150;
   }
 
   .logo-responsive img{
-    height: 50vw;
+    height: 35vw;
+    width: 30vw;
     padding-bottom: 5vh;
   }
 

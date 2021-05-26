@@ -7,7 +7,7 @@ const Greeting = ({smallScreen}) => {
             <div className="col-md-8 col-sm-8 d-flex greeting-col justify-content-center align-items-center">
                 {smallScreen && 
                 <div className="logo-responsive">
-                    <img src="logo.png" alt=""/>
+                    <img src="logo-wo-bg.png" alt=""/>
                 </div>
 }
                 <div className="welcome">
