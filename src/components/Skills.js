@@ -135,11 +135,11 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="col-md-6">
-                            <div className="skill-title">
-                                    <h6 className="display-6 m-0">BACK END</h6>
+                                <div className="skill-title">
                                     <div className="card-icon">
                                         <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlklEQVRIS2NkoDFgpLH5DHS1wIGBgWE+AwODAoW+esDAwJDIwMBwAGQOsg9AEvIUGg7TDjJLEd2C/1BZSoMNxRxkw0i1AFk9LjZKEA06C3BFF84g+sDAwMBPpUh+CEuNyHEASqYLqJCSQIYnYEumVHI8qjGUJkmCjkIPotGcDAqy0ZxMMOGM5mSCQYSigK45mTSnEakaAEn1LBkSFpfeAAAAAElFTkSuQmCC"/> 
                                     </div>
+                                    <h6 className="display-6 m-0">BACK END</h6>
                                 </div>
                                 <div className="d-flex justify-content-center align-items-center" style={{height: '30vh'}}>
                                     <img 
@@ -172,9 +172,12 @@ const Skills = () => {
                             </div>
                             <div className="d-flex justify-content-center row mt-4">
                                 <hr/>
-                                <h6 className="display-6 d-flex justify-content-center mb-4 ">
-                                    LENGUAJES Y UTILIDADES
-                                </h6>
+                                <div className="skill-title skill-title-1">
+                                    <div className="card-icon">
+                                        <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABcUlEQVRIS7XVvzMdURjG8c8taWgp0NCSGenxD4Q+ZqKnj0pU0tMzQ0/+AfRJQUuDglaaaM1rzmb2bvbXvbGnu/ecfb/P+7z7nO3pePU6rm9YwDTu24gbBjCLmwSYaYIMA/iMY5xhrQvAPjaxje9dAH5iESu4+B/AAj5hN1dkBH/S71G84Fuy66oMVjWDVRxiPPkcfsdaSqp/4SPi3CmesZFAfZwyQCjaSad+4EsqEH99xR4OsJUEHKVOYz+ezXfcl4NQG6pDVaw4GA/kV6iN/XWc5DbyoqLb6Ca66gOEh/P4nVRntuQBj5jAHG4L8ABHN2OIWh+qAFV+ZgF7wmTJQPNzu0a8JP9YVOdnXcAq59Y05LyfZQFrnFvda5r5GddBgLKALeMyWZS9ppVzq7uLwsMoEO2XBSwbw1BBK84wVJ8jC1jTDfF3v+1tWgzYuwOqAtYIatvBHeIrVhawWkhbQBSZwkOj5MKBQQCD1n473zngFQdTVBmi/FcZAAAAAElFTkSuQmCC"/> 
+                                    </div>
+                                    <h6 className="display-6 m-0">GENERAL</h6>
+                                </div>
                                 <div className="d-flex col justify-content-around">
                                     {
                                         others.map((icon, i) => (
