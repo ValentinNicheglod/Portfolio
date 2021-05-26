@@ -1,6 +1,88 @@
 import { Tooltip } from '@material-ui/core';
 import React from 'react';
 
+const backend = [
+    [
+        {
+            src: "skills/express.png",
+            title: "Express"
+        },
+        {
+            src: "skills/mysql.png",
+            title: "MySQL"
+        },
+        {
+            src: "https://img.icons8.com/color/55/000000/nodejs.png",
+            title: "NodeJS"
+        }
+    ],
+    [
+        {
+            src: "https://img.icons8.com/color/55/000000/postgreesql.png",
+            title: "PostgreSQL"
+        },
+        {
+            src: "skills/sequelize.png",
+            title: "Sequelize"
+        }
+    ]
+];
+
+const frontend = [
+    [
+        {
+            src: "https://img.icons8.com/color/55/000000/bootstrap.png",
+            title: "Bootstrap"
+        },
+        {
+            src: "https://img.icons8.com/color/55/000000/css3.png",
+            title: "CSS 3"
+        },
+        {
+            src: "https://img.icons8.com/color/55/000000/html-5.png",
+            title: "HTML 5"
+        }
+    ],
+    [
+        {
+            src: "https://img.icons8.com/windows/55/000000/less-logo.png",
+            title: "Less"
+        },
+        {
+            src: "https://img.icons8.com/color/55/000000/react-native.png",
+            title: "React JS y React Native"
+        },
+        {
+            src: "https://img.icons8.com/windows/55/000000/redux.png",
+            title: "Redux"
+        }
+    ]
+];
+const others = [
+    {
+        src: 'https://img.icons8.com/color/55/000000/git.png',
+        title: 'Git'
+    },{
+        src: 'https://img.icons8.com/ios-filled/55/000000/github.png',
+        title: 'GitHub'
+    },{
+        src: 'https://img.icons8.com/color/55/000000/javascript.png',
+        title: 'Javascript'
+    },{
+        src: 'skills/json.png',
+        title: 'JSON'
+    },{
+        src: 'https://img.icons8.com/color/55/000000/npm.png',
+        title: 'NPM'
+    },{
+        src: 'https://img.icons8.com/color/55/000000/typescript.png',
+        title: 'Typescript'
+    },{
+        src: 'skills/webpack.png',
+        title: 'Webpack'
+    }
+]
+
 const Skills = () => {
 
     return (
@@ -27,60 +109,22 @@ const Skills = () => {
                                     <h6 className="display-6 mb-4">FRONT END</h6>
                                 </div>
                                 <div>
-                                    <div className="d-flex col justify-content-around mb-3">
-                                        <Tooltip title="Bootstrap">
-                                        <div>
-                                        <img 
-                                            draggable={false} 
-                                            src="https://img.icons8.com/color/48/000000/bootstrap.png" 
-                                            alt="" 
-                                            width="55" 
-                                            height="55" 
-                                            
-                                        />
+                                    {frontend.map((row, i) => (
+                                        <div className="d-flex col justify-content-around mb-3" key={i}>
+                                            {row.map((icon, i) => (
+                                                <Tooltip title={icon.title} placement="right">
+                                                    <div>
+                                                        <img 
+                                                            draggable={false} 
+                                                            src={icon.src}
+                                                            alt="skill-icon"  
+                                                        />
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
                                         </div>
-                                        </Tooltip>
-                                        <Tooltip title="CSS 3">
-                                        <img 
-                                            draggable={false} 
-                                            src="https://img.icons8.com/color/48/000000/css3.png" 
-                                            alt="" 
-                                            width="55" 
-                                            height="55" 
-                                            
-                                        />
-                                        </Tooltip>
-                                        <Tooltip title="HTML 5">
-                                        <img 
-                                            draggable={false} 
-                                            src="https://img.icons8.com/color/48/000000/html-5.png" 
-                                            alt="" 
-                                            
-                                        />
-                                        </Tooltip>
-                                    </div>
-                                    <div className="d-flex col justify-content-around mb-3">
-                                        <img 
-                                            draggable={false} 
-                                            src="https://img.icons8.com/windows/55/000000/less-logo.png" 
-                                            alt="" 
-                                            title="Less"
-                                        />
-                                        <img 
-                                            draggable={false} 
-                                            src="https://img.icons8.com/color/48/000000/react-native.png" 
-                                            alt="" 
-                                            width="55" 
-                                            height="55" 
-                                            title="React JS y React Native"
-                                        />
-                                        <img 
-                                            draggable={false} 
-                                            src="https://img.icons8.com/windows/48/000000/redux.png" 
-                                            alt="" 
-                                            title="Redux"
-                                        />
-                                    </div>
+                                    ))}
+                                    
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -96,45 +140,22 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center">
                                     <h6 className="display-6 mb-4">BACK END</h6>
                                 </div>
-                                <div className="d-flex col justify-content-around mb-3">
-                                    <img 
-                                        draggable={false} 
-                                        src="skills/express.png" 
-                                        alt="" 
-                                        width="70" 
-                                        height="65" 
-                                        title="Express"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="skills/mysql.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="MySQL"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/55/000000/nodejs.png" 
-                                        alt="" 
-                                        title="Node JS"
-                                    />
-                                </div>
-                                <div className="d-flex col justify-content-around">
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/55/000000/postgreesql.png" 
-                                        alt="" 
-                                        title="PostgreSQL"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="skills/sequelize.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="Sequelize"
-                                    />
+                                <div>
+                                    {backend.map((row, i) => (
+                                        <div className="d-flex col justify-content-around mb-3" key={i}>
+                                            {row.map((icon, i) => (
+                                                <Tooltip title={icon.title} placement="right">
+                                                    <div>
+                                                        <img 
+                                                            draggable={false} 
+                                                            src={icon.src}
+                                                            alt="skill-icon"  
+                                                        />
+                                                    </div>
+                                                </Tooltip>
+                                            ))}
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                             <div className="d-flex justify-content-center row mt-4">
@@ -143,62 +164,19 @@ const Skills = () => {
                                     LENGUAJES Y UTILIDADES
                                 </h6>
                                 <div className="d-flex col justify-content-around">
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/git.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="Git"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/github.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="GitHub"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/javascript.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="JavaScript"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="skills/json.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="JSON"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/npm.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="NPM"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="https://img.icons8.com/color/48/000000/typescript.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="TypeScript"
-                                    />
-                                    <img 
-                                        draggable={false} 
-                                        src="skills/webpack.png" 
-                                        alt="" 
-                                        width="55" 
-                                        height="55" 
-                                        title="Webpack"
-                                    />
+                                    {
+                                        others.map((icon, i) => (
+                                            <Tooltip title={icon.title} placement="right" key={i}>
+                                                <div>
+                                                    <img 
+                                                        draggable={false} 
+                                                        src={icon.src}
+                                                        alt="skill-icon"  
+                                                    />
+                                                </div>
+                                            </Tooltip>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
