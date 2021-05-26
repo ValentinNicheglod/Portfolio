@@ -99,7 +99,7 @@ const Skills = () => {
                                 <div className="d-flex justify-content-center" style={{height: '30vh'}}>
                                     <img
                                         draggable={false} 
-                                        src="front.svg" 
+                                        src="https://storyset.com/illustration/coding/bro#F9A826FF&hide=&hide=complete" 
                                         alt="" 
                                         className="skill-img"
                                     />

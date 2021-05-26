@@ -227,6 +227,15 @@ ul {
 @keyframes circle {
   0%{
     clip-path: circle(10px at 100vw 120vh);
+    z-index: 150;
+  }
+  40%{
+    clip-path: circle(2000px at 100vw 120vh);
+    z-index: 150;
+  }
+  90%{
+      clip-path: circle(2000px at 100vw 120vh);
+      z-index: 150;
   }
   100%{
     clip-path: circle(750px at 90vw 120vh);
@@ -235,6 +244,9 @@ ul {
 
 @keyframes polygon {
   0%{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+  }
+  90%{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
   }
   100%{
@@ -281,17 +293,22 @@ ul {
 }
 
 .clip2{
-  animation: polygon .8s linear;
+  animation: polygon 2s linear;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
 }
 
 .clip3{
-  animation: circle .8s ease;
+  animation: circle 2s linear;
   clip-path: circle(750px at 90vw 120vh);
+  mix-blend-mode: screen;
 }
 
 .welcome h1{
   animation: blur .5s linear;
+  z-index: 100;
+  position: absolute;
+  mix-blend-mode: difference;
+  color: white;
 } 
 .welcome h6{
   animation: blur .5s linear;
