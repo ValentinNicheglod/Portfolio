@@ -30,20 +30,20 @@ const skills = [
     }
 ]
 
-const SkillsMobile = () => {
+const SkillsMobileCopy = () => {
 
     return (
-        <div className="bg-5 min skills m-0">
+        <div className="bg-5 skills h-75 m-0">
             <div className="p-4">
                 <div>
                      <h1 className="display-3 white title">
-                        Tech skills...
+                        Mis habilidades...
                     </h1>
                 </div>
-                <div className="d-flex justify-content-center align-items-center row">
+                <div className="d-flex justify-content-around align-items-center col h-100">
                     {
                         skills.map((card, i) => (
-                            <div className="card p-3 bg-3 d-flex justify-content-center mb-2 skill-mobile" key={i}>
+                            <div className="card p-3 bg-3 d-flex justify-content-center mb-2 skill-mobile proyect-card" key={i}>
                                 <div className="row">
                                     <div className="d-flex justify-content-center align-items-center row skill-mobile-cont-1">
                                         
@@ -85,4 +85,4 @@ const SkillsMobile = () => {
     )
 }
 
-export default SkillsMobile;
+export default SkillsMobileCopy;

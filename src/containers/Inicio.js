@@ -10,6 +10,7 @@ import GreetingsMobile from '../components/GreetingsMobile';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import SkillsMobile from '../components/SkillsMobile';
+import SkillsMobileCopy from '../components/SkillsMobileCopy';
 
 const Inicio = () => {
     document.addEventListener("contextmenu", function(e){
@@ -29,7 +30,10 @@ const Inicio = () => {
             <About/>
             {smallScreen
                 ? <SkillsMobile/>
-                : <Skills/>
+                : <>
+                <Skills/>
+                <SkillsMobileCopy/>
+                </>
             }
             <Projects
                 smallScreen={smallScreen}
