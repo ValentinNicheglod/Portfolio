@@ -227,15 +227,6 @@ ul {
 @keyframes circle {
   0%{
     clip-path: circle(10px at 100vw 120vh);
-    z-index: 150;
-  }
-  40%{
-    clip-path: circle(2000px at 100vw 120vh);
-    z-index: 150;
-  }
-  90%{
-      clip-path: circle(2000px at 100vw 120vh);
-      z-index: 150;
   }
   100%{
     clip-path: circle(750px at 90vw 120vh);
@@ -244,9 +235,6 @@ ul {
 
 @keyframes polygon {
   0%{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
-  }
-  90%{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
   }
   100%{
@@ -263,7 +251,7 @@ ul {
   }
 }
 
-@keyframes blur {
+@keyframes translate {
   0%{
     transform: translateX(-800px);
   }
@@ -279,7 +267,7 @@ ul {
   0%{
     filter: opacity(0);
   }
-  70%{
+  80%{
     filter: opacity(0);
   }
   100%{
@@ -288,33 +276,27 @@ ul {
 }
 
 .clip{
-  animation: clip .8s linear;
+  animation: clip 1s linear;
   clip-path: polygon(0 0,100% 0,100% 80%, 0 99%);
 }
 
 .clip2{
-  animation: polygon 2s linear;
+  animation: polygon .5s linear;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
 }
 
 .clip3{
-  animation: circle 2s linear;
+  animation: circle 1.5s linear;
   clip-path: circle(750px at 90vw 120vh);
-  mix-blend-mode: screen;
 }
 
-.welcome h1{
-  animation: blur .5s linear;
-  z-index: 100;
-  position: absolute;
-  mix-blend-mode: difference;
-  color: white;
+.welcome h1, .welcome h6{
+  animation: translate .5s linear;
+  cursor: default;
 } 
-.welcome h6{
-  animation: blur .5s linear;
-} 
+
 .welcome button{
-  animation: button 1s linear;
+  animation: button 2.5s ease-in-out;
 }
 
 .proyect-card{
@@ -478,13 +460,24 @@ ul {
 
 .more-info{
   padding: 0;
-  color: #F9A826;
-  transition: .5s;
+  transition: 1s;
 }
+
 
 .more-info:hover{
   padding: 0;
   color: #ff4c38;
+  transition: 0.5s;
+}
+
+.name{
+  transition: 1s;
+}
+
+.name:hover{
+  color: #ff4c38;
+  cursor: default;
+  transition: .5s;
 }
 
 .contact-card{
