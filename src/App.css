@@ -13,7 +13,6 @@ html {
 body{
   height: 100%;
   margin: 0;
-  background-color: #191970;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
@@ -216,21 +215,33 @@ ul {
   }
 }
 
+@keyframes circle-mobile {
+  0%{
+    clip-path: circle(20vh at 100vw 100vh);
+    background-color: palevioletred!important;
+  }
+  100%{
+    clip-path: circle(50vh at 0vw 60vh);
+  }
+}
+
 @keyframes polygon {
   0%{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+    width: 20%!important;
   }
   100%{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    width: 75%!important;
   }
 }
 
 @keyframes clip {
   0%{
-    clip-path: polygon(0 0,100% 0,100% 100%, 0 99%);
+    background-color: #191970;
   }
   100%{
-    clip-path: polygon(0 0,100% 0,100% 80%, 0 99%);
+    background-color: #191970;
   }
 }
 
@@ -266,6 +277,26 @@ ul {
   }
 }
 
+@keyframes arrow {
+  0%{
+    filter: opacity(0);
+    background-color: #ff4c38;
+  }
+  40%{
+    filter: opacity(0);
+  }
+  55%{
+    background-color: #ff4c38;
+    filter: opacity(1);
+  }
+  80%{
+    background-color: #ff4c38;
+  }
+  100%{
+    background-color: #191970;
+  }
+}
+
 @keyframes color {
   0%{
     color: #ff4c38;
@@ -278,26 +309,69 @@ ul {
   } 
 }
 
+@keyframes clip5 {
+  0%{
+    background-color: #ff4c38;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 100%);
+  }
+  20%{
+    clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
+    background-color: #ff4c38;
+  }
+  80%{
+    background-color: #ff4c38;
+  }
+  100%{
+    background-color: #191970;
+  }
+}
+
 .clip{
   animation: clip 1s linear;
-  clip-path: polygon(0 0,100% 0,100% 80%, 0 99%);
+  /* clip-path: polygon(0 0,100% 0,100% 80%, 0 99%); */
 }
 
 .clip2{
-  animation: polygon .5s linear;
+  animation: polygon 1s linear;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
   transition: 1s;
 }
 
 .clip3{
-  animation: circle 1.5s linear;
+  animation: circle 2s linear;
   clip-path: circle(750px at 90vw 120vh);
   transition: 1s;
+}
+
+.clip4{
+  clip-path: polygon(0 0, 0% 100%, 50% 50%);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  animation: arrow 5.5s linear;
+  transition: 1s;
+  
+}
+
+.clip4:hover{
+  clip-path: polygon(0 0, 0% 100%, 55% 50%);
+  transition: .5s;
+  background-color: #ff4c38;
 }
 
 .clip3:hover, .clip2:hover{
   filter: saturate(1.7);
   transition: 1s;
+}
+
+.clip5{
+  animation: clip5 5.5s linear;
+  clip-path: polygon(100% 80%, 0% 100%, 100% 100%);
+  bottom: 0;
+  right: 0;
+  z-index: 50;
 }
 
 .social-btn:hover{
@@ -311,11 +385,11 @@ ul {
 } 
 
 .name{
-  animation: color 4s linear;
+  animation: color 5.5s linear;
 }
 
 .welcome button{
-  animation: button 4s linear;
+  animation: button 5.5s linear;
 }
 
 .proyect-card{
@@ -774,7 +848,7 @@ ul {
   left: -2px;
   top: initial;
   border-radius: 0 25px 25px 0;
-  bottom: 50px;
+  bottom: 53Spx;
   width: 15%;
 }
 
@@ -844,6 +918,54 @@ ul {
     width: 70vw!important;
   }
 
+  .clip{
+    clip-path: none;
+    animation: none;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .greeting-col{
+    flex-direction: column;
+  }
+
+  .logo-responsive{
+    animation: button 5.5s linear;
+  }
+
+  .logo-responsive img{
+    height: 50vw;
+    padding-bottom: 5vh;
+  }
+
+  .clip4{
+    transform: rotate(90deg);
+    top: -31vh;
+    left: 200px;
+    bottom: initial;
+    right: 0;
+    margin-bottom: initial;
+    margin-top: initial;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .clip2{
+    z-index: 20;
+  }
+
+  .clip3{
+    z-index: 10;
+    clip-path: circle(50vh at 0vw 60vh);
+    animation: circle-mobile 2s linear;
+    transition: 1s;
+  }
+
+  .clip5{
+    bottom: -2px;
+    height: 110%!important;
+  }
+
   .info-cont{
     display: flex;
     justify-content: space-around;
@@ -863,7 +985,7 @@ ul {
   }
 
   .decoration{
-    visibility: hidden;
+    display: none!important;
   }
   
   .proyect-btn-cont small{

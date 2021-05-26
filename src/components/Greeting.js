@@ -1,10 +1,15 @@
 import React from 'react';
 
-const Greeting = () => {
+const Greeting = ({smallScreen}) => {
 
     return (
         <div className="bg-white row max-height m-0 responsive-cont clip">
-            <div className="col-md-8 col-sm-8 d-flex justify-content-center align-items-center">
+            <div className="col-md-8 col-sm-8 d-flex greeting-col justify-content-center align-items-center">
+                {smallScreen && 
+                <div className="logo-responsive">
+                    <img src="logo.png" alt=""/>
+                </div>
+}
                 <div className="welcome">
                     <h1 className="display-3">
                         Hola! Soy <b><span className="co-1 name">Valentín</span></b>,
@@ -22,8 +27,10 @@ const Greeting = () => {
             </button>
                 </div>
             </div>
-            <div className="col-md-4 col-sm-4 d-flex justify-content-end p-0">
+            <div className="col-md-4 d-flex justify-content-end p-0">
+                <div className="w-25 h-75 bg-1 clip4 position-absolute"/>
                 <div className="w-100 h-100 bg-7 clip3 position-absolute"/>
+                <div className="w-100 h-100 bg-1 clip5 position-absolute"/>
                 <div className="w-75 h-100 bg-2 clip2 position-relative d-flex justify-content-end decoration">
                     <img 
                         src="logo-white.png" 

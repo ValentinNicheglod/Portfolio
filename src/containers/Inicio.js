@@ -22,10 +22,8 @@ const Inicio = () => {
 
     return (
         <div className="h-100">
-            {smallScreen
-                ? <GreetingsMobile/>
-                : <Greeting/>
-            }
+            <Greeting smallScreen={smallScreen}/>
+            
             <About/>
             {smallScreen
                 ? <SkillsMobile/>
