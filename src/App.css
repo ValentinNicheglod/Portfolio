@@ -286,11 +286,23 @@ ul {
 .clip2{
   animation: polygon .5s linear;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+  transition: 1s;
 }
 
 .clip3{
   animation: circle 1.5s linear;
   clip-path: circle(750px at 90vw 120vh);
+  transition: 1s;
+}
+
+.clip3:hover, .clip2:hover{
+  filter: saturate(1.7);
+  transition: 1s;
+}
+
+.social-btn:hover{
+  transform: scale(1.1);
+  transition: .5s;
 }
 
 .welcome h1, .welcome h6{
@@ -505,6 +517,7 @@ ul {
   width: 50px;
   height: 50px;
   border-radius: 25px;
+  transition: .5s;
 }
 
 .social-cont{
@@ -683,6 +696,7 @@ ul {
 
 .shadow{
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  overflow: hidden;
 }
 
 .slider-indicators{
@@ -735,6 +749,50 @@ ul {
   background-color: white;
   border-radius: 50%;
 }
+
+.skill-title{
+  background-color: #F9A8264D;
+  border-radius: 25px 0 0 25px;
+  height: 45px;
+  border: 1px solid #F9A826;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 20%;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  right: -2px;
+}
+
+.skill-title-1{
+  left: -2px;
+  border-radius: 0 25px 25px 0;
+}
+
+.skill-title h6{
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Rubik';
+  color: #F9A826;
+}
+
+.card-icon{
+  background-color: #F9A826;
+  border-radius: 25px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-icon img{
+  filter: invert(1);
+  transform: scale(.9);
+}
+
 @media screen and (min-width: 600px) {
   body::-webkit-scrollbar {
     width: 10px;

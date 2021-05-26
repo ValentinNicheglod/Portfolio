@@ -96,7 +96,14 @@ const Skills = () => {
                     <div className="card w-75 p-5 shadow">
                         <div className="row">
                             <div className="col-md-6">
+                                <div className="skill-title skill-title-1">
+                                    <h6 className="display-6 m-0">FRONT END</h6>
+                                    <div className="card-icon">
+                                        <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAiElEQVRIS2NkoDFgpLH5DHS3wIGBgWE+AwODApk+e8DAwJDIwMBwAKYf3QcgBfJkGg7TBjJDEZcF/6ES5AYdhn50g0YtGA0iggl4NIiGQBBRoyx6iFxYohcVBgwMDOcJBgR+BYYMDAwXsBV2sCRGoflw7WDHI/uA5hZQy+Uo5pBb7hPtmKFvAQCemyEZ3hVsZQAAAABJRU5ErkJggg=="/> 
+                                    </div>
+                                </div>
                                 <div className="d-flex justify-content-center align-items-center" style={{height: '30vh'}}>
+                                
                                     <img
                                         draggable={false} 
                                         src="front.svg" 
@@ -106,9 +113,7 @@ const Skills = () => {
                                     />
                                 </div>
                                 <hr/>
-                                <div className="d-flex justify-content-center">
-                                    <h6 className="display-6 mb-4">FRONT END</h6>
-                                </div>
+                                
                                 <div>
                                     {frontend.map((row, i) => (
                                         <div className="d-flex col justify-content-around mb-3" key={i}>
@@ -130,6 +135,12 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="col-md-6">
+                            <div className="skill-title">
+                                    <h6 className="display-6 m-0">BACK END</h6>
+                                    <div className="card-icon">
+                                        <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlklEQVRIS2NkoDFgpLH5DHS1wIGBgWE+AwODAoW+esDAwJDIwMBwAGQOsg9AEvIUGg7TDjJLEd2C/1BZSoMNxRxkw0i1AFk9LjZKEA06C3BFF84g+sDAwMBPpUh+CEuNyHEASqYLqJCSQIYnYEumVHI8qjGUJkmCjkIPotGcDAqy0ZxMMOGM5mSCQYSigK45mTSnEakaAEn1LBkSFpfeAAAAAElFTkSuQmCC"/> 
+                                    </div>
+                                </div>
                                 <div className="d-flex justify-content-center align-items-center" style={{height: '30vh'}}>
                                     <img 
                                         draggable={false} 
@@ -140,9 +151,6 @@ const Skills = () => {
                                     />
                                 </div>
                                 <hr/>
-                                <div className="d-flex justify-content-center">
-                                    <h6 className="display-6 mb-4">BACK END</h6>
-                                </div>
                                 <div>
                                     {backend.map((row, i) => (
                                         <div className="d-flex col justify-content-around mb-3" key={i}>
