@@ -981,24 +981,13 @@ ul {
     font-family: inherit;
   }
 
-  .more-info{
+  .more-info, .clip4{
     display: none;
   }
 
   .logo-responsive img{
     height: 17vh;
     width: 15vh;
-  }
-
-  .clip4{
-    transform: rotate(90deg);
-    top: -36vh;
-    left: 200px;
-    margin-bottom: initial;
-    margin-top: initial;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%!important;
   }
 
   .clip2{
@@ -1455,14 +1444,21 @@ ul {
   }
 }
 
-@media screen and (max-width: 400px) {
-  /* .contact-btn{
-    margin-top: .2vh;
-    margin-bottom: 1vh;
-  } */
+@media screen and (max-width: 500px) {
+  .logo-responsive img {
+    height: 15vh;
+    width: 13vh;
+  }
+}
 
+@media screen and (max-width: 400px) {
   .contact{
     height: 70%;
+  }
+
+  .clip4{
+    transform: rotate(90deg);
+    top: -25vh;
   }
 
   .legend{
