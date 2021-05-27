@@ -12,7 +12,7 @@ const Greeting = ({smallScreen}) => {
                 </div>
 }
                 <div className="welcome">
-                    <h1 className="display-3">
+                    <h1 className="display-2">
                         Hola! Soy <b><span className="co-1 name">Valentín</span></b>,
                     </h1>
                     <h6 className="display-6">

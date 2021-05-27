@@ -26,6 +26,9 @@ const contactLinks = [
 ]
 
 const Contact = ({smallScreen}) => {
+    const date = new Date();
+    const year = date.getFullYear();
+    
     return (
         <div className="h-100 ">
             
@@ -78,7 +81,7 @@ const Contact = ({smallScreen}) => {
                                 Estoy dispuesto a recibir propuestas laborales o realizar colaboraciones en algún proyecto.
                             </p><a 
                             href="mailto:nicheglod69@gmail.com" 
-                            className="btn contact-btn"
+                            className="btn btn-mobile"
                         >
                             ENVÍAME UN CORREO
                         </a>
@@ -112,6 +115,9 @@ const Contact = ({smallScreen}) => {
                 <p className="d-flex justify-content-center">
                     Hecho por mi con mucho amor 💖 y café ☕
                 </p>
+                <small className="d-flex justify-content-center">
+                    Copyright © {year} | Valentín Nicheglod
+                </small>
             </div>
         </div>
     )

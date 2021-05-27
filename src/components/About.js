@@ -7,8 +7,9 @@ const images = [1, 2, 3, 4, 5];
 const info = [
     'Me llamo Valentín Nicheglod, vivo en Uruguay, en la ciudad de Paysandú, tengo 20 años y mi vida gira en torno a cuatro pasiones: la arquitectura 👷🏼‍♂️, la aviación ✈️, el diseño 🖊️ y por supuesto la programación 👨🏻‍💻.',
     'Soy desarrollador web full stack con más de diez meses de experiencia programando en JavaScript, también he desarrollado aplicaciones móviles en react native, si tengo que elegir entre front end y back end, prefiero el front end, pero esto no quita que disfrute trabajando en back end.',
-    'Siempre estoy en busca de expandir mis conocimientos, me encanta aprender y enfrentarme a nuevos desafíos, es algo que considero fundamental para el desarrollo de cualquier persona.',
-    'Me considero una persona muy atenta a los detalles, y esto me ayuda al momento de pensar y diseñar, disfruto trabajando en equipos proactivos y organizados.'
+    'Me considero una persona muy atenta a los detalles, y esto me ayuda al momento de pensar y diseñar, disfruto trabajando en equipos proactivos y organizados.',
+    'Siempre estoy en busca de expandir mis conocimientos, me encanta aprender y enfrentarme a nuevos desafíos, es algo que considero fundamental para el desarrollo de cualquier persona.'
+    
 ];
 
 const About = () => {
@@ -38,7 +39,7 @@ const About = () => {
                     >
                             Ver curriculúm
                     </a>
-                    <div className="cv-btn-line"/>
+                    <a className="cv-btn-line" href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing" />
                 </div>
             </div>
             <div className="col-md-5 col-sm-6 d-flex justify-content-center align-items-center pb-5 slider-cont">
@@ -67,8 +68,9 @@ const About = () => {
                 </svg>
             </button>
             <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">
+                
                 <a 
-                    className="btn contact-btn cv-btn-mobile d-flex justify-content-center W-100"
+                    className="btn btn-sm w-50 btn-mobile d-flex justify-content-center W-100"
                     href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing" 
                     target="_blank" 
                     rel="noreferrer noopener"
