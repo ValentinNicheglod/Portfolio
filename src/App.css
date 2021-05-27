@@ -977,25 +977,28 @@ ul {
     z-index: 150;
   }
 
+  .btn-danger{
+    font-family: inherit;
+  }
+
   .more-info{
     display: none;
   }
 
   .logo-responsive img{
-    height: 28vw;
-    width: 30vw;
+    height: 17vh;
+    width: 15vh;
   }
 
   .clip4{
     transform: rotate(90deg);
-    top: -31vh;
+    top: -36vh;
     left: 200px;
-    bottom: initial;
-    right: 0;
     margin-bottom: initial;
     margin-top: initial;
     margin-left: auto;
     margin-right: auto;
+    width: 50%!important;
   }
 
   .clip2{
@@ -1146,6 +1149,11 @@ ul {
     font-weight: 400;
   }
 
+  .legend small {
+    padding-bottom: 10px;
+    font-size: 0.6rem;
+  }
+
   .list-item{
     font-size: 1.2rem;
   }
@@ -1220,6 +1228,21 @@ ul {
     margin-bottom: 5%;
     font-size: 15px;
     border-radius: 10px;
+  }
+
+  .btn-mobile-sec{
+    font-family: 'Rubik';
+    border: solid 1px #F9A826;
+    box-shadow: #F9A8263D 0px 0px 20px 1px, #F9A8263D 0px 0px 2px 1px inset!important;
+    color: #F9A826;
+    background-color: transparent;
+  }
+
+  .btn-mobile-sec:hover, .btn-mobile-sec:focus, .btn-mobile-sec:active{
+    font-family: 'Rubik';
+    border: solid 1px #F9A826;
+    box-shadow: #F9A8263D 0px 0px 20px 1px, #F9A8263D 0px 0px 2px 1px inset!important;
+    letter-spacing: .3mm;
   }
 
   .MuiTooltip-popper{
@@ -1419,55 +1442,17 @@ ul {
     bottom: 55px;
   }
 
-  /* ================== */
-  
-/*   .side{
-    width: 80%;
-    height: 65%;
-    border-top-left-radius: 65%;
-    border-bottom-left-radius: 65%;
-    padding-left: 35%;
-    padding-right: 0px;
+  .welcome{
+    transform: translateY(20vh);
   }
 
-  
-  
-  .slider{
-    height: 100%;
-    width: 80%;
-    border-radius: 20px;
-    box-sizing: content-box;
+  .welcome h6{
+    font-size: 5vw;
   }
-  
-  .slider img {
-    border-radius: 20px;
-    height: 100%;
+
+  .welcome h1{
+    font-size: 10vw;
   }
-  
-  .slider div {
-    border-radius: 20px;
-    width: 100%;
-  }
-  
-  .slider-items{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .min{
-    min-height: 100%;
-  }
-  
-  .social-btn{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-  }
-  
-  .box{
-    box-sizing: border-box;
-  } */
 }
 
 @media screen and (max-width: 400px) {
@@ -1512,5 +1497,24 @@ ul {
   .proyect-btn:hover{
     width: 40px;
     height: 40px;
+  }
+
+  .btn-mobile, .btn-mobile-sec{
+    width: unset!important;
+  }
+
+  .social-btn{
+    transform: scale(.8);
+  }
+
+  .welcome{
+    transform: translateY(15vh);
+  }
+}
+
+@media screen and (min-height: 600px) and (max-width: 600px) {
+  .clip4{
+    transform: rotate(90deg);
+    top: -40vh;
   }
 }

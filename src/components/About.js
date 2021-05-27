@@ -70,10 +70,13 @@ const About = () => {
             <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">
                 
                 <a 
-                    className="btn btn-sm w-50 btn-mobile d-flex justify-content-center W-100"
+                    className="btn w-50 btn-mobile btn-mobile-sec d-flex justify-content-center W-100"
                     href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing" 
                     target="_blank" 
                     rel="noreferrer noopener"
+                    onClick=""
+                    tabIndex="0"
+                    role="button"
                 >
                     VER CURRíCULUM
                 </a>
