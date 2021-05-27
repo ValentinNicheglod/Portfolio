@@ -285,25 +285,52 @@ ul {
   0%{
     filter: opacity(0);
     background-color: #ff4c38;
+    color: #ff4c38;
   }
   40%{
     filter: opacity(0);
+    background-color: #ff4c38;
+    color: #ff4c38;
   }
   55%{
     background-color: #ff4c38;
+    color: #ff4c38;
     filter: opacity(1);
   }
   80%{
     background-color: #ff4c38;
+    color: #ff4c38;
   }
   100%{
     background-color: #191970;
+    color: #191970;
   }
 }
 
 @keyframes color {
   0%{
     color: #ff4c38;
+  }
+  80%{
+    color: #ff4c38;
+  }
+  100%{
+      color: #191970;
+  } 
+}
+
+@keyframes wave {
+  0%{
+    color: #ff4c38;
+    transform: scale(1);
+    top: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  20%{
+    transform: scale(2);
+    top: 30px;
+    opacity: 1;
   }
   80%{
     color: #ff4c38;
@@ -1441,6 +1468,23 @@ ul {
 
   .welcome h1{
     font-size: 10vw;
+  }
+
+  .wave{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform: scale(2);
+    color: #191970;
+    animation: wave 5.5s linear;
+    transition: 1s;
+  }
+
+  .wave path{
+    stroke: #387AC4;
+    stroke-width: 5px;
+    stroke-dasharray: 0;
+    stroke-linejoin: round;
   }
 }
 
