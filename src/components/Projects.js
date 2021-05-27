@@ -36,8 +36,6 @@ const projects = [
 
 const Projects = ({smallScreen}) => {
 
-    const [deviceType, setDeviceType] = useState('computer')
-
     return (
         <div className="bg-2 row min projects m-0">
             <div className="p-4">
@@ -50,7 +48,6 @@ const Projects = ({smallScreen}) => {
                     {
                         projects.map((project, i) => (
                             <ProjectCard
-                                deviceType={deviceType}
                                 github= {project.github}
                                 img= {project.img}
                                 key={i}
@@ -58,7 +55,6 @@ const Projects = ({smallScreen}) => {
                                 mobile_gallery={project.mobile_gallery}
                                 name= {project.name}
                                 page= {project.page}
-                                setDeviceType={setDeviceType}
                                 smallScreen={smallScreen}
                                 state= {project.state}
                                 type= {project.type}

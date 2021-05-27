@@ -33,7 +33,7 @@ const Slider = ({deviceType, images, logo, mobile, name, setDeviceType, setOpen,
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <img src={`projects/mockups/${path}.jpg`} alt=""className="image-slider" style={{transform: deviceType === 'phone' && smallScreen ? 'scale(1.7)' : null}}/>
+        <img src={`projects/mockups/${path}.jpg`} alt=""className="image-slider" style={{transform: deviceType === 'phone' && smallScreen ? 'scale(1.5)' : null}}/>
       </CarouselItem>
     ));
 

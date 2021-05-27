@@ -28,7 +28,7 @@ img{
 }
 
 #img{
-  margin: 4rem
+  margin: 2rem;
 }
 
 ul {
@@ -311,16 +311,11 @@ ul {
 
 @keyframes clip5 {
   0%{
-    background-color: #ff4c38;
     clip-path: polygon(100% 100%, 0% 100%, 100% 100%);
   }
   20%{
-    clip-path: polygon(100% 75%, 0% 100%, 100% 100%);
-    background-color: #ff4c38;
-  }
-  80%{
-    background-color: #ff4c38;
-  }
+    clip-path: polygon(100% 75%, 0% 100%, 100% 100%);  }
+
   100%{
     background-color: #191970;
   }
@@ -390,6 +385,10 @@ ul {
 
 .welcome button{
   animation: button 5.5s linear;
+}
+
+.col-md-6 hr{
+  margin: 1rem 10px;
 }
 
 .proyect-card{
@@ -563,6 +562,10 @@ ul {
   padding: 0;
   color: #ff4c38;
   transition: 0.5s;
+}
+
+.more-info:hover::after{
+  content: "...";
 }
 
 .name{
@@ -862,10 +865,6 @@ ul {
   font-weight: 400;
   font-family: 'Rubik';
   color: #F9A826;
-}
-
-.general-skills{
-  margin-left: 100px;
 }
 
 .card-icon{
