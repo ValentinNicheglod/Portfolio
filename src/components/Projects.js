@@ -45,23 +45,25 @@ const Projects = ({ smallScreen }) => (
       <div className="row d-flex justify-content-around proyect-card-cont">
         {
                         projects.map((project, i) => (
-                          <ProjectCard
-                            github={project.github}
-                            img={project.img}
-                            key={i}
-                            gallery={project.gallery}
-                            mobileGallery={project.mobile_gallery}
-                            name={project.name}
-                            page={project.page}
-                            smallScreen={smallScreen}
-                            state={project.state}
-                            type={project.type}
-                          />
-                          /* <div id="preload">
-                            {project.gallery && project.gallery.map((img, i) => (
-                                <img src={`projects/mockups/${img}.jpg`} alt=""/>
-                            ))}
-                            </div> */
+                          <>
+                            <ProjectCard
+                              github={project.github}
+                              img={project.img}
+                              key={i}
+                              gallery={project.gallery}
+                              mobileGallery={project.mobile_gallery}
+                              name={project.name}
+                              page={project.page}
+                              smallScreen={smallScreen}
+                              state={project.state}
+                              type={project.type}
+                            />
+                            <div id="preload">
+                              {project.gallery && project.gallery.map((img, i) => (
+                                <img src={`projects/mockups/${img}.jpg`} alt="" />
+                              ))}
+                            </div>
+                          </>
                         ))
                     }
       </div>
