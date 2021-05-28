@@ -301,7 +301,7 @@ ul {
 } */
 
 .title{
-  padding-bottom: 50px;
+  padding-bottom: 5vh;
 }
 
 .clip{
@@ -384,6 +384,7 @@ ul {
 .proyect-card{
   height: 100%;
   width: 25vw;
+  min-width: 300px;
   max-width: 450px;
   max-height: 900px;
   border-radius: 15px;
@@ -396,6 +397,7 @@ ul {
 .skills .card{
   max-width: 1080px;
   max-height: 720px;
+  min-width: 900px;
 }
 
 .proyect-btn{
@@ -520,12 +522,8 @@ ul {
   color: lightgray;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
+  background-color: white;
 }
-
-/* .br{
-  border-right-color: rgb(88, 88, 88);
-  border-right-width: 1px;
-} */
 
 .contact{
   height: 50%;
