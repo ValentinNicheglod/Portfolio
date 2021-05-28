@@ -246,7 +246,7 @@ ul {
   height: 70%;
 }
 
-/* .image-slider{
+.image-slider{
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -255,7 +255,7 @@ ul {
   width: auto;
   height: 100%;
   transform: scale(1.2);
-} */
+}
 
 .carousel-item{
   background-color: #DEDEDE;
@@ -405,6 +405,7 @@ ul {
   justify-content: center;
   transition: all .5s, border-radius 1.5s;
   position: relative;
+  overflow: hidden;
 }
 
 .proyect-btn:hover{
@@ -453,6 +454,7 @@ ul {
   left: 37%;
   display: inline;
   opacity: 1;
+  padding-left: 3px;
 }
 
 .proyect-card-cont{
@@ -499,6 +501,12 @@ ul {
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.open-btn-gallery{
+  width: 12vw;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .legend small {
@@ -550,7 +558,7 @@ ul {
 
 .more-info:hover{
   padding: 0;
-  color: #ff4c38;
+  color: lightgray;
   transition: 0.5s;
 }
 
@@ -987,7 +995,7 @@ ul {
   }
 
   .more-info, .clip4, .decoration, .cv-btn-cont, .MuiTooltip-popper{
-    display: none;
+    display: none!important;
   }
   
   .proyect-btn-cont small{

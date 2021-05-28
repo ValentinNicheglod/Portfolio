@@ -57,6 +57,7 @@ const ProjectCard = ({
                                         </svg>
                                       )
                                 }
+              &nbsp;&nbsp;
               {type}
             </p>
           </div>
@@ -89,6 +90,7 @@ const ProjectCard = ({
                                         </svg>
                                       )
                                 }
+              &nbsp;&nbsp;
               {state}
             </p>
           </div>
