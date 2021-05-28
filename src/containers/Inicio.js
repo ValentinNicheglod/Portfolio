@@ -1,7 +1,6 @@
 import React from 'react';
 
 import '../App.css';
-import 'react-slideshow-image/dist/styles.css';
 
 import About from '../components/About';
 import Contact from '../components/Contact';
