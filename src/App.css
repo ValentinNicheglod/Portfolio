@@ -383,12 +383,19 @@ ul {
 
 .proyect-card{
   height: 100%;
-  width: 25%;
+  width: 25vw;
+  max-width: 450px;
+  max-height: 900px;
   border-radius: 15px;
 }
 
 .skill-img-1{
   transform: scale(1.4)
+}
+
+.skills .card{
+  max-width: 1080px;
+  max-height: 720px;
 }
 
 .proyect-btn{
@@ -537,6 +544,7 @@ ul {
   font-size: 20px;
   width: 30%;
   transition: all .5s, border-radius 1.5s;
+  min-width: 300px;
 }
 
 .contact-btn:hover{
@@ -577,6 +585,10 @@ ul {
   position: absolute;
   bottom: -15vh;
   padding: 1rem;
+  min-height: 170px;
+  max-height: 250px;
+  min-width: none;
+  max-width: 1500px;
 }
 
 .contact-title{
@@ -594,6 +606,7 @@ ul {
 .social-cont{
   width: 50%;
   margin-bottom: 15vh;
+  max-width: 1500px;
 }
 
 .box{
@@ -634,7 +647,7 @@ ul {
   background-color: #FF8D2A;
   position: absolute;
   right: -10px;
-  bottom: -2mm;
+  bottom: -1vh;
   transition: all 1s, right .5s;
   cursor: pointer;
 }
@@ -798,7 +811,6 @@ ul {
 }
 
 .skill-img{
-  width: 70%;
   aspect-ratio: 1/1;
 }
 
@@ -885,6 +897,15 @@ ul {
 
 .more-info1:hover, .more-info2:hover{
   color: lightgray;
+}
+
+.skill-ilustration{
+  max-height: 50%;
+  height: 30vh;
+}
+
+@media screen and (min-width: 1000px){
+
 }
 
 @media screen and (min-width: 600px) {

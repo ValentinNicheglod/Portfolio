@@ -101,10 +101,11 @@ const Skills = () => (
                 <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAiElEQVRIS2NkoDFgpLH5DHS3wIGBgWE+AwODApk+e8DAwJDIwMBwAKYf3QcgBfJkGg7TBjJDEZcF/6ES5AYdhn50g0YtGA0iggl4NIiGQBBRoyx6iFxYohcVBgwMDOcJBgR+BYYMDAwXsBV2sCRGoflw7WDHI/uA5hZQy+Uo5pBb7hPtmKFvAQCemyEZ3hVsZQAAAABJRU5ErkJggg==" />
               </div>
             </div>
-            <div className="d-flex justify-content-center align-items-center" style={{ height: '30vh' }}>
+            <div className="d-flex justify-content-center align-items-center skill-ilustration">
               <img
                 draggable={false}
-                src="ilustrations/front.svg"
+                // src="ilustrations/front.svg"
+                src="https://valentinnicheglod.github.io/Portfolio/ilustrations/front.svg"
                 alt=""
                 className="skill-img"
                 height="320vh"
@@ -139,13 +140,14 @@ const Skills = () => (
               </div>
               <h6 className="display-6 m-0">BACK END</h6>
             </div>
-            <div className="d-flex justify-content-center align-items-center" style={{ height: '30vh' }}>
+            <div className="d-flex justify-content-center align-items-center skill-ilustration">
               <img
                 draggable={false}
-                src="ilustrations/back.svg"
+                // src="ilustrations/back.svg"
+                src="https://valentinnicheglod.github.io/Portfolio/ilustrations/back.svg"
                 alt=""
                 className="skill-img"
-                height="270vh"
+                height="270"
               />
             </div>
             <hr />
