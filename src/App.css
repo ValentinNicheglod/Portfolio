@@ -109,15 +109,6 @@ ul {
   color: #D3D2DA;
 }
 
-/* .circle{
-  width: 240%;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  position: relative;
-  bottom: 500px;
-  left: 180%;
-} */
-
 .info-cont{
   display: flex;
   justify-content: space-around;
@@ -215,7 +206,7 @@ ul {
     clip-path: circle(10px at 100vw 120vh);
   }
   100%{
-    clip-path: circle(750px at 90vw 120vh);
+    clip-path: circle(45vw at 90vw 120vh);
   }
 }
 
@@ -365,7 +356,7 @@ ul {
 
 .clip3{
   animation: circle 2s linear;
-  clip-path: circle(750px at 90vw 120vh);
+  clip-path: circle(45vw at 90vw 120vh);
   transition: 1s;
 }
 
@@ -403,6 +394,10 @@ ul {
 .social-btn:hover{
   transform: scale(1.1);
   transition: .5s;
+}
+
+.welcome{
+  z-index: 500;
 }
 
 .welcome h1, .welcome h6{
@@ -878,7 +873,7 @@ ul {
   display: flex;
   align-items: center;
   padding: 10px;
-  width: 20%;
+  width: 18%;
   justify-content: space-between;
   position: absolute;
   top: 20px;
@@ -953,6 +948,11 @@ ul {
 
   .row{
     --bs-gutter-x: 0;
+  }
+
+  .welcome{
+    position: absolute;
+    left: 15vw;
   }
 }
 
