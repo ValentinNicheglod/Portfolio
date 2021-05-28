@@ -558,7 +558,7 @@ ul {
 
 .more-info:hover{
   padding: 0;
-  color: lightgray;
+  color: #ff4c38;
   transition: 0.5s;
 }
 
@@ -881,6 +881,10 @@ ul {
   position: absolute;
   bottom: -5px;
   color: white;
+}
+
+.more-info1:hover, .more-info2:hover{
+  color: lightgray;
 }
 
 @media screen and (min-width: 600px) {
