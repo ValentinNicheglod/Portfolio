@@ -87,7 +87,7 @@ const others = [
 const Skills = () => (
   <div className="bg-5 min skills h-100 m-0 p-4">
     <div>
-      <h1 className="display-3 white title">
+      <h1 className="display-3 white title skills-title">
         Tech skills...
       </h1>
     </div>
