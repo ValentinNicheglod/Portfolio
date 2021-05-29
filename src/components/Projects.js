@@ -44,28 +44,28 @@ const Projects = ({ smallScreen }) => (
       </div>
       <div className="row d-flex justify-content-around proyect-card-cont align-items-center">
         {
-                        projects.map((project, i) => (
-                          <>
-                            <ProjectCard
-                              github={project.github}
-                              img={project.img}
-                              key={i}
-                              gallery={project.gallery}
-                              mobileGallery={project.mobile_gallery}
-                              name={project.name}
-                              page={project.page}
-                              smallScreen={smallScreen}
-                              state={project.state}
-                              type={project.type}
-                            />
-                            <div id="preload">
-                              {project.gallery && project.gallery.map((img) => (
-                                <img src={`projects/mockups/${img}.jpg`} alt="" />
-                              ))}
-                            </div>
-                          </>
-                        ))
-                    }
+          projects.map((project, i) => (
+            <>
+              <ProjectCard
+                github={project.github}
+                img={project.img}
+                key={i}
+                gallery={project.gallery}
+                mobileGallery={project.mobile_gallery}
+                name={project.name}
+                page={project.page}
+                smallScreen={smallScreen}
+                state={project.state}
+                type={project.type}
+              />
+              <div id="preload">
+                {project.gallery && project.gallery.map((img) => (
+                  <img src={`projects/mockups/${img}.jpg`} alt="" />
+                ))}
+              </div>
+            </>
+          ))
+        }
       </div>
       <button className="btn more-info more-info1" onClick={() => animateScrollTo(window.innerHeight * 4 + 10)}>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
