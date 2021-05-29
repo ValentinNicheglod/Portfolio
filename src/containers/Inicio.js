@@ -18,6 +18,8 @@ const Inicio = () => {
 
   const smallScreen = window.screen.width < 600;
 
+  console.log(window.screen.width);
+
   return (
     <div className="h-100">
       <Greeting smallScreen={smallScreen} />

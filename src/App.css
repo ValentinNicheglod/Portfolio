@@ -503,6 +503,7 @@ ul {
 
 .legend{
   padding-top: 10%;
+  align-items: center;
 }
 
 .legend p {
@@ -584,9 +585,13 @@ ul {
   bottom: -15vh;
   padding: 1rem;
   min-height: 170px;
-  max-height: 250px;
+  max-height: 220px;
   min-width: none;
   max-width: 1500px;
+}
+
+.contact-card p{
+  font-family: Work Sans;
 }
 
 .contact-title{
@@ -802,6 +807,10 @@ ul {
   height: 30%;
 }
 
+.h-90{
+  height: 87%;
+}
+
 .hr-project{
   color: #f9a826!important; 
   margin: 10px 0 2px 0!important;
@@ -877,6 +886,11 @@ ul {
   transform: scale(.9);
 }
 
+.more-info-cont{
+  display: flex;
+  justify-content: center;
+}
+
 .more-info1{
   position: absolute;
   bottom: 10px;
@@ -893,6 +907,11 @@ ul {
   color: white;
 }
 
+.more-info3{
+  position: initial;
+  color: white;
+}
+
 .more-info1:hover, .more-info2:hover{
   color: lightgray;
 }
@@ -902,8 +921,15 @@ ul {
   height: 30vh;
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 600px) and (max-width: 1440px){
+  .proyect-btn:hover svg{
+    left: 5px;
+    height: 1.6vw;
+  }
 
+  .proyect-btn p{
+    font-size: 1.05vw;
+  }
 }
 
 @media screen and (min-width: 600px) {

@@ -19,25 +19,27 @@ const About = () => (
           Sobre mi...
         </h1>
       </div>
-      <div className="info-cont box">
-        {
-          info.map((paragraph, i) => (
-            <p key={i}>
-              {paragraph}
-            </p>
-          ))
-      }
-      </div>
-      <div className="cv-btn-cont">
-        <a
-          className="btn cv-btn"
-          href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Ver curriculúm
-          <div className="cv-btn-line" />
-        </a>
+      <div className="d-flex flex-column justify-content-around h-90">
+        <div className="info-cont box">
+          {
+            info.map((paragraph, i) => (
+              <p key={i}>
+                {paragraph}
+              </p>
+            ))
+        }
+        </div>
+        <div className="cv-btn-cont">
+          <a
+            className="btn cv-btn"
+            href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Ver curriculúm
+            <div className="cv-btn-line" />
+          </a>
+        </div>
       </div>
     </div>
     <div className="col-md-5 col-sm-6 d-flex justify-content-center align-items-center py-3 slider-cont">

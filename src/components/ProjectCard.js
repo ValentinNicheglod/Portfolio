@@ -13,18 +13,8 @@ const ProjectCard = ({
   const [open, setOpen] = useState(false);
   const [deviceType, setDeviceType] = useState(type === 'Aplicación' ? 'phone' : 'computer');
 
-  const preloadImage = (data) => {
-    /* const total = data.length;
-    const imgArray = [];
-    for (let i = 0; i < total; i += 1) {
-      const tmpImage = new Image();
-      tmpImage.src = `projects/mockups/${data[i]}.jpg`;
-      imgArray.push(tmpImage);
-    } */
-  };
-
   return (
-    <div className="card bg-3 p-3 proyect-card" onLoad={() => preloadImage(gallery)}>
+    <div className="card bg-3 p-3 proyect-card">
       <div className="d-flex justify-content-center row proyect-card-1">
         <div className="row">
           <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
@@ -97,7 +87,7 @@ const ProjectCard = ({
         </div>
         <div className="d-flex justify-content-center image">
           <img
-            src={`projects/${img}`}
+            src={`https://valentinnicheglod.github.io/Portfolio/projects/${img}`}
             alt=""
             draggable={false}
           />

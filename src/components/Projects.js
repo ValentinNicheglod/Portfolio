@@ -59,7 +59,7 @@ const Projects = ({ smallScreen }) => (
                               type={project.type}
                             />
                             <div id="preload">
-                              {project.gallery && project.gallery.map((img, i) => (
+                              {project.gallery && project.gallery.map((img) => (
                                 <img src={`projects/mockups/${img}.jpg`} alt="" />
                               ))}
                             </div>
