@@ -85,16 +85,16 @@ const others = [
 ];
 
 const Skills = () => (
-  <div className="bg-5 min skills m-0 p-4">
+  <div className="bg-5 min skills h-100 m-0 p-4">
     <div>
       <h1 className="display-3 white title">
         Tech skills...
       </h1>
     </div>
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center h-90">
       <div className="card w-75 p-5 shadow">
         <div className="row">
-          <div className="col-md-6">
+          <div className="w-50 fit-content">
             <div className="skill-title skill-title-1">
               <h6 className="display-6 m-0">FRONT END</h6>
               <div className="card-icon">
@@ -133,7 +133,7 @@ const Skills = () => (
 
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="w-50 fit-content">
             <div className="skill-title">
               <div className="card-icon">
                 <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlklEQVRIS2NkoDFgpLH5DHS1wIGBgWE+AwODAoW+esDAwJDIwMBwAGQOsg9AEvIUGg7TDjJLEd2C/1BZSoMNxRxkw0i1AFk9LjZKEA06C3BFF84g+sDAwMBPpUh+CEuNyHEASqYLqJCSQIYnYEumVHI8qjGUJkmCjkIPotGcDAqy0ZxMMOGM5mSCQYSigK45mTSnEakaAEn1LBkSFpfeAAAAAElFTkSuQmCC" />

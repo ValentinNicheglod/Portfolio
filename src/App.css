@@ -394,12 +394,6 @@ ul {
   transform: scale(1.4)
 }
 
-.skills .card{
-  max-width: 1080px;
-  max-height: 720px;
-  min-width: 900px;
-}
-
 .proyect-btn{
   background-color: #F9A826;
   border-width: 2px;
@@ -658,6 +652,8 @@ ul {
 .cv-btn-cont{
   position: relative;
   display: inline;
+  height: fit-content;
+  width: fit-content;
 }
 
 .cv-btn-cont:hover .cv-btn-line{
@@ -921,6 +917,40 @@ ul {
   height: 30vh;
 }
 
+.fit-content{
+  height: fit-content;
+}
+
+@media screen and (min-width: 1920px){
+  .skills .card{
+    transform: scale(1.2);
+    margin-bottom: 50px;
+  }
+
+  .proyect-btn{
+    transform: scale(1.2);
+    margin-bottom: 10px;
+  }
+
+  .proyect-card, .contact-card{
+    transform: scale(1.2);
+  }
+
+  .welcome{
+    transform: scale(1.2);
+    left: 375px;
+  }
+
+  .social-btn{
+    transform: scale(1.4)
+  }
+
+  .social-btn{
+    transform: scale(1.5)
+  }
+}
+
+
 @media screen and (min-width: 600px) and (max-width: 1440px){
   .proyect-btn:hover svg{
     left: 5px;
@@ -935,6 +965,12 @@ ul {
 @media screen and (min-width: 600px) {
   body::-webkit-scrollbar {
     width: 10px;
+  }
+
+  .skills .card{
+    max-width: 1080px;
+    max-height: 720px;
+    min-width: 900px;
   }
 
   body::-webkit-scrollbar-track {
@@ -1179,10 +1215,6 @@ ul {
     height: fit-content;
   }
 
-  .fit-content{
-    height: fit-content;
-  }
-
   .clip{
     height:inherit;
   }
@@ -1204,7 +1236,7 @@ ul {
 
   .btn-mobile{
     font-family: 'Rubik';
-    border: unset;
+    border: 2px solid #F9A826;
     box-shadow: #F9A8262D 0px 0px 20px 0px, #F9A8262D 0px 0px 2px 1px inset!important;
     color: #F9A826;
     width: 60%;

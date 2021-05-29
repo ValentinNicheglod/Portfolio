@@ -11,7 +11,7 @@ const ProjectCard = ({
   name, img, state, gallery, mobileGallery, github, page, smallScreen, type,
 }) => {
   const [open, setOpen] = useState(false);
-  const [deviceType, setDeviceType] = useState(type === 'Aplicación' ? 'phone' : 'computer');
+  const [deviceType, setDeviceType] = useState('computer');
 
   return (
     <div className="card bg-3 p-3 proyect-card">

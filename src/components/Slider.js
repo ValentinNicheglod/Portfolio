@@ -29,6 +29,11 @@ const Slider = ({
     setActiveIndex(newIndex);
   };
 
+  const changeDevice = (device) => {
+    setDeviceType(device);
+    goToIndex(0);
+  };
+
   const slides = images && images.map((path, i) => (
     <CarouselItem
       key={i}
@@ -70,11 +75,11 @@ const Slider = ({
             && (
             <div className="gallery-selector">
               <div className="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autoComplete="off" checked={deviceType === 'computer'} onClick={() => setDeviceType('computer')} />
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autoComplete="off" checked={deviceType === 'computer'} onClick={() => changeDevice('computer')} />
                 <label className="btn btn-outline-light" htmlFor="btnradio1">
                   Computadora
                 </label>
-                <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autoComplete="off" checked={deviceType === 'phone'} onClick={() => setDeviceType('phone')} />
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autoComplete="off" checked={deviceType === 'phone'} onClick={() => changeDevice('phone')} />
                 <label className="btn btn-outline-light" htmlFor="btnradio3">
                   &nbsp;Smartphone&nbsp;
                 </label>

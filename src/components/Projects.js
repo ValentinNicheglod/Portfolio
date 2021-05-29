@@ -42,7 +42,7 @@ const Projects = ({ smallScreen }) => (
           Proyectos...
         </h1>
       </div>
-      <div className="row d-flex justify-content-around proyect-card-cont">
+      <div className="row d-flex justify-content-around proyect-card-cont align-items-center">
         {
                         projects.map((project, i) => (
                           <>
