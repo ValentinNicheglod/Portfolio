@@ -108,7 +108,7 @@ const Skills = () => (
                 src="https://valentinnicheglod.github.io/Portfolio/ilustrations/front.svg"
                 alt=""
                 className="skill-img"
-                height="320vh"
+                height="320"
               />
             </div>
             <hr />

@@ -31,10 +31,10 @@
 
 @keyframes clip {
   0%{
-    background-color: #191970;
+    background-color: var(--dark-blue);
   }
   100%{
-    background-color: #191970;
+    background-color: var(--dark-blue);
   }
 }
 
@@ -66,7 +66,7 @@
     color: #ff4c38;
   }
   100%{
-    color: #191970;
+    color: var(--dark-blue);
   }
 }
 
@@ -85,7 +85,7 @@
     background-color: #ff4c38;
   }
   100%{
-    background-color: #191970;
+    background-color: var(--dark-blue);
   }
 }
 
@@ -97,7 +97,7 @@
     color: #ff4c38;
   }
   100%{
-      color: #191970;
+      color: var(--dark-blue);
   } 
 }
 
@@ -118,7 +118,7 @@
     color: #ff4c38;
   }
   100%{
-    color: #191970;
+    color: var(--dark-blue);
   } 
 }
 
@@ -130,7 +130,7 @@
     clip-path: polygon(100% 75%, 0% 100%, 100% 100%);  
   }
   100%{
-    background-color: #191970;
+    background-color: var(--dark-blue);
   }
 }
 
@@ -142,10 +142,9 @@ html {
   width: 100%;
   max-width: inherit;
   overflow: auto;
-  background-color: #191970;
   scroll-behavior: smooth;
   --scrollbarBG: white;
-  --thumbBG: #191970;
+  --dark-blue: #191970;
 }
 
 body{
@@ -153,7 +152,7 @@ body{
   margin: 0;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scrollbar-color: var(--dark-blue) #FFFF;
 }
 
 button, a{
@@ -202,7 +201,7 @@ ul {
 }
 
 .bg-1{
-  background-color: #191970;
+  background-color: var(--dark-blue);
 }
 
 .bg-2{
@@ -214,7 +213,7 @@ ul {
 }
 
 .bg-5{
-  background: linear-gradient(180deg, #191970,#387AC4);
+  background: linear-gradient(180deg, var(--dark-blue),#387AC4);
 }
 
 .bg-6{
@@ -230,7 +229,7 @@ ul {
 }
 
 .co-1{
-  color: #191970;
+  color: var(--dark-blue);
 }
 
 .info-cont{
@@ -448,7 +447,7 @@ ul {
   transition: all .5s, display 2s;
   display: none;
   opacity: 0;
-  color: #191970;
+  color: var(--dark-blue);
 }
 
 .proyect-btn:hover p{
@@ -971,15 +970,16 @@ ul {
     max-width: 1080px;
     max-height: 720px;
     min-width: 900px;
+    margin-bottom: 30px;
   }
 
   body::-webkit-scrollbar-track {
-    background: var(--scrollbarBG);
+    background: #FFFF;
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) ;
+    background-color: var(--dark-blue);
     border-radius: 10px;
-    border: 2px solid var(--scrollbarBG);
+    border: 2px solid #FFFF;
   }
 
   .row{
@@ -1490,7 +1490,7 @@ ul {
     position: absolute;
     top: 30px;
     transform: scale(2);
-    color: #191970;
+    color: var(--dark-blue);
     animation: wave 5.5s linear;
     transition: 1s;
   }

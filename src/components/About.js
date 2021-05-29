@@ -12,15 +12,15 @@ const info = [
 ];
 
 const About = () => (
-  <div className="bg-1 row m-0 box responsive-cont">
-    <div className="col-md-7 col-sm-6 p-4 box fit-content">
+  <div className="bg-1 row m-0 responsive-cont">
+    <div className="col-md-7 col-sm-6 p-4">
       <div>
         <h1 className="display-3 white title">
           Sobre mi...
         </h1>
       </div>
       <div className="d-flex flex-column justify-content-around h-90">
-        <div className="info-cont box">
+        <div className="info-cont">
           {
             info.map((paragraph, i) => (
               <p key={i}>
