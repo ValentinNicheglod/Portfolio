@@ -25,7 +25,10 @@
         "react/button-has-type": "off",
         "no-unused-vars": "warn",
         "jsx-a11y/label-has-associated-control": "off",
-        "no-shadow": "warn"
-        
+        "no-shadow": "warn",
+        "no-undef": "warn",
+        "no-unused-expressions": "warn",
+        "no-return-assign": "warn"
+
     }
 }

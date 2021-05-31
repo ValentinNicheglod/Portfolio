@@ -18,7 +18,7 @@ const projects = [
     img: 'notatKy.png',
     state: 'Finalizado',
     gallery: ['notatky/inicio', 'notatky/login', 'notatky/signup', 'notatky/contra1', 'notatky/contra2', 'notatky/contra3', 'notatky/home', 'notatky/home-editing', 'notatky/home-editing-2', 'notatky/home-editing-3', 'notatky/home-add-tag', 'notatky/profile', 'notatky/edit-data', 'notatky/edit-pw', 'notatky/col-tag'],
-    mobile_gallery: ['notatky/mobile/1', 'notatky/mobile/2', 'notatky/mobile/3', 'notatky/mobile/4', 'notatky/mobile/5', 'notatky/mobile/14', 'notatky/mobile/15', 'notatky/mobile/16', 'notatky/mobile/6', 'notatky/mobile/7', 'notatky/mobile/8', 'notatky/mobile/9', 'notatky/mobile/10', 'notatky/mobile/11', 'notatky/mobile/12', 'notatky/mobile/13'],
+    mobile_gallery: ['notatky/mobile/1', 'notatky/mobile/2', 'notatky/mobile/3', 'notatky/mobile/4', 'notatky/mobile/14', 'notatky/mobile/15', 'notatky/mobile/16', 'notatky/mobile/6', 'notatky/mobile/7', 'notatky/mobile/8', 'notatky/mobile/9', 'notatky/mobile/10', 'notatky/mobile/11', 'notatky/mobile/12', 'notatky/mobile/13'],
     github: 'https://github.com/ValentinNicheglod/NotatKy',
     page: 'https://valentinnicheglod.github.io/NotatKy/#/',
     type: 'Web',
@@ -27,7 +27,8 @@ const projects = [
     name: 'TreeBank',
     img: 'treebank.png',
     state: 'Finalizado',
-    gallery: ['treebank/0', 'treebank/1', 'treebank/2', 'treebank/3', 'treebank/4', 'treebank/5', 'treebank/6', 'treebank/7', 'treebank/8', 'treebank/9', 'treebank/10', 'treebank/11'],
+    gallery: ['treebank/0', 'treebank/1', 'treebank/2', 'treebank/3', 'treebank/4', 'treebank/5',
+      'treebank/6', 'treebank/7', 'treebank/8', 'treebank/9', 'treebank/10', 'treebank/11'],
     github: 'https://github.com/ValentinNicheglod/treebank',
     page: 'https://github.com/ValentinNicheglod/treebank',
     type: 'Aplicación',
@@ -51,6 +52,7 @@ const Projects = ({ smallScreen }) => (
                 img={project.img}
                 key={i}
                 gallery={project.gallery}
+                index={i}
                 mobileGallery={project.mobile_gallery}
                 name={project.name}
                 page={project.page}
@@ -58,11 +60,6 @@ const Projects = ({ smallScreen }) => (
                 state={project.state}
                 type={project.type}
               />
-              <div id="preload">
-                {project.gallery && project.gallery.map((img) => (
-                  <img src={`projects/mockups/${img}.jpg`} alt="" />
-                ))}
-              </div>
             </>
           ))
         }

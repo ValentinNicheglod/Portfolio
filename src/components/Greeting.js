@@ -2,7 +2,7 @@ import React from 'react';
 import animateScrollTo from 'animated-scroll-to';
 
 const Greeting = ({ smallScreen }) => (
-  <div className="bg-white row max-height m-0 responsive-cont clip">
+  <div className="bg-white row max-height m-0 responsive-cont clip greeting">
     <div className="col-md-8 col-sm-8 d-flex greeting-col justify-content-center align-items-center">
       {smallScreen
         && (
