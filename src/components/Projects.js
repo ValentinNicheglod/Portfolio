@@ -36,7 +36,7 @@ const projects = [
 ];
 
 const Projects = ({ smallScreen }) => (
-  <div className="bg-2 row min projects m-0">
+  <div className="bg-2 row min projects m-0 responsive-cont">
     <div className="p-4">
       <div>
         <h1 className="display-3 white title">

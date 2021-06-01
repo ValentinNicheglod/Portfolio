@@ -85,7 +85,7 @@ const others = [
 ];
 
 const Skills = () => (
-  <div className="bg-5 min skills h-100 m-0 p-4">
+  <div className="bg-5 min skills responsive-cont m-0 p-4">
     <div>
       <h1 className="display-3 white title skills-title">
         Tech skills...
@@ -116,8 +116,8 @@ const Skills = () => (
             <div>
               {frontend.map((row, i) => (
                 <div className="d-flex col justify-content-around mb-3" key={i}>
-                  {row.map((icon) => (
-                    <Tooltip title={icon.title} placement="right">
+                  {row.map((icon, i) => (
+                    <Tooltip title={icon.title} placement="right" key={i}>
                       <div>
                         <img
                           draggable={false}
@@ -154,8 +154,8 @@ const Skills = () => (
             <div>
               {backend.map((row, i) => (
                 <div className="d-flex col justify-content-around mb-3" key={i}>
-                  {row.map((icon) => (
-                    <Tooltip title={icon.title} placement="right">
+                  {row.map((icon, i) => (
+                    <Tooltip title={icon.title} placement="right" key={i}>
                       <div>
                         <img
                           draggable={false}

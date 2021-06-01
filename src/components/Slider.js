@@ -32,20 +32,22 @@ const Slider = ({
   };
 
   const changeDevice = (device) => {
-    if (document.querySelector(`#active-${index}`)) {
-      document.querySelector(`#active-${index}`).id = 'change-device-animate-out';
+    if (device !== deviceType) {
+      if (document.querySelector(`#active-${index}`)) {
+        document.querySelector(`#active-${index}`).id = 'change-device-animate-out';
+      }
+      setTimeout(() => {
+        setDeviceType(device);
+        if (document.querySelector('#change-device-animate-out')) {
+          document.querySelector('#change-device-animate-out').id = 'change-device-animate-in';
+        }
+      }, 500);
+      setTimeout(() => {
+        if (document.querySelector('#change-device-animate-in')) {
+          document.querySelector('#change-device-animate-in').id = `active-${index}`;
+        }
+      }, 1000);
     }
-    setTimeout(() => {
-      setDeviceType(device);
-      if (document.querySelector('#change-device-animate-out')) {
-        document.querySelector('#change-device-animate-out').id = 'change-device-animate-in';
-      }
-    }, 500);
-    setTimeout(() => {
-      if (document.querySelector('#change-device-animate-in')) {
-        document.querySelector('#change-device-animate-in').id = `active-${index}`;
-      }
-    }, 1000);
   };
 
   const onClose = () => {

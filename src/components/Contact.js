@@ -30,8 +30,7 @@ const Contact = ({ smallScreen }) => {
   const year = date.getFullYear();
 
   return (
-    <div className="h-100 ">
-
+    <div className="h-100 vh100">
       <div className="bg-8 d-flex justify-content-center row contact">
         <hr />
         <h1 className="display-3 white title d-flex justify-content-center">
@@ -52,11 +51,10 @@ const Contact = ({ smallScreen }) => {
           }
           {
               contactLinks.map((link, i) => (
-                <Tooltip title={link.title} placement="bottom">
+                <Tooltip title={link.title} placement="bottom" key={i}>
                   <a
                     href={link.href}
                     className="social-btn"
-                    key={i}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
