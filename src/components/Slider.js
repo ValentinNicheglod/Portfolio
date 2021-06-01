@@ -32,8 +32,20 @@ const Slider = ({
   };
 
   const changeDevice = (device) => {
-    setDeviceType(device);
-    goToIndex(0);
+    if (document.querySelector(`#active-${index}`)) {
+      document.querySelector(`#active-${index}`).id = 'change-device-animate-out';
+    }
+    setTimeout(() => {
+      setDeviceType(device);
+      if (document.querySelector('#change-device-animate-out')) {
+        document.querySelector('#change-device-animate-out').id = 'change-device-animate-in';
+      }
+    }, 500);
+    setTimeout(() => {
+      if (document.querySelector('#change-device-animate-in')) {
+        document.querySelector('#change-device-animate-in').id = `active-${index}`;
+      }
+    }, 1000);
   };
 
   const onClose = () => {
@@ -49,7 +61,13 @@ const Slider = ({
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
     >
-      <img src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${path}.jpg`} alt="" className="image-slider" style={{ transform: deviceType === 'phone' && smallScreen ? 'scale(1.5)' : null }} />
+      <img
+        id={activeIndex === i ? `active-${index}` : null}
+        src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${path}.jpg`}
+        alt=""
+        className="image-slider"
+        style={{ transform: deviceType === 'phone' && smallScreen ? 'scale(1.5)' : null }}
+      />
     </CarouselItem>
   ));
 

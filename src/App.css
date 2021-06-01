@@ -515,6 +515,29 @@
   }
 }
 
+@keyframes change-device-in {
+  from{
+    transform: translateY(-100%);
+    opacity: .2;
+    filter: grayscale(100%);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes change-device-out {
+  from{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(100%);
+    opacity: .2;
+    filter: grayscale(100%);
+  }
+}
 
 /* Styles */
 
@@ -562,14 +585,6 @@ ul {
 .preload{
   width: 100px;
   height: 100px;
-}
-
-.carousel-item{
-
-}
-
-.active{
-
 }
 
 .wrapper {
@@ -647,7 +662,16 @@ ul {
 .carousel-item{
   background-color: #DEDEDE;
   height: 100%;
-  transition: -webkit-transform 6s ease;
+}
+
+#change-device-animate-out{
+  animation: change-device-out .5s ease-in;
+  animation-fill-mode: both;
+}
+
+#change-device-animate-in{
+  animation: change-device-in .5s ease-out;
+  animation-fill-mode: both;
 }
 
 .carousel-inner{
@@ -701,19 +725,22 @@ ul {
 }
 
 .clip{
-  animation: clip 1s linear;
+  animation: clip .5s linear 1s;
+  animation-fill-mode: both;
 }
 
 .clip2{
-  animation: polygon 1s linear;
+  animation: polygon 1s linear 2s;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
   transition: 1s;
+  animation-fill-mode: both;
 }
 
 .clip3{
-  animation: circle 2s linear;
+  animation: circle 2s linear 2s;
   clip-path: circle(45vw at 90vw 120vh);
   transition: 1s;
+  animation-fill-mode: both;
 }
 
 .clip4{
@@ -723,9 +750,9 @@ ul {
   bottom: 0;
   margin-bottom: auto;
   margin-top: auto;
-  animation: arrow 5.5s linear;
+  animation: arrow 5.5s linear 1.5s;
   transition: 1s;
-  
+  animation-fill-mode: both;
 }
 
 .clip4:hover{
@@ -740,11 +767,12 @@ ul {
 }
 
 .clip5{
-  animation: clip5 5.5s linear;
+  animation: clip5 5.5s linear 1.5s;
   clip-path: polygon(100% 75%, 0% 100%, 100% 100%);
   bottom: 0;
   right: 0;
   z-index: 50;
+  animation-fill-mode: both;
 }
 
 .social-btn:hover{

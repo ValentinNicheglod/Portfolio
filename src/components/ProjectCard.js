@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-// import Modal from '@material-ui/core/Modal';
-
-import animateScrollTo from 'animated-scroll-to';
 import Slider from './Slider';
 
 const laptop = 'M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z';
@@ -17,27 +14,17 @@ const ProjectCard = ({
 
   const openGallery = () => {
     setOpen(true);
-    /* const slide = document.querySelector(`#slide-${index}`);
-    setTimeout(() => {
-      slide.id = 'modal';
-    }, 1000); */
   };
 
   const closeGallery = () => {
-    /* document.querySelector('#modal').setAttribute('id', 'modal-hidden');
-    setTimeout(() => {
-      setOpen(false);
-      document.querySelector('#modal-hidden').setAttribute('id', `slide-${index}`);
-      setDeviceType('computer');
-    }, 1500); */
     setOpen(false);
   };
-  const preload = () => {
+  /*   const preload = () => {
     gallery && gallery.map((image) => (new Image()).src = `https://valentinnicheglod.github.io/Portfolio/projects/mockups/${image}.jpg`);
-  };
+  }; */
 
   return (
-    <div className="card bg-3 p-3 proyect-card" onLoad={preload}>
+    <div className="card bg-3 p-3 proyect-card">
       <div className="d-flex justify-content-center row proyect-card-1">
         <div className="row">
           <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
@@ -77,32 +64,32 @@ const ProjectCard = ({
           <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
             <p>
               {
-                                    state === 'Finalizado'
-                                      ? (
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="20"
-                                          height="20"
-                                          fill="currentColor"
-                                          className="bi bi-check2"
-                                          viewBox="0 0 16 16"
-                                        >
-                                          <path d={finished} />
-                                        </svg>
-                                      )
-                                      : (
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="20"
-                                          height="20"
-                                          fill="currentColor"
-                                          className="bi bi-braces"
-                                          viewBox="0 0 16 16"
-                                        >
-                                          <path d={production} />
-                                        </svg>
-                                      )
-                                }
+                  state === 'Finalizado'
+                    ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        className="bi bi-check2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d={finished} />
+                      </svg>
+                    )
+                    : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        className="bi bi-braces"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d={production} />
+                      </svg>
+                    )
+              }
               &nbsp;&nbsp;
               {state}
             </p>
@@ -185,10 +172,7 @@ const ProjectCard = ({
           }
         </div>
       </div>
-      <div
-        // id={`slide-${index}`}
-        id={open ? 'modal' : 'modal-hidden'}
-      >
+      <div id={open ? 'modal' : 'modal-hidden'}>
         <Slider
           deviceType={deviceType}
           images={deviceType === 'phone' ? mobileGallery : gallery}
@@ -203,7 +187,6 @@ const ProjectCard = ({
           closeGallery={closeGallery}
           setDeviceType={setDeviceType}
         />
-        {/* {animation && <div id={open ? 'circle-visible' : 'circle-hidden'} />} */}
       </div>
     </div>
   );
