@@ -53,7 +53,7 @@ const Slider = ({
   const onClose = () => {
     closeGallery();
     setTimeout(() => {
-      goToIndex(0);
+      setActiveIndex(0);
     }, 2000);
   };
 
@@ -68,7 +68,7 @@ const Slider = ({
         src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${path}.jpg`}
         alt=""
         className="image-slider"
-        style={{ transform: deviceType === 'phone' && smallScreen ? 'scale(1.5)' : null }}
+        style={{ transform: deviceType === 'phone' ? 'scale(1.5)' : null }}
       />
     </CarouselItem>
   ));
@@ -81,7 +81,6 @@ const Slider = ({
         interval={false}
         next={next}
         previous={previous}
-        // slide={false}
         key={index}
       >
         <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
