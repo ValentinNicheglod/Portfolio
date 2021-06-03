@@ -63,8 +63,8 @@ const About = () => (
       </div>
     </div>
     <button className="btn more-info more-info1" onClick={() => animateScrollTo(window.innerHeight * 2 + 20)}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
-        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+        <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
       </svg>
     </button>
     <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">

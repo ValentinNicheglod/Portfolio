@@ -9,7 +9,7 @@ import {
 } from 'reactstrap';
 
 const Slider = ({
-  deviceType, closeGallery, images, index, logo, mobile, name, open, setDeviceType, smallScreen,
+  deviceType, closeGallery, images, index, logo, mobile, name, open, setDeviceType,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -38,15 +38,17 @@ const Slider = ({
       }
       setTimeout(() => {
         setDeviceType(device);
+      }, 500);
+      setTimeout(() => {
         if (document.querySelector('#change-device-animate-out')) {
           document.querySelector('#change-device-animate-out').id = 'change-device-animate-in';
         }
-      }, 500);
+      }, 600);
       setTimeout(() => {
         if (document.querySelector('#change-device-animate-in')) {
           document.querySelector('#change-device-animate-in').id = `active-${index}`;
         }
-      }, 1000);
+      }, 1100);
     }
   };
 
@@ -68,7 +70,6 @@ const Slider = ({
         src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${path}.jpg`}
         alt=""
         className="image-slider"
-        style={{ transform: deviceType === 'phone' ? 'scale(1.5)' : null }}
       />
     </CarouselItem>
   ));

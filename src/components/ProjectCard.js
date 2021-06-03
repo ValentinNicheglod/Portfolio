@@ -18,8 +18,6 @@ const ProjectCard = ({
   const [animation, setAnimation] = useState(true);
   const [animation1, setAnimation1] = useState(false);
 
-  console.log(tech);
-
   const openGallery = () => {
     setOpen(true);
     setTimeout(() => {
@@ -62,10 +60,7 @@ const ProjectCard = ({
   return (
     <div
       className="card bg-3 p-3 proyect-card"
-      id={
-        // eslint-disable-next-line no-nested-ternary
-        (animation1 ? 'card-front' : 'card-back')
-}
+      id={animation1 ? 'card-front' : 'card-back'}
     >
       {side === 'front'
         ? (

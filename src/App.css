@@ -1026,12 +1026,12 @@ p, h1, h2, h3, h4, h5, h6, small{
 
 #change-device-animate-out{
   animation: change-device-out .5s ease-in;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both
 }
 
 #change-device-animate-in{
   animation: change-device-in .5s ease-out;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both;
 }
 
 .carousel-inner{
@@ -1087,7 +1087,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   bottom: 0;
   margin-bottom: auto;
   margin-top: auto;
-  animation: arrow 5.5s linear 1.5s;
+  animation: arrow 5.5s linear 2s;
   transition: 1s;
   animation-fill-mode: backwards;
 }
@@ -1127,12 +1127,12 @@ p, h1, h2, h3, h4, h5, h6, small{
 } 
 
 .welcome button{
-  animation: button 5.5s linear 1.5s;
+  animation: button 5.5s linear 2s;
   animation-fill-mode: backwards;
 }
 
 .name{
-  animation: color 5.5s linear 1.5s;
+  animation: color 5.5s linear 2s;
   animation-fill-mode: backwards;
 }
 
