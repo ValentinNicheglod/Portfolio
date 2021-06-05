@@ -52,7 +52,7 @@ const About = () => (
             images.map((image, i) => (
               <div key={i}>
                 <img
-                  src={`me/${image}.jpeg`}
+                  src={`https://valentinnicheglod.github.io/Portfolio/me/${image}.jpeg`}
                   alt=""
                   draggable={false}
                 />

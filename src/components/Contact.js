@@ -126,6 +126,7 @@ const Contact = ({ smallScreen }) => {
           {year}
           &nbsp;| Valentín Nicheglod
         </small>
+        {!smallScreen && (
         <Tooltip title="Volver arriba" placement="left">
           <button className="btn go-up-btn" onClick={() => animateScrollTo(0)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-chevron-up" viewBox="0 0 16 16">
@@ -133,6 +134,7 @@ const Contact = ({ smallScreen }) => {
             </svg>
           </button>
         </Tooltip>
+        )}
       </div>
     </div>
   );
