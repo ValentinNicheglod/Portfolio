@@ -59,12 +59,12 @@ const ProjectCard = ({
 
   return (
     <div
-      className="card bg-3 p-3 proyect-card"
+      className={`card bg-3 p-3 proyect-card ${side === 'back' ? 'project-back' : 'project-front'}`}
       id={animation1 ? 'card-front' : 'card-back'}
     >
       {side === 'front'
         ? (
-          <div>
+          <div className="h-100">
             <div className="d-flex justify-content-center row proyect-card-1">
               <div className="row">
                 <div className="d-flex justify-content-center col-md-6 col-sm-6 white p-info">
@@ -212,19 +212,22 @@ const ProjectCard = ({
                 }
               </div>
             </div>
-            <Tooltip title="Información adicional">
-              <div
-                className="floating-button"
-                onClick={moreInfoOpen}
-                role="button"
-                tabIndex={0}
-                aria-hidden
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-plus" viewBox="0 0 16 16">
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
-                </svg>
-              </div>
-            </Tooltip>
+            {!smallScreen
+              && (
+              <Tooltip title="Información adicional">
+                <div
+                  className="floating-button"
+                  onClick={moreInfoOpen}
+                  role="button"
+                  tabIndex={0}
+                  aria-hidden
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                  </svg>
+                </div>
+              </Tooltip>
+              )}
             {open
               && (
               <div id={animation ? 'modal' : 'modal-hidden'}>
@@ -247,20 +250,15 @@ const ProjectCard = ({
           </div>
         )
         : (
-          <div className="wrapper">
+          <div className="wrapper h-100">
             <div className="grid-logo">
               <img src={`https://valentinnicheglod.github.io/Portfolio/projects/${img}`} alt="logo" />
             </div>
-            {/* <div className="grid-name">
-              <h2>
-                {name}
-              </h2>
-            </div> */}
             <div className="grid-desc">
               <div className="desc-circle" />
               <div className="desc-circle-1" />
               <div className="desc-circle-2" />
-              <div style={{ zIndex: '1000' }}>
+              <div style={{ zIndex: '1000', padding: '0' }}>
                 <div className="tag">
                   {name}
                 </div>
@@ -273,26 +271,41 @@ const ProjectCard = ({
               </p>
             </div>
             <div className="grid-date grid-date-1">
-              <div className="tag">
-                Inicio
+              <div className="p-0">
+                <div className="tag">
+                  Inicio
+                </div>
+                <p>
+                  {date.start[0]}
+                </p>
+                <h6 className="grid-date-year">
+                  {date.start[1]}
+                </h6>
               </div>
-              <p>
-                {date.start[0]}
-              </p>
-              <h6 className="grid-date-year">
-                {date.start[1]}
-              </h6>
+              <div className="final-date p-0">
+                <div className="tag">
+                  Final
+                </div>
+                <p>
+                  {date.end[0]}
+                </p>
+                <h6 className="grid-date-year">
+                  {date.end[1]}
+                </h6>
+              </div>
             </div>
             <div className="grid-date grid-date-2">
-              <div className="tag">
-                Final
+              <div>
+                <div className="tag">
+                  Final
+                </div>
+                <p>
+                  {date.end[0]}
+                </p>
+                <h6 className="grid-date-year">
+                  {date.end[1]}
+                </h6>
               </div>
-              <p>
-                {date.end[0]}
-              </p>
-              <h6 className="grid-date-year">
-                {date.end[1]}
-              </h6>
             </div>
             <div className="grid-tech">
               <div>
@@ -303,7 +316,7 @@ const ProjectCard = ({
                   Tecnologías
                 </h3>
               </div>
-              <div className="w-100">
+              <div className="tech-icon-cont m-0 pt-0 w-100 h-50 d-flex justify-content-around row">
                 {tech.map((tech, i) => (
                   <Tooltip title={tech[1]}>
                     <div className="tech-icon row">
