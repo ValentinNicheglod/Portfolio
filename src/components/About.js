@@ -32,7 +32,7 @@ const About = () => (
         <div className="cv-btn-cont">
           <a
             className="btn cv-btn"
-            href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing"
+            href="https://drive.google.com/file/d/1KF0_DKU8DYXtTFJ2fZc7T6uaX5v3FA-h/view?usp=sharing"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -71,7 +71,7 @@ const About = () => (
 
       <a
         className="btn w-50 btn-mobile btn-mobile-sec d-flex justify-content-center W-100"
-        href="https://drive.google.com/file/d/1M-Urti3NuO2jC7VJeK6hTXu7wvs__dQ3/view?usp=sharing"
+        href="https://drive.google.com/file/d/1KF0_DKU8DYXtTFJ2fZc7T6uaX5v3FA-h/view?usp=sharing"
         target="_blank"
         rel="noreferrer noopener"
       >
