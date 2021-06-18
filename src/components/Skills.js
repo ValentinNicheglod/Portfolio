@@ -54,7 +54,7 @@ const frontend = [
       title: 'React JS y React Native',
     },
     {
-      src: 'https://img.icons8.com/windows/55/000000/redux.png',
+      src: 'https://img.icons8.com/color/55/000000/redux.png',
       title: 'Redux',
     },
   ],
@@ -66,6 +66,9 @@ const others = [
   }, {
     src: 'https://img.icons8.com/ios-filled/55/000000/github.png',
     title: 'GitHub',
+  }, {
+    src: 'https://img.icons8.com/color/55/000000/heroku.png',
+    title: 'Heroku',
   }, {
     src: 'https://img.icons8.com/color/55/000000/javascript.png',
     title: 'Javascript',
