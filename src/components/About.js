@@ -5,7 +5,7 @@ import animateScrollTo from 'animated-scroll-to';
 const images = [1, 2, 3, 4];
 const info = [
   'Me llamo Valentín Nicheglod, vivo en Uruguay, en la ciudad de Paysandú, tengo 20 años y mi vida gira en torno a cuatro pasiones: la arquitectura 👷🏼‍♂️, la aviación ✈️, el diseño 🖊️ y por supuesto la programación 👨🏻‍💻.',
-  'Soy desarrollador web full stack con más de diez meses de experiencia programando en JavaScript, también he desarrollado aplicaciones móviles en react native.',
+  'Soy desarrollador web full stack con un año de experiencia programando en JavaScript, también he desarrollado aplicaciones móviles en react native.',
   'Me considero una persona muy atenta a los detalles, y esto me ayuda al momento de pensar y diseñar, disfruto trabajando en equipos proactivos y organizados.',
   'Siempre estoy en busca de expandir mis conocimientos, me encanta aprender y enfrentarme a nuevos desafíos, es algo que considero fundamental para el desarrollo de cualquier persona.',
 
