@@ -17,6 +17,7 @@ const Inicio = () => {
   }, false);
 
   const images = [];
+
   function preload() {
     setTimeout(() => {
       for (let i = 0; i < preload.arguments.length; i += 1) {
@@ -30,6 +31,9 @@ const Inicio = () => {
     'https://img.icons8.com/fluent/96/000000/iphone.png',
     'https://img.icons8.com/fluent/96/000000/monitor.png',
     'https://img.icons8.com/fluent/96/000000/checkmark.png',
+    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/notatky/inicio.jpg',
+    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/treebank/0.jpg',
+    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/mono/inicio.jpg',
   );
 
   const smallScreen = window.screen.width < 600;
