@@ -1794,6 +1794,7 @@ p, h1, h2, h3, h4, h5, h6, small{
 .more-info1{
   position: absolute;
   bottom: 10px;
+  width: 60px;
   color: white;
   left: 0;
   right: 0;
