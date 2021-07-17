@@ -672,12 +672,12 @@ p, h1, h2, h3, h4, h5, h6, small{
 
 .grid-type p, .grid-state p{
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .grid-type img, .grid-state img{
   transform: translate(0, 15px);
-  z-index: 1000;
+  z-index: 200;
   position: relative;
 }
 
@@ -1870,7 +1870,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   }
 }
 
-/* @media screen and (min-width: 1920px){
+@media screen and (min-width: 1920px) and (max-height: 1200px){
   .skills .card{
     transform: scale(1.2);
     margin-bottom: 50px;
@@ -1936,7 +1936,7 @@ p, h1, h2, h3, h4, h5, h6, small{
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 1440px){
+@media screen and (min-width: 600px) and (max-width: 1440px) and (max-height: 900px){
   .proyect-btn:hover svg{
     left: 5px;
     height: 1.6vw;
@@ -2105,9 +2105,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   .skill-title{
     width: 17%;
   }
-} */
-
-
+}
 
 /* RESPONSIVE */
 
