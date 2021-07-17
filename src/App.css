@@ -1986,11 +1986,6 @@ p, h1, h2, h3, h4, h5, h6, small{
     font-size: 8px!important;
   }
 
-  .proyect-card{
-    height: 70vh;
-    width: 30vw;
-  }
-
   .image{
     height: 38vh;
   }
@@ -1998,12 +1993,6 @@ p, h1, h2, h3, h4, h5, h6, small{
   .image img{
     width: auto!important;
     height: 100%;
-  }
-
-  .wrapper{
-    grid-gap: 7px;
-    grid-template-columns: repeat(4, 5.8vw);
-    padding: 1rem;
   }
 
   .p-info p{
