@@ -29,7 +29,7 @@ const About = () => (
             ))
         }
         </div>
-        <div className="cv-btn-cont">
+        {/* <div className="cv-btn-cont">
           <a
             className="btn cv-btn"
             href="https://drive.google.com/file/d/1KF0_DKU8DYXtTFJ2fZc7T6uaX5v3FA-h/view?usp=sharing"
@@ -39,7 +39,7 @@ const About = () => (
             Ver curriculúm
             <div className="cv-btn-line" />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
     <div className="col-md-5 col-sm-6 d-flex justify-content-center align-items-center py-3 slider-cont">
@@ -67,8 +67,7 @@ const About = () => (
         <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
       </svg>
     </button>
-    <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">
-
+    {/* <div className="d-flex justify-content-center W-100 cv-btn-cont-mobile">
       <a
         className="btn w-50 btn-mobile btn-mobile-sec d-flex justify-content-center W-100"
         href="https://drive.google.com/file/d/1KF0_DKU8DYXtTFJ2fZc7T6uaX5v3FA-h/view?usp=sharing"
@@ -77,7 +76,7 @@ const About = () => (
       >
         VER CURRíCULUM
       </a>
-    </div>
+    </div> */}
   </div>
 );
 

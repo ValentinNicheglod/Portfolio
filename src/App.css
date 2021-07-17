@@ -654,7 +654,6 @@ p, h1, h2, h3, h4, h5, h6, small{
 
 .grid-logo{
   display: flex;
-  aspect-ratio: 1/1;
   justify-content: center;
   align-items: center;
   grid-column: 4/5;
@@ -1871,7 +1870,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   }
 }
 
-@media screen and (min-width: 1920px){
+/* @media screen and (min-width: 1920px){
   .skills .card{
     transform: scale(1.2);
     margin-bottom: 50px;
@@ -2014,7 +2013,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   .grid-type p, 
   .grid-state p{
     font-size: 10px;
-    z-index: 1500;
+    z-index: 100;
   }
 
   .grid-state img{
@@ -2106,7 +2105,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   .skill-title{
     width: 17%;
   }
-}
+} */
 
 
 
