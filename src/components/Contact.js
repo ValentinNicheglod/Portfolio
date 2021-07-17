@@ -78,8 +78,8 @@ const Contact = ({ smallScreen }) => {
                   ¿QUIERES COMUNICARTE CONMIGO?
                 </h6>
                 <p className="white w-100 m-0">
-                  Estoy dispuesto a recibir propuestas laborales
-                  o realizar colaboraciones en algún proyecto.
+                  Ya sea para simplemente estar en contacto
+                  o realizar colaboraciones en algun proyecto.
                 </p>
                 <a
                   href="mailto:nicheglod69@gmail.com"
@@ -95,8 +95,8 @@ const Contact = ({ smallScreen }) => {
                   ¿QUIERES COMUNICARTE CONMIGO?
                 </h3>
                 <p className="white">
-                  Estoy dispuesto a recibir propuestas laborales
-                  o realizar colaboraciones en algún proyecto.
+                  Ya sea para simplemente estar en contacto
+                  o realizar colaboraciones en algun proyecto.
                 </p>
                 <a
                   href="mailto:nicheglod69@gmail.com"

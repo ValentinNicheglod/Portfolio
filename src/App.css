@@ -1943,7 +1943,6 @@ p, h1, h2, h3, h4, h5, h6, small{
   }
 
   .project-back{
-    padding: 0!important;
     transition: 0!important;
   }
 
@@ -1979,7 +1978,7 @@ p, h1, h2, h3, h4, h5, h6, small{
   }
 
   .grid-desc p{
-    font-size: 1.2vw;
+    font-size: 2vh;
   }
 
   .tag{

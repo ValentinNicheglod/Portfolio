@@ -19,7 +19,7 @@ const About = () => (
           Sobre mi...
         </h1>
       </div>
-      <div className="d-flex flex-column justify-content-around h-90">
+      <div className="d-flex flex-column justify-content-around">
         <div className="info-cont">
           {
             info.map((paragraph, i) => (
