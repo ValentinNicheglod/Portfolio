@@ -24,11 +24,14 @@
         "react/no-array-index-key": "off",
         "react/button-has-type": "off",
         "no-unused-vars": "warn",
+        "parser": "off",
+        "import/no-named-as-default": 0,
         "jsx-a11y/label-has-associated-control": "off",
         "no-shadow": "warn",
         "no-undef": "warn",
         "no-unused-expressions": "warn",
-        "no-return-assign": "warn"
+        "no-return-assign": "warn",
+        "jsx-quotes": [2, "prefer-double"]
 
     }
 }

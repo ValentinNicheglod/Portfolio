@@ -5,7 +5,7 @@ import Inicio from './containers/Inicio';
 
 function App() {
   return (
-    <div className="App h-100">
+    <div className="App">
       <Inicio />
     </div>
   );

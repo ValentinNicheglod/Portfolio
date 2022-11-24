@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import '../App.css';
 
 import About from '../components/About';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import Greeting from '../components/Greeting';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import SkillsMobile from '../components/SkillsMobile';
+
+import SmallLogo from '../images/logos/Small.svg';
 
 const Inicio = () => {
+  const [loadingAnimation, setLoadingAnimation] = useState(true);
+  const [pageLoaded, setPageLoaded] = useState(false);
+
+  const firstSection = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPageLoaded(true);
+      document.body.classList.add('no-scroll');
+      setTimeout(() => {
+        document.body.classList.remove('no-scroll');
+        setLoadingAnimation(false);
+      }, 3300);
+    }, 300);
+  }, [firstSection]);
+
   document.addEventListener('contextmenu', (e) => {
     if (e.target.nodeName === 'IMG') {
       e.preventDefault();
@@ -17,12 +35,11 @@ const Inicio = () => {
   }, false);
 
   const urlImages = [
-    'https://img.icons8.com/fluent/96/000000/iphone.png',
-    'https://img.icons8.com/fluent/96/000000/monitor.png',
-    'https://img.icons8.com/fluent/96/000000/checkmark.png',
-    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/notatky/inicio.jpg',
-    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/treebank/0.jpg',
-    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/mono/inicio.jpg',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/ProjectBackground.png',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/radley/Mockup%20Template.png',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/notatky/V2/Inicio.jpg',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/meteor/Login.jpg',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/radley/Inicio.jpg',
   ];
 
   const images = [];
@@ -36,20 +53,29 @@ const Inicio = () => {
     }, 3000);
   }());
 
-  const smallScreen = window.screen.width < 600;
+  const isTablet = window.innerWidth < 991;
+  const smallScreen = window.innerWidth < 770;
+  const isMobile = window.innerWidth < 600;
 
   return (
-    <div className="h-100">
-      <Greeting smallScreen={smallScreen} />
-      <About />
-      {smallScreen ? <SkillsMobile /> : <Skills />}
-      <Projects
-        smallScreen={smallScreen}
-      />
-      <Contact
-        smallScreen={smallScreen}
-      />
-    </div>
+    <>
+      {loadingAnimation && (
+        <>
+          {pageLoaded && <img className="loading-logo" src={SmallLogo} alt="" />}
+          <div className={pageLoaded ? 'loading-screen loading-animation' : 'loading-screen'} />
+        </>
+      )}
+      <Greeting ref={firstSection} smallScreen={smallScreen} />
+      {!loadingAnimation && (
+        <>
+          <About isSmallScreen={smallScreen} />
+          <Skills isSmallScreen={isTablet} />
+          <Projects isSmallScreen={smallScreen} />
+          <Contact isSmallScreen={isMobile} />
+          <Footer smallScreen={smallScreen} />
+        </>
+      )}
+    </>
   );
 };
 
