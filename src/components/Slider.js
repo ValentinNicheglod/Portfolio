@@ -7,8 +7,10 @@ import {
   CarouselControl,
   CarouselIndicators,
 } from 'reactstrap';
+import { Tooltip } from '@material-ui/core';
 
 import ChevronRightIcon from '../images/icons/BlueChevronRight.svg';
+import CloseIcon from '../images/icons/Close.svg';
 
 const Slider = ({
   deviceType, closeGallery, images, index, mobile, open, project, setDeviceType,
@@ -127,6 +129,11 @@ const Slider = ({
         <CarouselControl cssModule={{ backgroundImage: ChevronRightIcon }} direction="prev" directionText=" " onClickHandler={previous} />
         <CarouselControl direction="next" directionText=" " onClickHandler={next} />
       </Carousel>
+      <Tooltip title="Cerrar" placement="left">
+        <button className="btn close-btn" onClick={onClose}>
+          <img src={CloseIcon} alt="" />
+        </button>
+      </Tooltip>
     </>
   );
 };
