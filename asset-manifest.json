@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ae9d8e7d.chunk.css",
-    "main.js": "/Portfolio/static/js/main.4372081a.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.4372081a.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.cdee1c60.chunk.css",
+    "main.js": "/Portfolio/static/js/main.b2f9d169.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.b2f9d169.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.6f3b8112.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.6f3b8112.js.map",
-    "static/js/2.206bdd37.chunk.js": "/Portfolio/static/js/2.206bdd37.chunk.js",
-    "static/js/2.206bdd37.chunk.js.map": "/Portfolio/static/js/2.206bdd37.chunk.js.map",
+    "static/js/2.0f808d22.chunk.js": "/Portfolio/static/js/2.0f808d22.chunk.js",
+    "static/js/2.0f808d22.chunk.js.map": "/Portfolio/static/js/2.0f808d22.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.ae9d8e7d.chunk.css.map": "/Portfolio/static/css/main.ae9d8e7d.chunk.css.map",
-    "static/js/2.206bdd37.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.206bdd37.chunk.js.LICENSE.txt",
+    "static/css/main.cdee1c60.chunk.css.map": "/Portfolio/static/css/main.cdee1c60.chunk.css.map",
+    "static/js/2.0f808d22.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.0f808d22.chunk.js.LICENSE.txt",
     "static/media/Aeroplane.d8e4784d.png": "/Portfolio/static/media/Aeroplane.d8e4784d.png",
     "static/media/Architecture.01ec5697.png": "/Portfolio/static/media/Architecture.01ec5697.png",
     "static/media/App.css": "/Portfolio/static/media/Wave.4855e410.svg",
@@ -27,12 +27,13 @@
     "static/media/Skills.8f2ec38b.png": "/Portfolio/static/media/Skills.8f2ec38b.png",
     "static/media/UXUIDesigner.6b09f82f.png": "/Portfolio/static/media/UXUIDesigner.6b09f82f.png",
     "static/media/WavingHand.5f77d73e.png": "/Portfolio/static/media/WavingHand.5f77d73e.png",
+    "static/media/getFetch.cjs": "/Portfolio/static/media/getFetch.5fde86e3.cjs",
     "static/media/notatKy.ba12a735.png": "/Portfolio/static/media/notatKy.ba12a735.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6f3b8112.js",
-    "static/js/2.206bdd37.chunk.js",
-    "static/css/main.ae9d8e7d.chunk.css",
-    "static/js/main.4372081a.chunk.js"
+    "static/js/2.0f808d22.chunk.js",
+    "static/css/main.cdee1c60.chunk.css",
+    "static/js/main.b2f9d169.chunk.js"
   ]
 }
