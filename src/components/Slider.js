@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-return-assign */
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Carousel,
   CarouselItem,
@@ -9,12 +8,16 @@ import {
 } from 'reactstrap';
 import { Tooltip } from '@material-ui/core';
 
+// Icons
+
 import ChevronRightIcon from '../images/icons/BlueChevronRight.svg';
 import CloseIcon from '../images/icons/Close.svg';
 
 const Slider = ({
   deviceType, closeGallery, images, index, mobile, open, project, setDeviceType,
 }) => {
+  const { t } = useTranslation();
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -78,7 +81,7 @@ const Slider = ({
                   <path d="M16 15L12 19L8 15" stroke="#366EFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M8 9L12 5L16 9" stroke="#366EFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <p>Prototipo scrolleable</p>
+                <p>{t('scrollable-prototype')}</p>
               </div>
             )}
             <div className="prototype-content-cont">
@@ -129,7 +132,7 @@ const Slider = ({
         <CarouselControl cssModule={{ backgroundImage: ChevronRightIcon }} direction="prev" directionText=" " onClickHandler={previous} />
         <CarouselControl direction="next" directionText=" " onClickHandler={next} />
       </Carousel>
-      <Tooltip title="Cerrar" placement="left">
+      <Tooltip title={t('close')} placement="left">
         <button className="btn close-btn" onClick={onClose}>
           <img src={CloseIcon} alt="" />
         </button>

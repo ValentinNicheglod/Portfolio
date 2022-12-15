@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import '../App.css';
 
+// Components
+
 import About from '../components/About';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -9,13 +11,35 @@ import Greeting from '../components/Greeting';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 
+// Logos
+
 import SmallLogo from '../images/logos/Small.svg';
+
+function getWindowWidth() {
+  return window.innerWidth;
+}
 
 const Inicio = () => {
   const [loadingAnimation, setLoadingAnimation] = useState(true);
   const [pageLoaded, setPageLoaded] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(getWindowWidth());
+  const [layout, setLayout] = useState({
+    isDesktop: window.innerWidth > 991,
+    isTablet: window.innerWidth < 991,
+    isSmallScreen: window.innerWidth < 770,
+    isMobile: window.innerWidth < 600,
+  });
 
   const firstSection = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(getWindowWidth());
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,6 +51,15 @@ const Inicio = () => {
       }, 3300);
     }, 300);
   }, [firstSection]);
+
+  useEffect(() => {
+    setLayout({
+      isDesktop: window.innerWidth > 991,
+      isTablet: window.innerWidth < 991,
+      isSmallScreen: window.innerWidth < 770,
+      isMobile: window.innerWidth < 600,
+    });
+  }, [windowWidth]);
 
   document.addEventListener('contextmenu', (e) => {
     if (e.target.nodeName === 'IMG') {
@@ -53,10 +86,6 @@ const Inicio = () => {
     }, 3000);
   }());
 
-  const isTablet = window.innerWidth < 991;
-  const smallScreen = window.innerWidth < 770;
-  const isMobile = window.innerWidth < 600;
-
   return (
     <>
       {loadingAnimation && (
@@ -65,14 +94,14 @@ const Inicio = () => {
           <div className={pageLoaded ? 'loading-screen loading-animation' : 'loading-screen'} />
         </>
       )}
-      <Greeting ref={firstSection} smallScreen={smallScreen} />
+      <Greeting ref={firstSection} smallScreen={layout.isSmallScreen} />
       {!loadingAnimation && (
         <>
-          <About isSmallScreen={smallScreen} />
-          <Skills isSmallScreen={isTablet} />
-          <Projects isSmallScreen={smallScreen} />
-          <Contact isSmallScreen={isMobile} />
-          <Footer smallScreen={smallScreen} />
+          <About layout={layout} />
+          <Skills layout={layout} />
+          <Projects />
+          <Contact layout={layout} />
+          <Footer layout={layout} />
         </>
       )}
     </>

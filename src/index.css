@@ -12,3 +12,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* @keyframes change-device-in {
+  from {
+    transform: translateY(-150%);
+    opacity: .2;
+    filter: grayscale(100%);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    transition: 1s;
+  }
+}
+
+@keyframes change-device-out {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    transition: 1s;
+  }
+
+  to {
+    transform: translateY(150%);
+    opacity: .2;
+    filter: grayscale(100%);
+  }
+} */
+
+/* #change-device-animate-out {
+  animation: change-device-out .5s ease-in;
+  animation-fill-mode: both;
+  transition: 1s;
+}
+
+#change-device-animate-in {
+  animation: change-device-in .5s ease-out;
+  animation-fill-mode: both;
+  transition: 1s;
+} */

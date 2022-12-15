@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Emojis
 
 import SkillsEmoji from '../images/emojis/Skills.png';
 
-// Skills
+const Skills = ({ layout }) => {
+  const { t } = useTranslation();
 
-const skillsList = [
-  {
-    type: 'Personales',
-    skills: [['Atención al detalle', 'Adaptabilidad', 'Proactividad', 'Compromiso']],
-    mobileSkills: ['Detallismo', 'Adaptabilidad', 'Proactividad', 'Compromiso'],
-  },
-  {
-    type: 'Diseño',
-    skills: [['Figma', 'Adobe XD', 'Adobe Photoshop', 'Adobe Illustrator']],
-    mobileSkills: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator'],
-  },
-  {
-    type: 'Desarrollo',
-    skills: [['Javascript', 'Typescript', 'HTML', 'CSS'], ['React JS', 'React Native', 'Redux', 'Node Js'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
-    mobileSkills: ['Javascript', 'Typescript', 'HTML', 'CSS'],
-    extraSkills: [['React', 'React Native', 'Redux', 'NodeJS'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
-  },
-];
+  const skillsList = [
+    {
+      type: t('personal'),
+      skills: [[t('detail-attention'), t('adaptability'), t('proactivity'), t('commitment')]],
+      mobileSkills: [t('detail-attention-2'), t('adaptability'), t('proactivity'), t('commitment')],
+    },
+    {
+      type: t('design'),
+      skills: [['Figma', 'Adobe XD', 'Adobe Photoshop', 'Adobe Illustrator']],
+      mobileSkills: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator'],
+    },
+    {
+      type: t('development'),
+      skills: [['Javascript', 'Typescript', 'HTML', 'CSS'], ['React JS', 'React Native', 'Redux', 'Node Js'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
+      mobileSkills: ['Javascript', 'Typescript', 'HTML', 'CSS'],
+      extraSkills: [['React', 'React Native', 'Redux', 'NodeJS'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
+    },
+  ];
 
-const Skills = ({ isSmallScreen }) => {
   const [showAllSkills, setShowAllSkills] = useState(false);
 
   const handleSkillsState = () => {
@@ -34,10 +35,10 @@ const Skills = ({ isSmallScreen }) => {
 
   const desktopSkillsGroup = (skillObject) => (
     <div className="skills-group">
-      {skillObject.skills.map((skillGroup) => (
-        <ul>
+      {skillObject.skills.map((skillGroup, index) => (
+        <ul key={index}>
           {skillGroup.map((skill) => (
-            <li>{skill}</li>
+            <li key={skill}>{skill}</li>
           ))}
         </ul>
       ))}
@@ -49,13 +50,13 @@ const Skills = ({ isSmallScreen }) => {
       <div className="skills-group-cont">
         <div className="skills-group" tabIndex={index}>
           {skillObject.mobileSkills.map((skill, index) => (
-            <p key={index}>{skill}</p>
+            <p key={index} name={skill}>{skill}</p>
           ))}
         </div>
         {!showAllSkills && skillObject.extraSkills && <button className="expand-skills-btn" onClick={handleSkillsState}>+8</button>}
       </div>
       {showAllSkills && skillObject.extraSkills?.map((skillGroup, index) => (
-        <div className="skills-group-cont">
+        <div key={index} className="skills-group-cont">
           <div className="skills-group mt-8">
             {skillGroup.map((skill, index) => (
               <p key={index}>{skill}</p>
@@ -79,7 +80,7 @@ const Skills = ({ isSmallScreen }) => {
             <h2>
               <b className="white">{skillObject.type}</b>
             </h2>
-            {isSmallScreen
+            {layout.isTablet
               ? mobileSkillsGroup(skillObject, index)
               : desktopSkillsGroup(skillObject)}
           </div>

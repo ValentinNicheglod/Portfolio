@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Tooltip } from '@material-ui/core';
 
 // Socials
@@ -31,8 +32,10 @@ const contactLinks = [
   },
 ];
 
-const Contact = ({ isSmallScreen }) => {
-  const Socials = () => (
+const Contact = ({ layout }) => {
+  const { t } = useTranslation();
+
+  const SocialLinks = () => (
     <div className="social-cont d-flex justify-content-around">
       {
         contactLinks.map((link, i) => (
@@ -51,41 +54,36 @@ const Contact = ({ isSmallScreen }) => {
     </div>
   );
 
-  const date = new Date();
-  const year = date.getFullYear();
+  const ContactButton = () => (
+    <a
+      href="mailto:nicheglod69@gmail.com"
+      className="button"
+    >
+      {t('send-email')}
+    </a>
+  );
 
   return (
     <div className="m-0 contact">
       <div className="d-flex justify-content-center row">
         <h1 className="title white d-flex justify-content-center">
-          <center>{isSmallScreen ? 'Contacto' : 'Mantengámonos en contacto'}</center>
+          <center>{layout.isMobile ? t('contact') : t('keep-in-touch')}</center>
         </h1>
-        <Socials />
-        {isSmallScreen
+        <SocialLinks />
+        {layout.isMobile
           ? (
             <center>
-              <a
-                href="mailto:nicheglod69@gmail.com"
-                className="button"
-              >
-                Envíame un correo
-              </a>
+              <ContactButton />
             </center>
           ) : (
             <div className="contact-card">
               <h2>
-                <center>¿Quieres comunicarte conmigo?</center>
+                <center>{t('contact-me')}</center>
               </h2>
               <p className="mb-48">
-                Ya sea para estar en contacto
-                o realizar colaboraciones en algun proyecto.
+                {t('contact-me-sub')}
               </p>
-              <a
-                href="mailto:nicheglod69@gmail.com"
-                className="button"
-              >
-                Envíame un correo
-              </a>
+              <ContactButton />
             </div>
           )}
       </div>
