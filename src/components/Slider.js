@@ -1,16 +1,23 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-return-assign */
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
 } from 'reactstrap';
+import { Tooltip } from '@material-ui/core';
+
+// Icons
+
+import ChevronRightIcon from '../images/icons/BlueChevronRight.svg';
+import CloseIcon from '../images/icons/Close.svg';
 
 const Slider = ({
-  deviceType, closeGallery, images, index, logo, mobile, name, open, setDeviceType, smallScreen,
+  deviceType, closeGallery, images, index, mobile, open, project, setDeviceType,
 }) => {
+  const { t } = useTranslation();
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -31,7 +38,7 @@ const Slider = ({
     setActiveIndex(newIndex);
   };
 
-  const changeDevice = (device) => {
+  /* const changeDevice = (device) => {
     if (device !== deviceType) {
       if (document.querySelector(`#active-${index}`)) {
         document.querySelector(`#active-${index}`).id = 'change-device-animate-out';
@@ -50,7 +57,7 @@ const Slider = ({
         }
       }, 1500);
     }
-  };
+  }; */
 
   const onClose = () => {
     closeGallery();
@@ -59,19 +66,54 @@ const Slider = ({
     }, 2000);
   };
 
-  const slides = images && images.map((path, i) => (
+  const Slides = images && images.map((image, i) => (
     <CarouselItem
       key={i}
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
     >
-      <img
-        id={activeIndex === i ? `active-${index}` : null}
-        src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${path}.jpg`}
-        alt=""
-        className="image-slider"
-        /* style={{ transform: deviceType === 'phone' && smallScreen ? 'scale(1.5)' : null }} */
-      />
+      {project.hasScrollablePrototype
+        ? (
+          <picture className="image-slider prototype-container" id={activeIndex === i ? `active-${index}` : undefined}>
+            {typeof image === 'object' && (
+              <div className="scrollable-alert">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 15L12 19L8 15" stroke="#366EFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M8 9L12 5L16 9" stroke="#366EFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <p>{t('scrollable-prototype')}</p>
+              </div>
+            )}
+            <div className="prototype-content-cont">
+              <img
+                src="https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/ProjectBackground.png"
+                alt=""
+                className="image-slider project-bg"
+              />
+              <img
+                src="https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/radley/Mockup%20Template.png"
+                alt=""
+                className="image-slider prototype-window"
+              />
+              <div className={typeof image === 'object' ? 'prototype-content' : 'prototype-content fixed'}>
+                <img
+                  src={`https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/${image.path || image}.jpg`}
+                  alt=""
+                  className="image-slider prototype-window"
+                />
+              </div>
+            </div>
+          </picture>
+        )
+        : (
+          <img
+            id={activeIndex === i ? `active-${index}` : undefined}
+            src={`https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/${image.path || image}.jpg`}
+            alt=""
+            name={typeof image === 'object' ? image.id : undefined}
+            className="image-slider"
+          />
+        )}
     </CarouselItem>
   ));
 
@@ -86,129 +128,15 @@ const Slider = ({
         key={index}
       >
         <CarouselIndicators items={images} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText=" " onClickHandler={previous} />
+        {Slides}
+        <CarouselControl cssModule={{ backgroundImage: ChevronRightIcon }} direction="prev" directionText=" " onClickHandler={previous} />
         <CarouselControl direction="next" directionText=" " onClickHandler={next} />
       </Carousel>
-      {/* <div
-            id="carouselExampleControls"
-            className="carousel slide h-100"
-            data-ride="carousel"
-            data-interval={false}
-          >
-        <div className="carousel-inner">
-          {
-          images && images.map((path, i) => (
-            <div
-              className={i === activeIndex ? 'carousel-item active' : 'carousel-item'}
-              key={i}
-            >
-              <img
-                className="d-block h-100"
-                src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${path}.jpg`}
-                alt=""
-                style={{ transform: deviceType === 'phone' && smallScreen ? 'scale(1.5)' : null }}
-              />
-            </div>
-          ))
-        }
-        </div>
-        <a
-          className="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon"
-          aria-hidden="true"
-        />
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="sr-only">Next</span>
-        </a>
-      </div> */}
-      <div id={open ? '' : 'hidden'} className="carousel-bottombar bg-3">
-        <div className="bottombar-1 col">
-          <img
-            src={`projects/${logo}`}
-            alt=""
-          />
-          <h6 className="white display">
-            Galería de&nbsp;
-            {name}
-          </h6>
-        </div>
-        <div className="bottombar-2 d-flex align-items-center">
-          {mobile
-            && (
-            <div className="gallery-selector">
-              {/* <div className="btn-group btn-group-sm"
-              role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" className="btn-check" name="btnradio"
-                id="btnradio1" autoComplete="off"
-                checked={deviceType === 'computer'} onClick={() => changeDevice('computer')} />
-                <label className="btn btn-outline-light" htmlFor="btnradio1">
-                  Computadora
-                </label>
-                <input type="radio" className="btn-check"
-                name="btnradio" id="btnradio3" autoComplete="off"
-                checked={deviceType === 'phone'} onClick={() => changeDevice('phone')} />
-                <label className="btn btn-outline-light" htmlFor="btnradio3">
-                  &nbsp;Smartphone&nbsp;
-                </label>
-              </div> */}
-              <button
-                className="w-50 btn-sm btn btn-outline-light btn1"
-                id={deviceType === 'computer' ? 'checked' : null}
-                onClick={() => changeDevice('computer')}
-              >
-                Computadora
-              </button>
-              <button
-                className="w-50 btn-sm btn btn-outline-light btn2"
-                id={deviceType === 'phone' ? 'checked' : null}
-                onClick={() => changeDevice('phone')}
-              >
-                &nbsp;Smartphone&nbsp;
-              </button>
-            </div>
-            )}
-        </div>
-        <div className="bottombar-3 p-3">
-          <div className="proyect-btn-cont m-0 open-btn-gallery">
-            <button className="btn btn-sm btn-danger" onClick={onClose}>
-              Salir
-            </button>
-          </div>
-        </div>
-        {/* {images && images.map((img) => (
-          <img className="preload" src={`https://valentinnicheglod.github.io/Portfolio/projects/mockups/${img}.jpg`} alt="" />
-        ))} */}
-        {/* <div className="slider-indicators">
-          {
-            images && images.map((image, i) => (
-              activeIndex === i
-                ? (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#212529" className="bi bi-circle-fill" viewBox="0 0 16 16" onClick={() => goToIndex(i)}>
-                    <circle cx="8" cy="8" r="8" />
-                  </svg>
-                )
-                : (
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#212529" className="bi bi-circle" viewBox="0 0 16 16" onClick={() => goToIndex(i)}>
-                    <path
-                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                    />
-                  </svg>
-                )
-            ))
-          }
-        </div> */}
-      </div>
+      <Tooltip title={t('close')} placement="left">
+        <button className="btn close-btn" onClick={onClose}>
+          <img src={CloseIcon} alt="" />
+        </button>
+      </Tooltip>
     </>
   );
 };

@@ -1,15 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import '../App.css';
 
+// Components
+
 import About from '../components/About';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 import Greeting from '../components/Greeting';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import SkillsMobile from '../components/SkillsMobile';
+
+// Logos
+
+import SmallLogo from '../images/logos/Small.svg';
+
+function getWindowWidth() {
+  return window.innerWidth;
+}
 
 const Inicio = () => {
+  const [loadingAnimation, setLoadingAnimation] = useState(true);
+  const [pageLoaded, setPageLoaded] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(getWindowWidth());
+  const [layout, setLayout] = useState({
+    isDesktop: window.innerWidth > 991,
+    isTablet: window.innerWidth < 991,
+    isSmallScreen: window.innerWidth < 770,
+    isMobile: window.innerWidth < 600,
+  });
+
+  const firstSection = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(getWindowWidth());
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPageLoaded(true);
+      document.body.classList.add('no-scroll');
+      setTimeout(() => {
+        document.body.classList.remove('no-scroll');
+        setLoadingAnimation(false);
+      }, 3300);
+    }, 300);
+  }, [firstSection]);
+
+  useEffect(() => {
+    setLayout({
+      isDesktop: window.innerWidth > 991,
+      isTablet: window.innerWidth < 991,
+      isSmallScreen: window.innerWidth < 770,
+      isMobile: window.innerWidth < 600,
+    });
+  }, [windowWidth]);
+
   document.addEventListener('contextmenu', (e) => {
     if (e.target.nodeName === 'IMG') {
       e.preventDefault();
@@ -17,12 +68,11 @@ const Inicio = () => {
   }, false);
 
   const urlImages = [
-    'https://img.icons8.com/fluent/96/000000/iphone.png',
-    'https://img.icons8.com/fluent/96/000000/monitor.png',
-    'https://img.icons8.com/fluent/96/000000/checkmark.png',
-    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/notatky/inicio.jpg',
-    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/treebank/0.jpg',
-    'https://valentinnicheglod.github.io/Portfolio/projects/mockups/mono/inicio.jpg',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/ProjectBackground.png',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/radley/Mockup%20Template.png',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/notatky/V2/Inicio.jpg',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/meteor/Login.jpg',
+    'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/master/public/projects/mockups/radley/Inicio.jpg',
   ];
 
   const images = [];
@@ -36,20 +86,25 @@ const Inicio = () => {
     }, 3000);
   }());
 
-  const smallScreen = window.screen.width < 600;
-
   return (
-    <div className="h-100">
-      <Greeting smallScreen={smallScreen} />
-      <About />
-      {smallScreen ? <SkillsMobile /> : <Skills />}
-      <Projects
-        smallScreen={smallScreen}
-      />
-      <Contact
-        smallScreen={smallScreen}
-      />
-    </div>
+    <>
+      {loadingAnimation && (
+        <>
+          {pageLoaded && <img className="loading-logo" src={SmallLogo} alt="" />}
+          <div className={pageLoaded ? 'loading-screen loading-animation' : 'loading-screen'} />
+        </>
+      )}
+      <Greeting ref={firstSection} smallScreen={layout.isSmallScreen} />
+      {!loadingAnimation && (
+        <>
+          <About layout={layout} />
+          <Skills layout={layout} />
+          <Projects />
+          <Contact layout={layout} />
+          <Footer layout={layout} />
+        </>
+      )}
+    </>
   );
 };
 

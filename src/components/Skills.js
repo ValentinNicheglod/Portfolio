@@ -1,207 +1,93 @@
-import React from 'react';
-import { Tooltip } from '@material-ui/core';
-import animateScrollTo from 'animated-scroll-to';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-const backend = [
-  [
-    {
-      src: 'skills/express.png',
-      title: 'Express',
-    },
-    {
-      src: 'skills/mysql.png',
-      title: 'MySQL',
-    },
-    {
-      src: 'https://img.icons8.com/color/55/000000/nodejs.png',
-      title: 'NodeJS',
-    },
-  ],
-  [
-    {
-      src: 'https://img.icons8.com/color/55/000000/postgreesql.png',
-      title: 'PostgreSQL',
-    },
-    {
-      src: 'skills/sequelize.png',
-      title: 'Sequelize',
-    },
-  ],
-];
+// Emojis
 
-const frontend = [
-  [
-    {
-      src: 'https://img.icons8.com/color/55/000000/bootstrap.png',
-      title: 'Bootstrap',
-    },
-    {
-      src: 'https://img.icons8.com/color/55/000000/css3.png',
-      title: 'CSS 3',
-    },
-    {
-      src: 'https://img.icons8.com/color/55/000000/html-5.png',
-      title: 'HTML 5',
-    },
-  ],
-  [
-    {
-      src: 'https://img.icons8.com/windows/55/000000/less-logo.png',
-      title: 'Less',
-    },
-    {
-      src: 'https://img.icons8.com/color/55/000000/react-native.png',
-      title: 'React JS y React Native',
-    },
-    {
-      src: 'https://img.icons8.com/color/55/000000/redux.png',
-      title: 'Redux',
-    },
-  ],
-];
-const others = [
-  {
-    src: 'https://img.icons8.com/color/55/000000/git.png',
-    title: 'Git',
-  }, {
-    src: 'https://img.icons8.com/ios-filled/55/000000/github.png',
-    title: 'GitHub',
-  }, {
-    src: 'https://img.icons8.com/color/55/000000/heroku.png',
-    title: 'Heroku',
-  }, {
-    src: 'https://img.icons8.com/color/55/000000/javascript.png',
-    title: 'Javascript',
-  }, {
-    src: 'skills/json.png',
-    title: 'JSON',
-  }, {
-    src: 'https://img.icons8.com/color/55/000000/npm.png',
-    title: 'NPM',
-  }, {
-    src: 'https://img.icons8.com/color/55/000000/typescript.png',
-    title: 'Typescript',
-  }, {
-    src: 'skills/webpack.png',
-    title: 'Webpack',
-  },
-];
+import SkillsEmoji from '../images/emojis/Skills.png';
 
-const Skills = () => (
-  <div className="bg-5 min skills responsive-cont m-0 p-4">
+const Skills = ({ layout }) => {
+  const { t } = useTranslation();
+
+  const skillsList = [
+    {
+      type: t('personal'),
+      skills: [[t('detail-attention'), t('adaptability'), t('proactivity'), t('commitment')]],
+      mobileSkills: [t('detail-attention-2'), t('adaptability'), t('proactivity'), t('commitment')],
+    },
+    {
+      type: t('design'),
+      skills: [['Figma', 'Adobe XD', 'Adobe Photoshop', 'Adobe Illustrator']],
+      mobileSkills: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator'],
+    },
+    {
+      type: t('development'),
+      skills: [['Javascript', 'Typescript', 'HTML', 'CSS'], ['React JS', 'React Native', 'Redux', 'Node Js'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
+      mobileSkills: ['Javascript', 'Typescript', 'HTML', 'CSS'],
+      extraSkills: [['React', 'React Native', 'Redux', 'NodeJS'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
+    },
+  ];
+
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
+  const handleSkillsState = () => {
+    setShowAllSkills(!showAllSkills);
+  };
+
+  const desktopSkillsGroup = (skillObject) => (
+    <div className="skills-group">
+      {skillObject.skills.map((skillGroup, index) => (
+        <ul key={index}>
+          {skillGroup.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+      ))}
+    </div>
+  );
+
+  const mobileSkillsGroup = (skillObject, index) => (
     <div>
-      <h1 className="display-3 white title skills-title">
-        Tech skills...
-      </h1>
-    </div>
-    <div className="d-flex justify-content-center align-items-center h-90">
-      <div className="card w-75 p-5 shadow">
-        <div className="row">
-          <div className="w-50 fit-content">
-            <div className="skill-title skill-title-1">
-              <h6 className="display-6 m-0">FRONT END</h6>
-              <div className="card-icon">
-                <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAiElEQVRIS2NkoDFgpLH5DHS3wIGBgWE+AwODApk+e8DAwJDIwMBwAKYf3QcgBfJkGg7TBjJDEZcF/6ES5AYdhn50g0YtGA0iggl4NIiGQBBRoyx6iFxYohcVBgwMDOcJBgR+BYYMDAwXsBV2sCRGoflw7WDHI/uA5hZQy+Uo5pBb7hPtmKFvAQCemyEZ3hVsZQAAAABJRU5ErkJggg==" />
-              </div>
-            </div>
-            <div className="d-flex justify-content-center align-items-center skill-ilustration">
-              <img
-                draggable={false}
-                // src="ilustrations/front.svg"
-                src="https://valentinnicheglod.github.io/Portfolio/ilustrations/front.svg"
-                alt=""
-                className="skill-img"
-                height="320"
-              />
-            </div>
-            <hr />
-
-            <div>
-              {frontend.map((row, i) => (
-                <div className="d-flex col justify-content-around mb-3" key={i}>
-                  {row.map((icon, i) => (
-                    <Tooltip title={icon.title} placement="right" key={i}>
-                      <div>
-                        <img
-                          draggable={false}
-                          src={icon.src}
-                          alt="skill-icon"
-                          width="55"
-                        />
-                      </div>
-                    </Tooltip>
-                  ))}
-                </div>
-              ))}
-
-            </div>
-          </div>
-          <div className="w-50 fit-content">
-            <div className="skill-title">
-              <div className="card-icon">
-                <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlklEQVRIS2NkoDFgpLH5DHS1wIGBgWE+AwODAoW+esDAwJDIwMBwAGQOsg9AEvIUGg7TDjJLEd2C/1BZSoMNxRxkw0i1AFk9LjZKEA06C3BFF84g+sDAwMBPpUh+CEuNyHEASqYLqJCSQIYnYEumVHI8qjGUJkmCjkIPotGcDAqy0ZxMMOGM5mSCQYSigK45mTSnEakaAEn1LBkSFpfeAAAAAElFTkSuQmCC" />
-              </div>
-              <h6 className="display-6 m-0">BACK END</h6>
-            </div>
-            <div className="d-flex justify-content-center align-items-center skill-ilustration">
-              <img
-                draggable={false}
-                // src="ilustrations/back.svg"
-                src="https://valentinnicheglod.github.io/Portfolio/ilustrations/back.svg"
-                alt=""
-                className="skill-img"
-                height="270"
-              />
-            </div>
-            <hr />
-            <div>
-              {backend.map((row, i) => (
-                <div className="d-flex col justify-content-around mb-3" key={i}>
-                  {row.map((icon, i) => (
-                    <Tooltip title={icon.title} placement="right" key={i}>
-                      <div>
-                        <img
-                          draggable={false}
-                          src={icon.src}
-                          alt="skill-icon"
-                          width="55"
-                        />
-                      </div>
-                    </Tooltip>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-          <hr />
-          <div className="d-flex justify-content-center row">
-
-            <div className="d-flex col justify-content-around">
-              {
-                others.map((icon, i) => (
-                  <Tooltip title={icon.title} placement="right" key={i}>
-                    <div>
-                      <img
-                        draggable={false}
-                        src={icon.src}
-                        alt="skill-icon"
-                        width="55"
-                      />
-                    </div>
-                  </Tooltip>
-                ))
-                }
-            </div>
-          </div>
+      <div className="skills-group-cont">
+        <div className="skills-group" tabIndex={index}>
+          {skillObject.mobileSkills.map((skill, index) => (
+            <p key={index} name={skill}>{skill}</p>
+          ))}
         </div>
+        {!showAllSkills && skillObject.extraSkills && <button className="expand-skills-btn" onClick={handleSkillsState}>+8</button>}
       </div>
-      <button className="btn more-info more-info2" onClick={() => animateScrollTo(window.innerHeight * 3)}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-chevron-compact-down" viewBox="0 0 16 16">
-          <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-        </svg>
-      </button>
+      {showAllSkills && skillObject.extraSkills?.map((skillGroup, index) => (
+        <div key={index} className="skills-group-cont">
+          <div className="skills-group mt-8">
+            {skillGroup.map((skill, index) => (
+              <p key={index}>{skill}</p>
+            ))}
+          </div>
+          {index !== skillObject.extraSkills?.length - 2 && <button className="expand-skills-btn mt-8" onClick={handleSkillsState}>-</button>}
+        </div>
+      ))}
     </div>
-  </div>
-);
+  );
+
+  return (
+    <section className="skills">
+      <div className="skills-title-cont">
+        <h1 className="skills-title mb-8">Skills</h1>
+        <img src={SkillsEmoji} alt="" />
+      </div>
+      <div className="skills-container">
+        {skillsList.map((skillObject, index) => (
+          <div key={index}>
+            <h2>
+              <b className="white">{skillObject.type}</b>
+            </h2>
+            {layout.isTablet
+              ? mobileSkillsGroup(skillObject, index)
+              : desktopSkillsGroup(skillObject)}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;
