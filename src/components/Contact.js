@@ -56,7 +56,7 @@ const Contact = ({ layout }) => {
 
   const ContactButton = () => (
     <a
-      href="mailto:nicheglod69@gmail.com"
+      href="mailto:valentinnicheglod1@gmail.com"
       className="button"
     >
       {t('send-email')}
