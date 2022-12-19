@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.cdee1c60.chunk.css",
-    "main.js": "/Portfolio/static/js/main.b78716ec.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.b78716ec.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.610672ae.chunk.css",
+    "main.js": "/Portfolio/static/js/main.8b756dbf.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.8b756dbf.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.6f3b8112.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.6f3b8112.js.map",
     "static/js/2.0f808d22.chunk.js": "/Portfolio/static/js/2.0f808d22.chunk.js",
     "static/js/2.0f808d22.chunk.js.map": "/Portfolio/static/js/2.0f808d22.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "static/css/main.cdee1c60.chunk.css.map": "/Portfolio/static/css/main.cdee1c60.chunk.css.map",
+    "static/css/main.610672ae.chunk.css.map": "/Portfolio/static/css/main.610672ae.chunk.css.map",
     "static/js/2.0f808d22.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.0f808d22.chunk.js.LICENSE.txt",
     "static/media/Aeroplane.d8e4784d.png": "/Portfolio/static/media/Aeroplane.d8e4784d.png",
     "static/media/Architecture.01ec5697.png": "/Portfolio/static/media/Architecture.01ec5697.png",
-    "static/media/App.css": "/Portfolio/static/media/Wave.4855e410.svg",
+    "static/media/App.css": "/Portfolio/static/media/Wave.4e32aa52.svg",
     "static/media/Camera.eef2b3d9.png": "/Portfolio/static/media/Camera.eef2b3d9.png",
     "static/media/Close.141827da.svg": "/Portfolio/static/media/Close.141827da.svg",
     "static/media/Computer.e284140d.png": "/Portfolio/static/media/Computer.e284140d.png",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.6f3b8112.js",
     "static/js/2.0f808d22.chunk.js",
-    "static/css/main.cdee1c60.chunk.css",
-    "static/js/main.b78716ec.chunk.js"
+    "static/css/main.610672ae.chunk.css",
+    "static/js/main.8b756dbf.chunk.js"
   ]
 }
