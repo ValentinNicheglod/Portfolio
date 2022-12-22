@@ -43,6 +43,12 @@ Sección de contacto, incluye botón para enviar un correo electrónico y links 
 Sección final, contiene un logo y un botón para volver arriba.
 
 ## 🖼️ Imágenes del proyecto...
+
+#### Versión 2
+> V2.0 (actual)
+![Valentín Nicheglod](https://user-images.githubusercontent.com/67331469/208328526-5fde5499-53bf-4d5f-9535-1e964272cfa5.png)
+
+
 #### Versión 1
 > V1.0
 ![portfolio1](https://user-images.githubusercontent.com/67331469/119241977-aec67c80-bb30-11eb-9ab5-dbf394bc1928.jpg)
@@ -50,7 +56,3 @@ Sección final, contiene un logo y un botón para volver arriba.
 ![portfolio-2](https://user-images.githubusercontent.com/67331469/119242064-5e9bea00-bb31-11eb-8deb-dcfc2f5c0b2c.png)
 ![portfolio-3](https://user-images.githubusercontent.com/67331469/119241976-aec67c80-bb30-11eb-9580-bda91c55bef4.jpg)
 ![portfolio-4](https://user-images.githubusercontent.com/67331469/119241975-ae2de600-bb30-11eb-8a08-7000ff6fccf3.jpg)
-
-#### Versión 2
-> V2.0 (actual)
-![Valentín Nicheglod](https://user-images.githubusercontent.com/67331469/208328526-5fde5499-53bf-4d5f-9535-1e964272cfa5.png)
