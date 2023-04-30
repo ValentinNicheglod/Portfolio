@@ -22,6 +22,7 @@
         "react/jsx-filename-extension": "off",
         "react/prop-types": "off",
         "react/no-array-index-key": "off",
+        "react/jsx-curly-newline": "off",
         "react/button-has-type": "off",
         "no-unused-vars": "warn",
         "parser": "off",

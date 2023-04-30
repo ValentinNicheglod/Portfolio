@@ -1,68 +1,377 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Emojis
 
-import SkillsEmoji from '../images/emojis/Skills.png';
+import DeveloperEmoji from '../images/emojis/Developer.png';
+import SoftSkillsEmoji from '../images/emojis/Skills.png';
+import UXUIDesignerEmoji from '../images/emojis/UXUIDesigner.png';
+
+// Icons
+
+import ChevronRightIcon from '../images/icons/BlueChevronRight.svg';
+import ChevronLeftIcon from '../images/icons/BlueChevronLeft.svg';
+
+// Skills Images
+
+const url = 'https://raw.githubusercontent.com/ValentinNicheglod/Portfolio/V3.0/src/images/';
 
 const Skills = ({ layout }) => {
   const { t } = useTranslation();
 
-  const skillsList = [
+  const skillsData = [
     {
-      type: t('personal'),
-      skills: [[t('detail-attention'), t('adaptability'), t('proactivity'), t('commitment')]],
-      mobileSkills: [t('detail-attention-2'), t('adaptability'), t('proactivity'), t('commitment')],
+      skills: [
+        {
+          name: t('commitment'),
+          image: `${url}skills/Commitment.png`,
+        },
+        {
+          name: t('proactivity'),
+          image: `${url}skills/Proactivity.png`,
+        },
+        {
+          name: t('detail-attention'),
+          image: `${url}skills/DetailAttention.png`,
+        },
+        {
+          name: t('creativity'),
+          image: `${url}skills/Creativity.png`,
+        },
+        {
+          name: t('flexibility'),
+          image: `${url}skills/Flexibility.png`,
+        },
+        {
+          name: t('leadership'),
+          image: `${url}skills/Leadership.png`,
+        },
+      ],
+      title: t('personal'),
+      type: 'Soft',
+      icon: SoftSkillsEmoji,
     },
     {
-      type: t('design'),
-      skills: [['Figma', 'Adobe XD', 'Adobe Photoshop', 'Adobe Illustrator']],
-      mobileSkills: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator'],
+      skills: [
+        {
+          name: 'Adobe XD',
+          image: `${url}skills/XD.png`,
+        },
+        {
+          name: 'Illustrator',
+          image: `${url}skills/Illustrator.png`,
+        },
+        {
+          name: 'Photoshop',
+          image: `${url}skills/Photoshop.png`,
+        },
+        {
+          name: 'Figma',
+          image: `${url}skills/Figma.png`,
+        },
+        {
+          name: t('prototyping'),
+          image: `${url}skills/Prototype.png`,
+        },
+        {
+          name: 'Wireframing',
+          image: `${url}skills/Wireframe.png`,
+        },
+      ],
+      title: t('design'),
+      type: 'Design',
+      icon: UXUIDesignerEmoji,
     },
     {
-      type: t('development'),
-      skills: [['Javascript', 'Typescript', 'HTML', 'CSS'], ['React JS', 'React Native', 'Redux', 'Node Js'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
-      mobileSkills: ['Javascript', 'Typescript', 'HTML', 'CSS'],
-      extraSkills: [['React', 'React Native', 'Redux', 'NodeJS'], ['Express', 'SQL', 'Sequelize', 'Firebase']],
+      skills: [
+        {
+          name: 'Javascript',
+          image: `${url}skills/JS.png`,
+        },
+        {
+          name: 'Typescript',
+          image: `${url}skills/TS.png`,
+        },
+        {
+          name: 'HTML 5',
+          image: `${url}skills/HTML.png`,
+        },
+        {
+          name: 'CSS 3',
+          image: `${url}skills/CSS.png`,
+        },
+        {
+          name: 'React',
+          image: `${url}skills/React.png`,
+        },
+        {
+          name: 'Angular',
+          image: `${url}skills/Angular.png`,
+        },
+        {
+          name: 'Redux',
+          image: `${url}skills/Redux.png`,
+        },
+        {
+          name: 'Salesforce',
+          image: `${url}skills/Salesforce.png`,
+        },
+        {
+          name: 'Bootstrap',
+          image: `${url}skills/Bootstrap.png`,
+        },
+        {
+          name: 'Less',
+          image: `${url}skills/Less.png`,
+        },
+        {
+          name: 'Sass',
+          image: `${url}skills/Sass.png`,
+        },
+        {
+          name: 'GIT',
+          image: `${url}skills/GIT.png`,
+        },
+        {
+          name: 'GitHub',
+          image: `${url}skills/GitHub.png`,
+        },
+        {
+          name: 'Node JS',
+          image: `${url}skills/Node.png`,
+        },
+        {
+          name: 'Express',
+          image: `${url}skills/Express.png`,
+        },
+        {
+          name: 'Heroku',
+          image: `${url}skills/Heroku.png`,
+        },
+        {
+          name: 'Postman',
+          image: `${url}skills/Postman.png`,
+        },
+        {
+          name: 'Webpack',
+          image: `${url}skills/Webpack.png`,
+        },
+        {
+          name: 'NPM',
+          image: `${url}skills/NPM.png`,
+        },
+        {
+          name: 'Firebase',
+          image: `${url}skills/Firebase.png`,
+        },
+        {
+          name: 'MongoDB',
+          image: `${url}skills/MongoDB.png`,
+        },
+        {
+          name: 'MySQL',
+          image: `${url}skills/MySQL.png`,
+        },
+        {
+          name: 'PostgreSQL',
+          image: `${url}skills/PostgreSQL.png`,
+        },
+        {
+          name: 'Sequelize',
+          image: `${url}skills/Sequelize.png`,
+        },
+        /* {
+          name: 'Eslint',
+          image: `${url}skills/Eslint.png`,
+        }, */
+      ],
+      title: t('development'),
+      type: 'Dev',
+      icon: DeveloperEmoji,
     },
   ];
 
-  const [showAllSkills, setShowAllSkills] = useState(false);
+  const filterOptions = [
+    {
+      name: 'Soft',
+      label: 'Soft Skills',
+      mobileLabel: 'Soft Skills',
+    },
+    {
+      name: 'Design',
+      label: 'Design Skills',
+      mobileLabel: 'Design Skills',
+    },
+    {
+      name: 'Dev',
+      label: 'Development Skills',
+      mobileLabel: 'Dev Skills',
+    },
+  ];
 
-  const handleSkillsState = () => {
-    setShowAllSkills(!showAllSkills);
+  const [lastPage, setLastPage] = useState(0);
+  const [selectedFilter, setSelectedFilter] = useState('Soft');
+  const [selectedSkill, setSelectedSkill] = useState(skillsData[0]);
+
+  const scroll = useRef(null);
+  const nextButton = useRef(null);
+  const prevButton = useRef(null);
+  let pageNumber = 0;
+
+  const handleScroll = () => {
+    const gap = window.innerWidth < 1300 ? 18 : 24;
+    const containerWidth = document.getElementById('scroll-container').offsetWidth + gap;
+    const displacement = -containerWidth * pageNumber;
+    scroll.current.style.transform = `translateX(${displacement}px)`;
   };
 
-  const desktopSkillsGroup = (skillObject) => (
-    <div className="skills-group">
-      {skillObject.skills.map((skillGroup, index) => (
-        <ul key={index}>
-          {skillGroup.map((skill) => (
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
+  const handleButtonsState = () => {
+    if (pageNumber <= 0) {
+      prevButton.current.style.display = 'none';
+    } else {
+      prevButton.current.style.display = 'flex';
+    }
+    if (pageNumber === lastPage - 1 || lastPage === 0) {
+      nextButton.current.style.display = 'none';
+    } else {
+      nextButton.current.style.display = 'flex';
+    }
+  };
+
+  const handleFilter = (event, name) => {
+    const filterName = name || event.target.name;
+    const filteredSkills = skillsData.find((skill) => skill.type === filterName);
+    setSelectedFilter(filterName);
+    setSelectedSkill(filteredSkills);
+  };
+
+  const handlePageChange = (isNextPage) => {
+    let actualPage = pageNumber;
+    actualPage = isNextPage ? actualPage + 1 : actualPage - 1;
+    pageNumber = actualPage;
+    handleScroll();
+    handleButtonsState();
+  };
+
+  useEffect(() => {
+    handleFilter(undefined, 'Soft');
+  }, []);
+
+  useEffect(() => {
+    if (layout.isDesktop) {
+      const lastPage = Math.floor(selectedSkill.skills.length / 6);
+      setLastPage(lastPage <= 1 ? 0 : lastPage);
+      handleButtonsState();
+    }
+  }, [selectedSkill]);
+
+  useEffect(() => {
+    layout.isDesktop && handleButtonsState();
+  }, [lastPage]);
+
+  const Filters = () => (
+    <div className="skills-filter">
+      {filterOptions.map((filter, index) => (
+        <button
+          name={filter.name}
+          key={index}
+          id={selectedFilter === filter.name ? 'selected-white' : ''}
+          onClick={handleFilter}
+        >
+          {layout.isDesktop ? filter.label : filter.mobileLabel}
+        </button>
       ))}
     </div>
   );
 
-  const mobileSkillsGroup = (skillObject, index) => (
-    <div>
-      <div className="skills-group-cont">
-        <div className="skills-group" tabIndex={index}>
-          {skillObject.mobileSkills.map((skill, index) => (
-            <p key={index} name={skill}>{skill}</p>
-          ))}
-        </div>
-        {!showAllSkills && skillObject.extraSkills && <button className="expand-skills-btn" onClick={handleSkillsState}>+8</button>}
-      </div>
-      {showAllSkills && skillObject.extraSkills?.map((skillGroup, index) => (
-        <div key={index} className="skills-group-cont">
-          <div className="skills-group mt-8">
-            {skillGroup.map((skill, index) => (
-              <p key={index}>{skill}</p>
-            ))}
+  const DesktopSkills = () => (
+    <>
+      <Filters />
+      <div className="d-flex justify-content-between">
+        <div className="d-flex align-items-center">
+          <img src={selectedSkill.icon} alt="" width="96" height="96" />
+          <div className="ml-4">
+            <h1 className="skills-title">
+              {selectedSkill.type}
+              <br />
+              Skills
+            </h1>
           </div>
-          {index !== skillObject.extraSkills?.length - 2 && <button className="expand-skills-btn mt-8" onClick={handleSkillsState}>-</button>}
+        </div>
+        <div className="skills-container">
+          <div className="position-relative">
+            <button
+              className="pagination-button left"
+              onClick={() => handlePageChange(false)}
+              ref={prevButton}
+              style={{ display: 'none' }}
+            >
+              <i className="bi bi-chevron-left white" />
+            </button>
+            <SkillsList />
+            <button
+              className="pagination-button right"
+              onClick={() => handlePageChange(true)}
+              ref={nextButton}
+              style={{ display: 'none' }}
+            >
+              <i className="bi bi-chevron-right white" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+    /* <div className="skills-group">
+    {skillObject.skills.map((skillGroup, index) => (
+      <ul key={index}>
+        {skillGroup.map((skill) => (
+          <li key={skill}>{skill}</li>
+        ))}
+      </ul>
+    ))}
+  </div> */
+  );
+
+  const MobileSkills = () => (
+    <>
+      <div className="d-flex align-items-center">
+        <img src={SoftSkillsEmoji} alt="" width="64" height="64" />
+        <div className="ml-2">
+          <h1 className="skills-title">
+            Skills
+          </h1>
+        </div>
+      </div>
+      <Filters />
+      <SkillsList />
+    </>
+  );
+
+  const SkillCard = ({ skill }) => (
+    <div className="skill-card">
+      <img src={skill.image} alt={`${skill.name} Logo`} />
+      <span className="center-text">
+        {skill.name}
+      </span>
+    </div>
+  );
+
+  const SkillsList = () => (
+    <div className="skills-scroll-container" id="scroll-container">
+      {/* <div className="skills-scroll position-relative" id="scroll" ref={scroll}>
+        {selectedSkill.skills.map((skill, index) => (
+          <SkillCard skill={skill} key={index} />
+        ))}
+      </div> */}
+      {skillsData.map((skill) => (
+        <div
+          className={selectedSkill.type === skill.type ? 'skills-scroll position-relative' : 'skills-scroll position-absolute z-index-0 start-0'}
+          id="scroll"
+          ref={scroll}
+        >
+          {skill.skills.map((skill, index) => (
+            <SkillCard skill={skill} key={index} />
+          ))}
         </div>
       ))}
     </div>
@@ -70,22 +379,11 @@ const Skills = ({ layout }) => {
 
   return (
     <section className="skills">
-      <div className="skills-title-cont">
-        <h1 className="skills-title mb-8">Skills</h1>
-        <img src={SkillsEmoji} alt="" />
-      </div>
-      <div className="skills-container">
-        {skillsList.map((skillObject, index) => (
-          <div key={index}>
-            <h2>
-              <b className="white">{skillObject.type}</b>
-            </h2>
-            {layout.isTablet
-              ? mobileSkillsGroup(skillObject, index)
-              : desktopSkillsGroup(skillObject)}
-          </div>
-        ))}
-      </div>
+      {/* <DesktopSkills /> */}
+      {layout.isTablet
+        ? <MobileSkills />
+        : <DesktopSkills />
+      }
     </section>
   );
 };

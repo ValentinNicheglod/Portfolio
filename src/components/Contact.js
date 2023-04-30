@@ -5,7 +5,7 @@ import { Tooltip } from '@material-ui/core';
 // Socials
 
 import Behance from '../images/social/Behance.png';
-import Dribble from '../images/social/Dribble.png';
+import Dribbble from '../images/social/Dribble.png';
 import GitHub from '../images/social/GitHub.png';
 import Linkedin from '../images/social/Linkedin.png';
 
@@ -16,9 +16,9 @@ const contactLinks = [
     image: Behance,
   },
   {
-    title: 'Dribble',
+    title: 'Dribbble',
     href: 'https://dribbble.com/valentin_nicheglod',
-    image: Dribble,
+    image: Dribbble,
   },
   {
     title: 'GitHub',

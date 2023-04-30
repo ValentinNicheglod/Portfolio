@@ -105,7 +105,7 @@ const Projects = () => {
   }, [pageNumber]);
 
   useEffect(() => {
-    const lastPage = Math.floor(projectsList.length / 3);
+    const lastPage = Math.ceil(projectsList.length / 3);
     setLastPage(lastPage <= 1 ? 0 : lastPage);
   }, [projectsList]);
 
@@ -160,19 +160,35 @@ const Projects = () => {
   );
 
   const ProjectsContainer = () => (
-    <div className="projects-container">
-      <div className="projects-scroll" ref={scroll}>
-        {
-          projectsList.map((project) => (
-            <ProjectCard
-              project={project}
-              key={project.id}
-              openGallery={openGallery}
-              galleryButtonState={galleryButtonState}
-            />
-          ))
-        }
+    <div className="position-relative">
+      {
+        pageNumber !== 0 && (
+          <button className="pagination-button left" onClick={() => handlePageChange(false)}>
+            <img src={ChevronLeftIcon} width="45" alt="Ir a la pagina anterior" />
+          </button>
+        )
+      }
+      <div className="projects-container">
+        <div className="projects-scroll" ref={scroll}>
+          {
+            projectsList.map((project) => (
+              <ProjectCard
+                project={project}
+                key={project.id}
+                openGallery={openGallery}
+                galleryButtonState={galleryButtonState}
+              />
+            ))
+          }
+        </div>
       </div>
+      {
+        pageNumber !== lastPage && (
+          <button className="pagination-button right" onClick={() => handlePageChange(true)}>
+            <img src={ChevronRightIcon} width="45" alt="Ir a la siguiente pagina" />
+          </button>
+        )
+      }
     </div>
   );
 
@@ -185,23 +201,7 @@ const Projects = () => {
           </h1>
           <Filters />
         </div>
-        <div className="position-relative">
-          {
-            pageNumber !== 0 && (
-              <button className="pagination-button left" onClick={() => handlePageChange(false)}>
-                <img src={ChevronLeftIcon} width="45" alt="Ir a la pagina anterior" />
-              </button>
-            )
-          }
-          <ProjectsContainer />
-          {
-            pageNumber !== lastPage && (
-              <button className="pagination-button right" onClick={() => handlePageChange(true)}>
-                <img src={ChevronRightIcon} width="45" alt="Ir a la siguiente pagina" />
-              </button>
-            )
-          }
-        </div>
+        <ProjectsContainer />
       </section>
       {open && selectedProject
         && (

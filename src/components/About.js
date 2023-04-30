@@ -63,9 +63,11 @@ const About = ({ layout }) => {
               <div className="interest mb-8">
                 <img src={interest.image} alt="" />
               </div>
-              <small>
-                <center>{interest.label}</center>
-              </small>
+              <div className="center-text">
+                <small>
+                  {interest.label}
+                </small>
+              </div>
             </div>
           ))
         }
