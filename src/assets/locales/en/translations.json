@@ -26,6 +26,8 @@
     "personal": "Personal",
     "prototyping": "Prototyping",
     "projects": "My projects",
+    "reconnect-subtitle": "Subscription Page",
+    "reconnect-description": "Responsive web section for plan subscription, designed in Figma and created with React and Tailwind.",
     "notatky-subtitle": "Note Taking App",
     "notatky-description": "Note taking web application where you can create a profile and save your notes, you can also filter them by tags, add them to collections and more.",
     "meteor-subtitle": "E-Commerce App",

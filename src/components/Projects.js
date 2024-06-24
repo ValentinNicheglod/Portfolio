@@ -11,16 +11,16 @@ import DeveloperEmoji from '../images/emojis/Developer.png';
 
 // Backgrounds
 
-import MeteorBG from '../images/MeteorBG.jpg';
-import NotatkyBG from '../images/NotatkyBG.jpg';
-import RadleyBG from '../images/RadleyBG.jpg';
+import MeteorBG from '../images/MeteorBG.png';
+import ReconnectBG from '../images/ReconnectBG.png';
+import RadleyBG from '../images/RadleyBG.png';
 
 // Icons
 
 import ChevronRightIcon from '../images/icons/BlueChevronRight.svg';
 import ChevronLeftIcon from '../images/icons/BlueChevronLeft.svg';
 import MeteorIcon from '../images/logos/meteor.png';
-import NotatKyIcon from '../images/logos/notatKy.png';
+import ReconnectIcon from '../images/logos/reconnect.png';
 import RadleyIcon from '../images/logos/radley.png';
 
 const Projects = () => {
@@ -28,16 +28,16 @@ const Projects = () => {
 
   const projects = [
     {
-      name: 'NotatKy',
+      name: 'ReConnect',
       id: 0,
-      subtitle: t('notatky-subtitle'),
-      backgroundImage: NotatkyBG,
-      icon: NotatKyIcon,
-      description: t('notatky-description'),
-      gallery: ['notatky/V2/Inicio', 'notatky/V2/GuestMode', 'notatky/V2/Login', 'notatky/V2/Login2', 'notatky/V2/SignUp', 'notatky/V2/SignUp2', 'notatky/V2/PasswordReset1', 'notatky/V2/PasswordReset2', 'notatky/V2/PasswordReset3', 'notatky/V2/Home', 'notatky/V2/Note', 'notatky/V2/TagModal', 'notatky/V2/Archive', 'notatky/V2/Trash', 'notatky/V2/Profile', 'notatky/V2/Profile2', 'notatky/V2/Profile3', 'notatky/V2/CollectionsTags', 'notatky/V2/CollectionsTags2'],
-      mobileGallery: ['notatky/mobile/1', 'notatky/mobile/2', 'notatky/mobile/3', 'notatky/mobile/4', 'notatky/mobile/14', 'notatky/mobile/15', 'notatky/mobile/16', 'notatky/mobile/6', 'notatky/mobile/8', 'notatky/mobile/9', 'notatky/mobile/7', 'notatky/mobile/11', 'notatky/mobile/10', 'notatky/mobile/12', 'notatky/mobile/13'],
-      github: 'https://github.com/ValentinNicheglod/NotatKy-',
-      page: 'https://valentinnicheglod.github.io/NotatKy/#/',
+      subtitle: t('reconnect-subtitle'),
+      backgroundImage: ReconnectBG,
+      icon: ReconnectIcon,
+      description: t('reconnect-description'),
+      gallery: ['reconnect/Pricing%20Page'],
+      mobileGallery: ['reconnect/Pricing%20Page'],
+      github: 'https://github.com/valentinnicheglod1/pricing-page',
+      page: 'https://valentinnicheglod1.github.io/pricing-page/',
       type: 'Dev',
       typeText: t('web-development'),
       typeIcon: DeveloperEmoji,
@@ -89,7 +89,6 @@ const Projects = () => {
   ];
 
   const [lastPage, setLastPage] = useState(0);
-  const [pageNumber, setPageNumber] = useState(0);
   const [projectsList, setProjectsList] = useState(projects);
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [open, setOpen] = useState(false);
@@ -98,11 +97,9 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState({});
   const [galleryButtonState, setGalleryButtonState] = useState('');
 
-  const scroll = useRef(0);
+  const scroll = useRef(null);
 
-  useEffect(() => {
-    scroll.current.style.transform = `translate(${-86 * pageNumber}vw)`;
-  }, [pageNumber]);
+  let pageNumber = 0;
 
   useEffect(() => {
     const lastPage = Math.ceil(projectsList.length / 3);
@@ -121,7 +118,8 @@ const Projects = () => {
   };
 
   const handlePageChange = (isNextPage) => {
-    setPageNumber(isNextPage ? pageNumber + 1 : pageNumber - 1);
+    pageNumber = isNextPage ? pageNumber + 1 : pageNumber - 1;
+    scroll.current.style.transform = `translateX(${-86 * pageNumber}vw)`;
   };
 
   const openGallery = (index) => {
@@ -159,8 +157,8 @@ const Projects = () => {
     </div>
   );
 
-  const ProjectsContainer = () => (
-    <div className="position-relative">
+  const PreviousButton = () => (
+    <>
       {
         pageNumber !== 0 && (
           <button className="pagination-button left" onClick={() => handlePageChange(false)}>
@@ -168,6 +166,24 @@ const Projects = () => {
           </button>
         )
       }
+    </>
+  );
+
+  const NextButton = () => (
+    <>
+      {
+        pageNumber !== lastPage && (
+          <button className="pagination-button right" onClick={() => handlePageChange(true)}>
+            <img src={ChevronRightIcon} width="45" alt="Ir a la siguiente pagina" />
+          </button>
+        )
+      }
+    </>
+  );
+
+  const ProjectsContainer = () => (
+    <div className="position-relative">
+      <PreviousButton />
       <div className="projects-container">
         <div className="projects-scroll" ref={scroll}>
           {
@@ -182,13 +198,7 @@ const Projects = () => {
           }
         </div>
       </div>
-      {
-        pageNumber !== lastPage && (
-          <button className="pagination-button right" onClick={() => handlePageChange(true)}>
-            <img src={ChevronRightIcon} width="45" alt="Ir a la siguiente pagina" />
-          </button>
-        )
-      }
+      <NextButton />
     </div>
   );
 

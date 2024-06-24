@@ -26,6 +26,8 @@
     "personal": "Personales",
     "prototyping": "Prototipado",
     "projects": "Mi trabajo",
+    "reconnect-subtitle": "Página de suscripción",
+    "reconnect-description": "Sección web responsive de suscripción a planes, diseñada en Figma y creada con React y Tailwind.",
     "notatky-subtitle": "App de Notas",
     "notatky-description": "Aplicación web de notas en donde puedes crear un perfil y guardar tus notas pudiendo también filtrarlas por etiquetas, agregarlas a colecciones y demás.",
     "meteor-subtitle": "App de E-Commerce",
