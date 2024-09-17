@@ -93,12 +93,20 @@ const Skills = ({ layout }) => {
           image: `${url}skills/TS.png`,
         },
         {
+          name: 'Python',
+          image: `${url}skills/Python.png`,
+        },
+        {
           name: 'HTML 5',
           image: `${url}skills/HTML.png`,
         },
         {
           name: 'CSS 3',
           image: `${url}skills/CSS.png`,
+        },
+        {
+          name: 'GIT',
+          image: `${url}skills/GIT.png`,
         },
         {
           name: 'React',
@@ -109,32 +117,44 @@ const Skills = ({ layout }) => {
           image: `${url}skills/Angular.png`,
         },
         {
+          name: 'Astro',
+          image: `${url}skills/Astro.png`,
+        },
+        {
+          name: 'Ionic',
+          image: `${url}skills/Ionic.png`,
+        },
+        {
+          name: 'Expo',
+          image: `${url}skills/Expo.png`,
+        },
+        {
           name: 'Redux',
           image: `${url}skills/Redux.png`,
         },
         {
-          name: 'Salesforce',
-          image: `${url}skills/Salesforce.png`,
+          name: 'Webpack',
+          image: `${url}skills/Webpack.png`,
         },
         {
-          name: 'Bootstrap',
-          image: `${url}skills/Bootstrap.png`,
+          name: 'RxJS',
+          image: `${url}skills/Rxjs.png`,
         },
         {
-          name: 'Less',
-          image: `${url}skills/Less.png`,
+          name: 'Tailwind CSS',
+          image: `${url}skills/Tailwind.png`,
         },
         {
           name: 'Sass',
           image: `${url}skills/Sass.png`,
         },
         {
-          name: 'GIT',
-          image: `${url}skills/GIT.png`,
+          name: 'Less',
+          image: `${url}skills/Less.png`,
         },
         {
-          name: 'GitHub',
-          image: `${url}skills/GitHub.png`,
+          name: 'Bootstrap',
+          image: `${url}skills/Bootstrap.png`,
         },
         {
           name: 'Node JS',
@@ -145,24 +165,20 @@ const Skills = ({ layout }) => {
           image: `${url}skills/Express.png`,
         },
         {
-          name: 'Heroku',
-          image: `${url}skills/Heroku.png`,
-        },
-        {
-          name: 'Postman',
-          image: `${url}skills/Postman.png`,
-        },
-        {
-          name: 'Webpack',
-          image: `${url}skills/Webpack.png`,
-        },
-        {
           name: 'NPM',
           image: `${url}skills/NPM.png`,
         },
         {
           name: 'Firebase',
           image: `${url}skills/Firebase.png`,
+        },
+        {
+          name: 'Eslint',
+          image: `${url}skills/Eslint.png`,
+        },
+        {
+          name: 'Prettier',
+          image: `${url}skills/Prettier.png`,
         },
         {
           name: 'MongoDB',
@@ -180,10 +196,14 @@ const Skills = ({ layout }) => {
           name: 'Sequelize',
           image: `${url}skills/Sequelize.png`,
         },
-        /* {
-          name: 'Eslint',
-          image: `${url}skills/Eslint.png`,
-        }, */
+        {
+          name: 'Postman',
+          image: `${url}skills/Postman.png`,
+        },
+        {
+          name: 'GitHub',
+          image: `${url}skills/GitHub.png`,
+        },
       ],
       title: t('development'),
       type: 'Dev',
