@@ -9,6 +9,8 @@ import Dribbble from '../images/social/Dribble.png';
 import GitHub from '../images/social/GitHub.png';
 import Linkedin from '../images/social/Linkedin.png';
 
+import ChevronRight from '../images/icons/ChevronRight.svg';
+
 const contactLinks = [
   {
     title: 'Behance',
@@ -60,6 +62,8 @@ const Contact = ({ layout }) => {
       className="button"
     >
       {t('send-email')}
+      &nbsp;&nbsp;
+      <img src={ChevronRight} width={32} height={32} alt="" />
     </a>
   );
 
