@@ -5,6 +5,9 @@ import { useTranslation } from 'react-i18next';
 import ProfilePicture from '../images/ProfilePicture.jpg';
 import LocationPin from '../images/icons/Location.svg';
 
+import UruguayFlag from '../images/flags/uruguay.png';
+import ArgentinaFlag from '../images/flags/argentina.png';
+
 // Icons
 
 import Behance from '../images/social/Behance.png';
@@ -44,11 +47,21 @@ const UserCard = () => {
         <h3 className="user-name mb-8">Valentín Nicheglod</h3>
         <small className="user-ocupation">{t('role')}</small>
       </div>
-      <div className="user-location mb-32">
-        <img src={LocationPin} width="24" height="24" alt="" />
-        <small>
-          <b className="white">Paysandú, Uruguay</b>
-        </small>
+      <div className="location-container mb-32">
+        <div className="user-location mb-8">
+          <img src={LocationPin} width="24" height="24" alt="" />
+          <small>
+            <b className="white">Buenos Aires, Argentina</b>
+          </small>
+          <img src={ArgentinaFlag} width="16" height="16" alt="" />
+        </div>
+        <div className="user-location">
+          <img src={LocationPin} width="24" height="24" alt="" />
+          <small>
+            <b className="white">Paysandú, Uruguay</b>
+          </small>
+          <img src={UruguayFlag} width="16" height="16" alt="" />
+        </div>
       </div>
       <div className="user-links">
         {

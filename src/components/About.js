@@ -99,7 +99,7 @@ const About = ({ layout }) => {
           <UserCard />
         </div>
         <div className="user-information">
-          <div className="position-relative">
+          <div className="position-relative mb-32">
             <h1 className="title mb-32">{t('about-me')}</h1>
             <AboutMe />
           </div>
