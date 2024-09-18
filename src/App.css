@@ -1977,4 +1977,9 @@ footer p {
     border-radius: 10px;
     border: 2px solid #F0F0F0;
   }
+
+  .user-card-cont {
+    display: flex;
+    align-items: center;
+  }
 }
