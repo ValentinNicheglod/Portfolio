@@ -32,14 +32,16 @@ const Greeting = () => {
   );
 
   return (
-    <div className="max-height m-0 background-image">
-      <div className="blur" />
-      <div className="wave" />
-      <div className="logo-container">
-        <img src={SmallLogo} alt="" />
+    <>
+      <div className="max-height m-0 background-image">
+        <div className="logo-container">
+          <img src={SmallLogo} alt="" />
+        </div>
+        <InformationCard />
       </div>
-      <InformationCard />
-    </div>
+      <div className="line" />
+    </>
+
   );
 };
 

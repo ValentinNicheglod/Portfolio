@@ -42,8 +42,8 @@ const UserCard = () => {
   const { t } = useTranslation();
   return (
     <div className="user-card">
-      <img src={ProfilePicture} className="profile-photo mb-32" alt="" />
-      <div className="mb-16 center row">
+      <img src={ProfilePicture} className="profile-photo mb-16" alt="" />
+      <div className="mb-32 center row">
         <h3 className="user-name mb-8">Valentín Nicheglod</h3>
         <small className="user-ocupation">{t('role')}</small>
       </div>

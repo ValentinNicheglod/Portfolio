@@ -397,7 +397,7 @@ span {
 /* Greeting */
 
 .background-image {
-  background-image: url(./images/Background.jpg);
+  background-image: url(./images/Background2.jpg);
   background-size: cover;
   position: relative;
 }
@@ -454,6 +454,11 @@ span {
 
   background-color: #FFF2;
   backdrop-filter: blur(5px);
+}
+
+.line {
+  height: 4px;
+  background: linear-gradient(90deg, #0768eb 60%, #1effff);
 }
 
 .logo-container {
@@ -1412,9 +1417,9 @@ footer p {
 
 /* Large Size Tablet */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
   .background-image {
-    background-image: url(./images/VerticalBackground.jpg);
+    background-image: url(./images/Background2.jpg);
   }
 
   /* About */
