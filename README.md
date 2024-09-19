@@ -21,6 +21,7 @@ En mi portfolio encontrarás más información sobre mí y mis proyectos.
 
 ## 📎 Descripción del proyecto...
 Actualmente el proyecto se presenta en una sola página con secciones, cada componente representa una sección, en un futuro mi idea es crear otras secciones y agregar un blog.
+<br>
 Luego de creado el proyecto, he adquirido mas conocimientos técnicos y de diseño, por lo tanto fui actualizando el proyecto tanto en funcionalidad como UI, dando el resultado actual.
 
 #### Componentes
