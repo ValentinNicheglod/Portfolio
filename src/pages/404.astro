@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../icons/logo.svg";
 import notFoundTranslations from "../locales/not-found.locales.json";
 import "../styles/global.scss";
 
@@ -60,17 +58,9 @@ const siteUrl = Astro.site ?? new URL("https://valentin-nicheglod.is-a.dev");
       </div>
 
       <section
-        class="inner-container relative w-full max-w-2xl rounded-3xl px-6 py-10 text-center sm:px-12 sm:py-14"
+        class="relative w-full max-w-2xl px-6 py-10 text-center sm:px-12 sm:py-14"
         aria-labelledby="not-found-title"
       >
-        <a
-          href="/"
-          class="mx-auto mb-8 flex w-fit rounded-full bg-white p-3 shadow-md outline-offset-4 transition-transform hover:scale-105 focus-visible:scale-105"
-          aria-label={notFoundTranslations.en.logoAlt}
-        >
-          <Image src={logo} alt="" class="h-16 w-16" loading="eager" />
-        </a>
-
         <p class="mb-3 text-8xl font-bold leading-none text-primary sm:text-9xl">404</p>
 
         <div data-language-copy="en">
@@ -108,11 +98,6 @@ const siteUrl = Astro.site ?? new URL("https://valentin-nicheglod.is-a.dev");
           </a>
         </div>
 
-        <nav class="mt-6 flex justify-center gap-3 text-sm" aria-label="Language selection">
-          <a class="text-primary underline-offset-4 hover:underline" href="/">English</a>
-          <span aria-hidden="true">·</span>
-          <a class="text-primary underline-offset-4 hover:underline" href="/es">Español</a>
-        </nav>
       </section>
     </main>
   </body>

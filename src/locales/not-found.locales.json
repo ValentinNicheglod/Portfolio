@@ -2,13 +2,11 @@
   "en": {
     "title": "Page not found",
     "description": "The page you are looking for does not exist or may have moved.",
-    "home": "Back to home",
-    "logoAlt": "Go to homepage"
+    "home": "Back to home"
   },
   "es": {
     "title": "Página no encontrada",
     "description": "La página que estás buscando no existe o puede haberse movido.",
-    "home": "Volver al inicio",
-    "logoAlt": "Ir al inicio"
+    "home": "Volver al inicio"
   }
 }
