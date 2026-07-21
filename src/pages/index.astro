@@ -12,9 +12,9 @@ import "../styles/global.scss";
 const lang = (Astro.currentLocale ?? "en") as "en" | "es";
 const siteUrl =
   Astro.site ?? new URL("https://valentin-nicheglod.is-a.dev");
-const localePath = lang === "en" ? "/en" : "/es";
+const localePath = lang === "en" ? "/" : "/es";
 const canonicalUrl = new URL(localePath, siteUrl).toString();
-const alternateEn = new URL("/en", siteUrl).toString();
+const alternateEn = new URL("/", siteUrl).toString();
 const alternateEs = new URL("/es", siteUrl).toString();
 const ogImageUrl = new URL("/og-image.jpg", siteUrl).toString();
 const profileImageUrl = new URL("/profile-pic.png", siteUrl).toString();
