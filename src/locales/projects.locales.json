@@ -10,7 +10,7 @@
     "images": "Image gallery",
     "open": "Open project",
     "more": "+ View more",
-    "less": "+ View less",
+    "less": "- View less",
     "technologies": "Technologies used",
     "next": "Next",
     "previous": "Previous",
@@ -34,7 +34,7 @@
         "1": "Mockup of the 'Login' section. Featuring a starry background and a welcome message for the user, below which is a white card with text fields for email and password, a button to log in, and another to reset the password.",
         "2": "Three mockups following the login style, representing the registration flow: 'Registration Data'. Including text fields for entering email, password, and password confirmation; 'Personal Data'. Including fields for first name, last name, and phone number; and 'Gender and Preferences'. Including options to select the user's gender (optional) and clothing preferences by gender.",
         "3": "Mockup of the 'User Profile' section. Showing the profile photo, name, email, phone number, and options like My Data, My Purchases, Addresses, Payment Methods, Settings, Help, and Log Out.",
-        "4": "Mockup of the 'Favorites' section. Displaying a card listing of the products the user has marked as favorites, each card with a button to remove the product from favorites.",
+        "4": "Mockup of the 'Favorites' section. Displaying a list of product cards that the user has marked as favorites, each card with a button to remove the product from favorites.",
         "5": "Mockup of the 'Product' section. Showing the name, images, reviews, colors, sizes, and price of the product. It also includes buttons to add the product to favorites or the shopping cart.",
         "6": "Mockup of the 'Search' section. Showing a search bar, a 'Most Searched' section with a carousel of the most popular products, and 'Categories', allowing access to them.",
         "7": "Mockup of the 'Shopping Cart' section. Showing each of the added products with selected color and size, a quantity selector, and the final price of the product. Below, the total purchase amount and a button to proceed with it.",
@@ -115,10 +115,10 @@
         "2": "Mockup de la sección 'Registrarse'. Consta de un modal con el encabezado 'Registrarse'. Incluye campos de texto para ingresar nombre, apellido, correo electrónico y contraseña, y por último un botón para registrarse.",
         "3": "Mockup desplazable de la sección 'Productos recomendados'. Mostrando un listado con cards de los productos que el sitio considere adecuados para el usuario.",
         "4": "Mockup desplazable de la sección 'Producto'. Mostrando nombre, imágenes, reseñas, colores, talles y precio del producto. También cuenta con botones para agregar el producto a favoritos o a la bolsa de compras. En la parte inferior del contenido, incluye un listado de productos similares al seleccionado.",
-        "6": "Mockup desplazable de la sección 'Bolsa de compras'. Dividido en dos columnas. La primer columna incluye un listado de cards de cada uno de los productos agregados, con color y talle seleccionados, un selector de cantidad, y el precio final del producto. La segunda columna incluye una card en la que se muestra un campo de texto para aplicar un código de descuento a la orden, el detalle de la orden y un botón para finalizar la compra.",
-        "7": "Mockup desplazable de la sección 'Paso 1 del Checkout': Envío de la orden. Dividido en dos columnas. La primer columna incluye un listado de cards de cada uno de los productos agregados. La segunda columna incluye una card con el encabezado 'Envío de la orden', un listado de direcciones guardadas, un formulario para agregar una nueva dirección, y un botón para continuar.",
-        "8": "Mockup desplazable de la sección 'Paso 2 del Checkout': Método de pago. Dividido en dos columnas. La primer columna incluye un listado de cards de cada uno de los productos agregados. La segunda columna incluye una card con el encabezado 'Método de pago', un listado de tarjetas guardadas, un formulario para agregar una nueva tarjeta, y un botón para pagar y confirmar la orden.",
-        "9": "Mockup desplazable de la sección 'Paso 3 del Checkout': Compra confirmada. Dividido en dos columnas. La primer columna incluye un listado de cards de cada uno de los productos agregados. La segunda columna incluye una card con la confirmación de la compra e información de la misma."
+        "6": "Mockup desplazable de la sección 'Bolsa de compras'. Dividido en dos columnas. La primera columna incluye un listado de cards de cada uno de los productos agregados, con color y talle seleccionados, un selector de cantidad, y el precio final del producto. La segunda columna incluye una card en la que se muestra un campo de texto para aplicar un código de descuento a la orden, el detalle de la orden y un botón para finalizar la compra.",
+        "7": "Mockup desplazable de la sección 'Paso 1 del Checkout': Envío de la orden. Dividido en dos columnas. La primera columna incluye un listado de cards de cada uno de los productos agregados. La segunda columna incluye una card con el encabezado 'Envío de la orden', un listado de direcciones guardadas, un formulario para agregar una nueva dirección, y un botón para continuar.",
+        "8": "Mockup desplazable de la sección 'Paso 2 del Checkout': Método de pago. Dividido en dos columnas. La primera columna incluye un listado de cards de cada uno de los productos agregados. La segunda columna incluye una card con el encabezado 'Método de pago', un listado de tarjetas guardadas, un formulario para agregar una nueva tarjeta, y un botón para pagar y confirmar la orden.",
+        "9": "Mockup desplazable de la sección 'Paso 3 del Checkout': Compra confirmada. Dividido en dos columnas. La primera columna incluye un listado de cards de cada uno de los productos agregados. La segunda columna incluye una card con la confirmación de la compra e información de la misma."
       }
     },
     "reconnect": {

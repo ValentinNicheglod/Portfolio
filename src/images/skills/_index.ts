@@ -45,6 +45,9 @@ import postgresql from "../../images/skills/PostgreSQL.png";
 import sequelize from "../../images/skills/Sequelize.png";
 import postman from "../../images/skills/Postman.png";
 import github from "../../images/skills/GitHub.png";
+import nextjs from "../../images/skills/Next.png";
+import capacitor from "../../images/skills/Capacitor.png";
+import googleCloud from "../../images/skills/GoogleCloud.png";
 
 export {
   commitment,
@@ -92,4 +95,7 @@ export {
   sequelize,
   postman,
   github,
+  nextjs,
+  capacitor,
+  googleCloud,
 };

@@ -71,7 +71,7 @@ export const getSkillsData = (lang: "es" | "en") => {
           customClass: "dark:drop-shadow-[0px_4px_8px_#FFFFFF25]",
         },
         {
-          name: "WireFraming",
+          name: "Wireframing",
           image: skillsIcons.wireframe,
           customClass: "dark:drop-shadow-[0px_4px_8px_#FFFFFF25]",
         },
@@ -83,12 +83,11 @@ export const getSkillsData = (lang: "es" | "en") => {
       type: SkillFilters.DEV,
       skills: [
         {
-          name: "Javascript",
+          name: "JavaScript",
           image: skillsIcons.js,
-          type: SkillFilters.DEV,
         },
         {
-          name: "Typescript",
+          name: "TypeScript",
           image: skillsIcons.ts,
         },
         {
@@ -96,33 +95,47 @@ export const getSkillsData = (lang: "es" | "en") => {
           image: skillsIcons.python,
         },
         {
-          name: "HTML 5",
+          name: "HTML5",
           image: skillsIcons.html,
         },
         {
-          name: "CSS 3",
+          name: "CSS3",
           image: skillsIcons.css,
         },
         {
-          name: "GIT",
+          name: "Git",
           image: skillsIcons.git,
-        },
-        {
-          name: "React",
-          image: skillsIcons.react,
         },
         {
           name: "Angular",
           image: skillsIcons.angular,
         },
         {
+          name: "Ionic",
+          image: skillsIcons.ionic,
+        },
+        {
+          name: "Capacitor",
+          image: skillsIcons.capacitor,
+        },
+        {
+          name: "React",
+          image: skillsIcons.react,
+        },
+        {
+          name: "React Native",
+          image: skillsIcons.react,
+        },
+        {
+          name: "Next.js",
+          image: skillsIcons.nextjs,
+          customClass:
+            "dark:invert dark:brightness-90 transition-all duration-500",
+        },
+        {
           name: "Astro",
           image: skillsIcons.astro,
           customClass: "dark:drop-shadow-[0px_4px_8px_#FFFFFF25]",
-        },
-        {
-          name: "Ionic",
-          image: skillsIcons.ionic,
         },
         {
           name: "Expo",
@@ -133,10 +146,6 @@ export const getSkillsData = (lang: "es" | "en") => {
         {
           name: "Redux",
           image: skillsIcons.redux,
-        },
-        {
-          name: "Webpack",
-          image: skillsIcons.webpack,
         },
         {
           name: "RxJS",
@@ -160,7 +169,11 @@ export const getSkillsData = (lang: "es" | "en") => {
           image: skillsIcons.bootstrap,
         },
         {
-          name: "Node JS",
+          name: "Webpack",
+          image: skillsIcons.webpack,
+        },
+        {
+          name: "Node.js",
           image: skillsIcons.node,
         },
         {
@@ -178,7 +191,11 @@ export const getSkillsData = (lang: "es" | "en") => {
           image: skillsIcons.firebase,
         },
         {
-          name: "Eslint",
+          name: "Google Cloud",
+          image: skillsIcons.googleCloud,
+        },
+        {
+          name: "ESLint",
           image: skillsIcons.eslint,
         },
         {
@@ -218,16 +235,10 @@ export const getSkillsData = (lang: "es" | "en") => {
 };
 
 export const getAllSkills = (lang: "es" | "en") => {
-  const skillsData = getSkillsData(lang);
-
-  return skillsData
-    .map((skillCategory) => {
-      return skillCategory.skills.map((skill) => {
-        return {
-          ...skill,
-          type: skillCategory.type,
-        };
-      });
-    })
-    .flat();
+  return getSkillsData(lang).flatMap((skillCategory) =>
+    skillCategory.skills.map((skill) => ({
+      ...skill,
+      type: skillCategory.type,
+    })),
+  );
 };
